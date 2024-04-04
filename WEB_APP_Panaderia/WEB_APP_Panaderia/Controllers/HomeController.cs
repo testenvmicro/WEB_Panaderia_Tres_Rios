@@ -18,7 +18,13 @@ namespace WEB_APP_Panaderia.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+		public IActionResult Metricas()
+		{
+			return View();
+		}
+
+
+		public IActionResult Privacy()
         {
             return View();
         }
