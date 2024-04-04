@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\metricas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\metricas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T21:10:36.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AQIAAMoGAAAAAAAAAAAAAOEGAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T17:36:11.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Metricas.cshtml",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
+              "ViewState": "AQIAAGIBAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T21:00:30.45Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
