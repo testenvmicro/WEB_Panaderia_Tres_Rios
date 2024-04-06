@@ -2437,6 +2437,18 @@
       "PackagePath": "staticwebassets\\assets\\img\\login.jpg"
     },
     {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\logo-pizza.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-pizza.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\logo-pizzeria-panaderia.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-pizzeria-panaderia.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\logo-pizzeria.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-pizzeria.png"
+    },
+    {
       "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\logo-small.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-small.png"
     },

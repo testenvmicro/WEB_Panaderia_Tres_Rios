@@ -11,8 +11,12 @@
       "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\metricas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\assets\\scss\\pages\\_sales-dashboard.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\assets\\scss\\pages\\_sales-dashboard.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
-              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-04T21:10:36.109Z",
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\assets\\css\\style.css",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\css\\style.css",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\assets\\css\\style.css",
+              "ViewState": "AQIAAFVTAAAAAAAAAAAAAGBTAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-06T04:34:35.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AQIAAMoGAAAAAAAAAAAAAOEGAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-04T17:36:11.249Z",
+              "DocumentIndex": 3,
+              "Title": "_sales-dashboard.scss",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\scss\\pages\\_sales-dashboard.scss",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\assets\\scss\\pages\\_sales-dashboard.scss",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\scss\\pages\\_sales-dashboard.scss",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\assets\\scss\\pages\\_sales-dashboard.scss",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2024-04-06T04:34:20.573Z",
               "EditorCaption": ""
             },
             {
@@ -58,9 +62,22 @@
               "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
               "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
-              "ViewState": "AQIAAGIBAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAAAUBAAAAAAAAAAAAABkBAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-04T21:00:30.45Z",
+              "WhenOpened": "2024-04-06T01:47:14.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAHUAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-06T01:33:42.603Z",
               "EditorCaption": ""
             }
           ]

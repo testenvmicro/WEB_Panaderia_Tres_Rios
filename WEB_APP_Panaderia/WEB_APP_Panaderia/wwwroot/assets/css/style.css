@@ -21340,9 +21340,10 @@ body.mini-sidebar.expand-menu .sidebar .sidebar-menu > ul > li.submenu-open ul l
 .table.recent-transactions tr td {
   padding: 15px;
 }
-.table.recent-transactions tr td span {
-  font-size: 14px;
-}
+    .table.recent-transactions tr td span {
+        font-size: 14px;
+        color: chocolate
+    }
 .table.recent-transactions tr td span svg {
   margin-right: 5px;
 }
@@ -21746,7 +21747,7 @@ body.mini-sidebar.expand-menu .sidebar .sidebar-menu > ul > li.submenu-open ul l
 }
 .login-wrapper .login-content .login-logo {
   display: block;
-  max-width: 150px;
+  max-width: 250px;
   margin: auto;
 }
 .login-wrapper .login-content .login-logo img {
