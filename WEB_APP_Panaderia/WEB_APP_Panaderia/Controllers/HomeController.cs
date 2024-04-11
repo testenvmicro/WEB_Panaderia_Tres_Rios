@@ -23,6 +23,10 @@ namespace WEB_APP_Panaderia.Controllers
 			return View();
 		}
 
+		public IActionResult Usuarios()
+		{
+			return View();
+		}
 
 		public IActionResult Privacy()
         {
