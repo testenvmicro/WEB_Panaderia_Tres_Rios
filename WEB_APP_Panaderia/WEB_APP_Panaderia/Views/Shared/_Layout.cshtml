@@ -10,7 +10,7 @@
 
     <title>@ViewData["Title"] - Panadería Tres Rios</title>
     <!-- Favicon -->
-	<link rel="shortcut icon" type="~/image/x-icon" href="assets/img/favicon.png">
+	<link rel="shortcut icon" type="~/image/x-icon" href="~/assets/img/favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
@@ -176,14 +176,14 @@
 								<li><a href="add-product.html"><i data-feather="plus-square"></i><span>Create Product</span></a></li>
 								<li><a href="expired-products.html"><i data-feather="codesandbox"></i><span>Expired Products</span></a></li>
 								<li><a href="low-stocks.html"><i data-feather="trending-down"></i><span>Low Stocks</span></a></li>
-								<li><a href="category-list.html"><i data-feather="codepen"></i><span>Category</span></a></li>
+@* 								<li><a href="category-list.html"><i data-feather="codepen"></i><span>Category</span></a></li>
 								<li><a href="sub-categories.html"><i data-feather="speaker"></i><span>Sub Category</span></a></li>
 								<li><a href="brand-list.html"><i data-feather="tag"></i><span>Brands</span></a></li>
 								<li><a href="units.html"><i data-feather="speaker"></i><span>Units</span></a></li>
 								<li><a href="varriant-attributes.html"><i data-feather="layers"></i><span>Variant Attributes</span></a></li>
 								<li><a href="warranty.html"><i data-feather="bookmark"></i><span>Warranties</span></a></li>
 								<li><a href="barcode.html"><i data-feather="align-justify"></i><span>Print Barcode</span></a></li>
-								<li><a href="qrcode.html"><i data-feather="maximize"></i><span>Print QR Code</span></a></li>
+								<li><a href="qrcode.html"><i data-feather="maximize"></i><span>Print QR Code</span></a></li> *@
 							</ul>
 						</li>
 						<li class="submenu-open">
@@ -204,12 +204,12 @@
 								<li><a href="pos.html"><i data-feather="hard-drive"></i><span>POS</span></a></li>
 							</ul>
 						</li>
-						<li class="submenu-open">
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Promo</h6>
 							<ul>
 								<li><a href="coupons.html"><i data-feather="shopping-cart"></i><span>Coupons</span></a></li>
 							</ul>
-						</li>
+						</li> *@
 						<li class="submenu-open">
 							<h6 class="submenu-hdr">Purchases</h6>
 							<ul>
@@ -298,7 +298,7 @@
 								<li><a href="delete-account.html"><i data-feather="lock"></i><span>Delete Account Request</span></a></li>
 							</ul>
 						</li>
-						<li class="submenu-open">
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Pages</h6>
 							<ul>
 								<li><a href="profile.html"><i data-feather="user"></i><span>Profile</span></a></li>
@@ -380,8 +380,8 @@
 									<a href="under-maintenance.html"><i data-feather="alert-triangle"></i><span>Under Maintenance</span> </a>
 								</li>
 							</ul>
-						</li>
-						<li class="submenu-open">
+						</li> *@
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Settings</h6>
 							<ul>
 								<li class="submenu">
@@ -456,8 +456,8 @@
 									<a href="signin.html"><i data-feather="log-out"></i><span>Logout</span> </a>
 								</li>
 							</ul>
-						</li>
-						<li class="submenu-open">
+						</li> *@
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">UI Interface</h6>
 							<ul>
 								<li class="submenu">
@@ -586,8 +586,8 @@
 									</ul>
 								</li>
 							</ul>
-						</li>
-						<li class="submenu-open">
+						</li> *@
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Help</h6>
 							<ul>
 								<li><a href="javascript:void(0);"><i data-feather="file-text"></i><span>Documentation</span></a></li>
@@ -612,7 +612,7 @@
 									</ul>
 								</li>
 							</ul>
-						</li>
+						</li> *@
 					</ul>
 				</div>
 			</div>
@@ -1126,14 +1126,14 @@
 							<li><a href="add-product.html"><span>Create Product</span></a></li>
 							<li><a href="expired-products.html"><span>Expired Products</span></a></li>
 							<li><a href="low-stocks.html"><span>Low Stocks</span></a></li>
-							<li><a href="category-list.html"><span>Category</span></a></li>
+@* 							<li><a href="category-list.html"><span>Category</span></a></li>
 							<li><a href="sub-categories.html"><span>Sub Category</span></a></li>
 							<li><a href="brand-list.html"><span>Brands</span></a></li>
 							<li><a href="units.html"><span>Units</span></a></li>
 							<li><a href="varriant-attributes.html"><span>Variant Attributes</span></a></li>
 							<li><a href="warranty.html"><span>Warranties</span></a></li>
 							<li><a href="barcode.html"><span>Print Barcode</span></a></li>
-							<li><a href="qrcode.html"><span>Print QR Code</span></a></li>
+							<li><a href="qrcode.html"><span>Print QR Code</span></a></li> *@
 						</ul>
 					</li>
 					<li class="submenu">
@@ -1541,6 +1541,10 @@
 
 	<!-- Slimscroll JS -->
 	<script src="~/assets/js/jquery.slimscroll.min.js"></script>
+
+	<!-- Datatable JS -->
+	<script src="~/assets/js/jquery.dataTables.min.js"></script>
+	<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
 
 	<!-- Bootstrap Core JS -->
 	<script src="~/assets/js/bootstrap.bundle.min.js"></script>
