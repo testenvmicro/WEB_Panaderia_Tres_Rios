@@ -125,9 +125,9 @@
 			<div class="dropdown mobile-user-menu">
 				<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 				<div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="profile.html">My Profile</a>
-					<a class="dropdown-item" href="general-settings.html">Settings</a>
-					<a class="dropdown-item" href="signin.html">Logout</a>
+					<a class="dropdown-item" href="profile.html">Perfil</a>
+					@* <a class="dropdown-item" href="general-settings.html">Configuraciones</a> *@
+					<a class="dropdown-item" href="signin.html">Cerrar Sesión</a>
 				</div>
 			</div>
 			<!-- /Mobile Menu -->
@@ -148,7 +148,7 @@
 										<li><a href="@Url.Action("Metricas","Home")">Panel de Ventas</a></li>
 									</ul>
 								</li>
-								<li class="submenu">
+								@* <li class="submenu">
 									
 									<ul>
 										<li><a href="chat.html">Chat</a></li>
@@ -166,7 +166,7 @@
 										<li><a href="notes.html">Notes</a></li>
 										<li><a href="file-manager.html">File Manager</a></li>
 									</ul>
-								</li>
+								</li> *@
 							</ul>
 						</li>
 						<li class="submenu-open">
@@ -186,22 +186,22 @@
 								<li><a href="qrcode.html"><i data-feather="maximize"></i><span>Print QR Code</span></a></li> *@
 							</ul>
 						</li>
-						<li class="submenu-open">
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Stock</h6>
 							<ul>
 								<li><a href="manage-stocks.html"><i data-feather="package"></i><span>Manage Stock</span></a></li>
 								<li><a href="stock-adjustment.html"><i data-feather="clipboard"></i><span>Stock Adjustment</span></a></li>
 								<li><a href="stock-transfer.html"><i data-feather="truck"></i><span>Stock Transfer</span></a></li>
 							</ul>
-						</li>
+						</li> *@
 						<li class="submenu-open">
-							<h6 class="submenu-hdr">Sales</h6>
+							<h6 class="submenu-hdr">Ventas</h6>
 							<ul>
-								<li><a href="sales-list.html"><i data-feather="shopping-cart"></i><span>Sales</span></a></li>
+@* 								<li><a href="sales-list.html"><i data-feather="shopping-cart"></i><span>Sales</span></a></li>
 								<li><a href="invoice-report.html"><i data-feather="file-text"></i><span>Invoices</span></a></li>
 								<li><a href="sales-returns.html"><i data-feather="copy"></i><span>Sales Return</span></a></li>
-								<li><a href="quotation-list.html"><i data-feather="save"></i><span>Quotation</span></a></li>
-								<li><a href="pos.html"><i data-feather="hard-drive"></i><span>POS</span></a></li>
+								<li><a href="quotation-list.html"><i data-feather="save"></i><span>Quotation</span></a></li> *@
+								<li><a href="@Url.Action("Punto_De_Venta","Home")"><i data-feather="hard-drive"></i><span>Punto de Venta</span></a></li>
 							</ul>
 						</li>
 						@* <li class="submenu-open">
@@ -218,7 +218,7 @@
 								<li><a href="purchase-returns.html"><i data-feather="refresh-cw"></i><span>Purchase Return</span></a></li>
 							</ul>
 						</li>
-						<li class="submenu-open">
+						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Finance & Accounts</h6>
 							<ul>
 								<li class="submenu">
@@ -229,7 +229,7 @@
 									</ul>
 								</li>
 							</ul>
-						</li>
+						</li> *@
 						<li class="submenu-open">
 							<h6 class="submenu-hdr">Peoples</h6>
 							<ul>
@@ -245,34 +245,34 @@
 							<h6 class="submenu-hdr">Recursos Humanos</h6>
 							<ul>
 								<li><a href="@Url.Action("Usuarios","Home")"><i data-feather="user"></i><span>Usuarios</span></a></li>
-								<li><a href="department-grid.html"><i data-feather="users"></i><span>Departments</span></a></li>
+								@* <li><a href="department-grid.html"><i data-feather="users"></i><span>Departments</span></a></li>
 								<li><a href="designation.html"><i data-feather="git-merge"></i><span>Designation</span></a></li>
-								<li><a href="shift.html"><i data-feather="shuffle"></i><span>Shifts</span></a></li>
-								<li class="submenu">
+								<li><a href="shift.html"><i data-feather="shuffle"></i><span>Shifts</span></a></li> *@
+								@* <li class="submenu">
 									<a href="javascript:void(0);"><i data-feather="book-open"></i><span>Attendence</span><span class="menu-arrow"></span></a>
 									<ul>
 										<li><a href="attendance-employee.html">Employee</a></li>
 										<li><a href="attendance-admin.html">Admin</a></li>
 									</ul>
-								</li>
-								<li class="submenu">
+								</li> *@
+								@* <li class="submenu">
 									<a href="javascript:void(0);"><i data-feather="calendar"></i><span>Leaves</span><span class="menu-arrow"></span></a>
 									<ul>
 										<li><a href="leaves-admin.html">Admin Leaves</a></li>
 										<li><a href="leaves-employee.html">Employee Leaves</a></li>
 										<li><a href="leave-types.html">Leave Types</a></li>
 									</ul>
-								</li>
-								<li>
+								</li> *@
+								@* <li>
 									<a href="holidays.html"><i data-feather="credit-card"></i><span>Holidays</span></a>
-								</li>
-								<li class="submenu">
+								</li> *@
+								@* <li class="submenu">
 									<a href="payroll-list.html"><i data-feather="dollar-sign"></i><span>Payroll</span><span class="menu-arrow"></span></a>
 									<ul>
 										<li><a href="payroll-list.html">Employee Salary</a></li>
 										<li><a href="payslip.html">Payslip</a></li>
 									</ul>
-								</li>
+								</li> *@
 							</ul>
 						</li>
 						<li class="submenu-open">
@@ -725,7 +725,7 @@
 							<li><a href="invoice-report.html"><span>Invoices</span></a></li>
 							<li><a href="sales-returns.html"><span>Sales Return</span></a></li>
 							<li><a href="quotation-list.html"><span>Quotation</span></a></li>
-							<li><a href="pos.html"><span>POS</span></a></li>
+							<li><a href="@Url.Action("Punto_De_Venta","Home")"><span>POS</span></a></li>
 							<li><a href="coupons.html"><span>Coupons</span></a></li>
 						</ul>
 						<ul class="tab-pane" id="purchase" aria-labelledby="report-tab">
@@ -1146,7 +1146,7 @@
 									<li><a href="invoice-report.html"><span>Invoices</span></a></li>
 									<li><a href="sales-returns.html"><span>Sales Return</span></a></li>
 									<li><a href="quotation-list.html"><span>Quotation</span></a></li>
-									<li><a href="pos.html"><span>POS</span></a></li>
+									<li><a href="@Url.Action("Punto_De_Venta","Home")"><span>POS</span></a></li>
 									<li><a href="coupons.html"><span>Coupons</span></a></li>
 								</ul>
 							</li>
@@ -1553,6 +1553,16 @@
 	<script src="~/assets/plugins/apexchart/apexcharts.min.js"></script>
 	<script src="~/assets/plugins/apexchart/chart-data.js"></script>
 
+	<!-- Daterangepikcer JS -->
+	<script src="~/assets/js/moment.min.js"></script>
+	<script src="~/assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+	<!-- Owl JS -->
+	<script src="~/assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+
+	<!-- Select2 JS -->
+	<script src="~/assets/plugins/select2/js/select2.min.js"></script>
+
 	<!-- Sweetalert 2 -->
 	<script src="~/assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
 	<script src="~/assets/plugins/sweetalert/sweetalerts.min.js"></script>
@@ -1560,6 +1570,7 @@
 	<!-- Custom JS -->
 	<script src="~/assets/js/theme-script.js"></script>
 	<script src="~/assets/js/script.js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

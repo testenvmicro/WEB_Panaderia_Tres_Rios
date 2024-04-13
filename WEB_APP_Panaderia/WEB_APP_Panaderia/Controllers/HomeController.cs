@@ -28,6 +28,11 @@ namespace WEB_APP_Panaderia.Controllers
 			return View();
 		}
 
+		public IActionResult Punto_De_Venta()
+		{
+			return View();
+		}
+
 		public IActionResult Privacy()
         {
             return View();
