@@ -2437,6 +2437,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\login.jpg"
     },
     {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\logo-panaderia.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-panaderia.png"
+    },
+    {
       "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\logo-pizza.png",
       "PackagePath": "staticwebassets\\assets\\img\\logo-pizza.png"
     },
@@ -2499,6 +2503,42 @@
     {
       "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\media\\media-link-02.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\media\\media-link-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\panaderia\\enchilada.png",
+      "PackagePath": "staticwebassets\\assets\\img\\panaderia\\enchilada.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\panaderia\\pan-baguette.png",
+      "PackagePath": "staticwebassets\\assets\\img\\panaderia\\pan-baguette.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-extra-grande.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-extra-grande.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-grande.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-grande.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-jumbo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-jumbo.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-mediana.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-mediana.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-pequenna.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-pequenna.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-personal.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-personal.png"
+    },
+    {
+      "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\pizzeria\\pizza-super-jumbo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\pizzeria\\pizza-super-jumbo.png"
     },
     {
       "Id": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\img\\product\\Macbook.png",
