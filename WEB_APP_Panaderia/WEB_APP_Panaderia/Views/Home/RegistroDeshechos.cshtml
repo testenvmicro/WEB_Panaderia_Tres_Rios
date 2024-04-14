@@ -29,9 +29,6 @@
 					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Collapse" id="collapse-header"><i data-feather="chevron-up" class="feather-chevron-up"></i></a>
 				</li>
 			</ul>
-			<div class="page-btn">
-				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#add-units"><i data-feather="plus-circle" class="me-2"></i>Add New User</a>
-			</div>
 		</div>
 
 		<!-- /user list -->
@@ -40,19 +37,20 @@
 				<div class="table-top">
 					<div class="search-set">
 						<div class="search-input">
-							<a href="javascript:void(0);" class="btn btn-searchset"><i data-feather="search" class="feather-search"></i></a>
+							<a href="javascript:void(0);" class="btn btn-searchset"><i data-feather="search" class="feather-search"></i> </a>
 						</div>
 					</div>
+
 					<div class="search-path">
-						<a class="btn btn-filter" id="filter_search">
+						@*<a class="btn btn-filter" id="filter_search">
 							<i data-feather="filter" class="filter-icon"></i>
 							<span><img src="assets/img/icons/closes.svg" alt="img"></span>
-						</a>
+						</a>*@
 					</div>
 					<div class="form-sort">
 						<i data-feather="sliders" class="info-img"></i>
 						<select class="select">
-							<option>Sort by Date</option>
+							<option>Filtar por Fecha</option>
 							<option>14 09 23</option>
 							<option>11 09 23</option>
 						</select>
@@ -121,7 +119,7 @@
 									</div>
 									<div class="col-lg-2 col-sm-6 col-12">
 										<div class="input-blocks">
-											<a class="btn btn-filters ms-auto"> <i data-feather="search" class="feather-search"></i> Search </a>
+											<a class="btn btn-filters ms-auto"> <i data-feather="search" class="feather-search"></i> Busqueda </a>
 										</div>
 									</div>
 								</div>
@@ -133,6 +131,18 @@
 				<div class="table-responsive product-list">
 					<table class="table datanew">
 						<thead>
+							@*<tr>
+							<th class="no-sort">
+							<label class="checkboxs">
+							<input type="checkbox" id="select-all">
+							<span class="checkmarks"></span>
+							</label>
+							</th>
+							<th>Id</th>
+							<th>Fecha de Reporte</th>
+							<th>Creado por </th>
+							<th class="no-sort">Action</th>
+							</tr>*@
 							<tr>
 								<th class="no-sort">
 									<label class="checkboxs">
@@ -140,14 +150,17 @@
 										<span class="checkmarks"></span>
 									</label>
 								</th>
-								<th>Id</th>
-								<th>Fecha de Reporte</th>
-								<th>Creado por </th>
-								<th class="no-sort">Action</th>
+								<th>Evento</th>
+								<th>Tratamiento Residuo</th>
+								<th>Disposición Final</th>
+								<th>Transporte</th>
+								<th>Categoria</th>
+								<th>Fecha Revision</th>
+								<th class="no-sort">Acción</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							@*<tr>
 								<td>
 									<label class="checkboxs">
 										<input type="checkbox">
@@ -174,7 +187,7 @@
 										</a>
 									</div>
 								</td>
-							</tr>
+							</tr>*@
 							<tr>
 								<td>
 									<label class="checkboxs">
@@ -182,104 +195,19 @@
 										<span class="checkmarks"></span>
 									</label>
 								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Bold V3.2</a>
-									</div>
-								</td>
-								<td>PT002</td>
-								<td>Electronics</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2" href="edit-product.html">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
+								<td>001</td>
 
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Nike Jordan</a>
-									</div>
-								</td>
-								<td>PT003</td>
-								<td>Shoe</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2" href="edit-product.html">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="productimgname">
+								<td>Tratamiento1</td>
+								<td>Disposición1</td>
+								<td>Transporte1</td>
 
-										<a href="javascript:void(0);">Nike Jordan</a>
-									</div>
-								</td>
-								<td>PT004</td>
-								<td>Electronics</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2" href="edit-product.html">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
+								<td>Transporte1</td>
 
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Amazon Echo Dot</a>
-									</div>
-								</td>
-								<td>PT005</td>
-								<td>Speaker</td>
+								<td>Transporte1</td>
 								<td class="action-table-data">
 									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
+										<a class="me-2 edit-icon  p-2" href="product-details.html">
+											<i data-feather="eye" class="feather-eye"></i>
 										</a>
 										<a class="me-2 p-2" href="edit-product.html">
 											<i data-feather="edit" class="feather-edit"></i>
@@ -297,46 +225,19 @@
 										<span class="checkmarks"></span>
 									</label>
 								</td>
-								<td>PT006</td>
-								<td>Furnitures</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);">Robb</a>
-									</div>
-								</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2" href="edit-product.html">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
+								<td>001</td>
 
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Red Premium Handy</a>
-									</div>
-								</td>
-								<td>PT007</td>
-								<td>Bags</td>
+								<td>Tratamiento1</td>
+								<td>Disposición1</td>
+								<td>Transporte1</td>
+
+								<td>Transporte1</td>
+
+								<td>Transporte1</td>
 								<td class="action-table-data">
 									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
+										<a class="me-2 edit-icon  p-2" href="product-details.html">
+											<i data-feather="eye" class="feather-eye"></i>
 										</a>
 										<a class="me-2 p-2" href="edit-product.html">
 											<i data-feather="edit" class="feather-edit"></i>
@@ -354,73 +255,19 @@
 										<span class="checkmarks"></span>
 									</label>
 								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Iphone 14 Pro</a>
-									</div>
-								</td>
-								<td>PT008</td>
-								<td>Phone</td>
+								<td>001</td>
+
+								<td>Tratamiento1</td>
+								<td>Disposición1</td>
+								<td>Transporte1</td>
+
+								<td>Transporte1</td>
+
+								<td>Transporte1</td>
 								<td class="action-table-data">
 									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2" href="edit-product.html">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Black Slim 200</a>
-									</div>
-								</td>
-								<td>PT009</td>
-								<td>Chairs</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2" href="edit-product.html">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="productimgname">
-										<a href="javascript:void(0);">Woodcraft Sandal</a>
-									</div>
-								</td>
-								<td>PT010</td>
-								<td>Bags</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 edit-icon p-2" href="product-details.html">
-											<i data-feather="eye" class="action-eye"></i>
+										<a class="me-2 edit-icon  p-2" href="product-details.html">
+											<i data-feather="eye" class="feather-eye"></i>
 										</a>
 										<a class="me-2 p-2" href="edit-product.html">
 											<i data-feather="edit" class="feather-edit"></i>
