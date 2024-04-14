@@ -23,13 +23,25 @@ namespace WEB_APP_Panaderia.Controllers
 			return View();
 		}
 
+		public IActionResult Usuarios()
+		{
+			return View();
+		}
+
+		public IActionResult Punto_De_Venta()
+		{
+			return View();
+		}
 
 		public IActionResult Privacy()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult RegistroDeshechos()
+		{
+			return View();
+		}
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
