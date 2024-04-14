@@ -166,13 +166,11 @@
 									<h5 class="mb-3">Productos</h5>
 								</div>
 								<div class="tabs_container">
-									<div class="tab_content active" data-tab="all">
-									
-									</div>
+							
 									<div class="tab_content" data-tab="panaderia">
 										<div class="row">
 											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-												<div class="product-info default-cover card">
+												<div class="product-info default-cover">
 													<a href="javascript:void(0);" class="img-bg">
 														<img src="~/assets/img/panaderia/pos-product-05.png" alt="Products">
 														<span><i data-feather="check" class="feather-16"></i></span>
@@ -234,7 +232,7 @@
 												</div>
 											</div>
 											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-												<div class="product-info default-cover card">
+											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
 													<a href="javascript:void(0);" class="img-bg">
 														<img src="~/assets/img/pizzeria/pizza-pequenna.png" alt="Products">
 														<span><i data-feather="check" class="feather-16"></i></span>
@@ -248,7 +246,7 @@
 												</div>
 											</div>
 										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card">
+											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
 												<a href="javascript:void(0);" class="img-bg">
 													<img src="~/assets/img/pizzeria/pizza-mediana.png" alt="Products">
 													<span><i data-feather="check" class="feather-16"></i></span>
@@ -262,7 +260,7 @@
 											</div>
 										</div>
 										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card">
+											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
 												<a href="javascript:void(0);" class="img-bg">
 													<img src="~/assets/img/pizzeria/pizza-grande.png" alt="Products">
 													<span><i data-feather="check" class="feather-16"></i></span>
@@ -276,7 +274,7 @@
 											</div>
 										</div>
 										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card">
+											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
 												<a href="javascript:void(0);" class="img-bg">
 													<img src="~/assets/img/pizzeria/pizza-extra-grande.png" alt="Products">
 													<span><i data-feather="check" class="feather-16"></i></span>
@@ -290,7 +288,7 @@
 											</div>
 										</div>
 										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card">
+											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
 												<a href="javascript:void(0);" class="img-bg">
 													<img src="~/assets/img/pizzeria/pizza-jumbo.png" alt="Products">
 													<span><i data-feather="check" class="feather-16"></i></span>
@@ -304,7 +302,7 @@
 											</div>
 										</div>
 										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card">
+											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
 												<a href="javascript:void(0);" class="img-bg">
 													<img src="~/assets/img/pizzeria/pizza-super-jumbo.png" alt="Products">
 													<span><i data-feather="check" class="feather-16"></i></span>
@@ -319,12 +317,11 @@
 										</div>
 										</div>
 									</div>
-
-								
 								</div>
 							</div>
 						</div>
 					</div>
+
 					<div class="col-md-12 col-lg-4 ps-0">
 						<aside class="product-order-list">
 							<div class="head d-flex align-items-center justify-content-between w-100">
@@ -540,7 +537,7 @@
 						<p class="mb-0">¿Quiere imprimir el recibo u ordenar de nuevo?</p>
 						<div class="modal-footer d-sm-flex justify-content-between">
 							<button type="button" class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#print-receipt">Imprimir Recibo<i class="feather-arrow-right-circle icon-me-5"></i></button>
-							<button type="submit" class="btn btn-secondary flex-fill">Siguiente Orden<i class="feather-arrow-right-circle icon-me-5"></i></button>
+						<a href="@Url.Action("Punto_De_Venta","Home")" class="btn btn-secondary flex-fill">Siguiente Orden<i class="feather-arrow-right-circle icon-me-5"></i></a>
 						</div>
 					</form>
 				</div>
@@ -564,81 +561,44 @@
 						</a>
 					</div>
 					<div class="text-center info text-center">
-						<h6>Dreamguys Technologies Pvt Ltd.,</h6>
-						<p class="mb-0">Phone Number: +1 5656665656</p>
-						<p class="mb-0">Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+						<h6>3 Rios Pizzeria.,</h6>
+						<p class="mb-0">Telefono: +506 2279 8626 / 2278 1596</p>
+						<p class="mb-0">Correo: <a>tresriospizzeria@gmail.com</a></p>
 					</div>
 					<div class="tax-invoice">
-						<h6 class="text-center">Tax Invoice</h6>
+						<h6 class="text-center">Factura</h6>
 						<div class="row">
 							<div class="col-sm-12 col-md-6">
-								<div class="invoice-user-name"><span>Name: </span><span>John Doe</span></div>
-								<div class="invoice-user-name"><span>Invoice No: </span><span>CS132453</span></div>
+								<div class="invoice-user-name"><span>Nombre: </span><span>David Gonzalez</span></div>
+								<div class="invoice-user-name"><span>Num Factura: </span><span>CS132453</span></div>
 							</div>
 							<div class="col-sm-12 col-md-6">
-								<div class="invoice-user-name"><span>Customer Id: </span><span>#LL93784</span></div>
-								<div class="invoice-user-name"><span>Date: </span><span>01.07.2022</span></div>
+								<div class="invoice-user-name"><span>Fecha: </span><span>01.07.2024</span></div>
 							</div>
 						</div>
 					</div>
 					<table class="table-borderless w-100 table-fit">
 						<thead>
 							<tr>
-								<th># Item</th>
-								<th>Price</th>
-								<th>Qty</th>
+								<th># Producto</th>
+								<th>Precio</th>
+								<th>Cantidad</th>
 								<th class="text-end">Total</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>1. Red Nike Laser</td>
-								<td>$50</td>
-								<td>3</td>
-								<td class="text-end">$150</td>
-							</tr>
-							<tr>
-								<td>2. Iphone 14</td>
-								<td>$50</td>
-								<td>2</td>
-								<td class="text-end">$100</td>
-							</tr>
-							<tr>
-								<td>3. Apple Series 8</td>
-								<td>$50</td>
-								<td>3</td>
-								<td class="text-end">$150</td>
+								<td>Pizza Super Jumbo</td>
+								<td>13,000</td>
+								<td>1</td>
+							<td class="text-end"> ₡13,000</td>
 							</tr>
 							<tr>
 								<td colspan="4">
 									<table class="table-borderless w-100 table-fit">
 										<tr>
-											<td>Sub Total :</td>
-											<td class="text-end">$700.00</td>
-										</tr>
-										<tr>
-											<td>Discount :</td>
-											<td class="text-end">-$50.00</td>
-										</tr>
-										<tr>
-											<td>Shipping :</td>
-											<td class="text-end">0.00</td>
-										</tr>
-										<tr>
-											<td>Tax (5%) :</td>
-											<td class="text-end">$5.00</td>
-										</tr>
-										<tr>
-											<td>Total Bill :</td>
-											<td class="text-end">$655.00</td>
-										</tr>
-										<tr>
-											<td>Due :</td>
-											<td class="text-end">$0.00</td>
-										</tr>
-										<tr>
-											<td>Total Payable :</td>
-											<td class="text-end">$655.00</td>
+											<td>Total Pagado :</td>
+										<td class="text-end"> ₡13,000</td>
 										</tr>
 									</table>
 								</td>
@@ -646,103 +606,16 @@
 						</tbody>
 					</table>
 					<div class="text-center invoice-bar">
-						<p>**VAT against this challan is payable through central registration. Thank you for your business!</p>
-						<a href="javascript:void(0);">
-							<img src="~/assets/img/barcode/barcode-03.jpg" alt="Barcode">
-						</a>
-						<p>Sale 31</p>
-						<p>Thank You For Shopping With Us. Please Come Again</p>
-						<a href="javascript:void(0);" class="btn btn-primary">Print Receipt</a>
+				
+						<p>Gracias por comprar con nosotros. Vuelva Pronto</p>
+						<a href="javascript:void(0);" class="btn btn-primary">Imprimir Recibo</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- /Print Receipt -->
-	<!-- Products -->
-	<div class="modal fade modal-default pos-modal" id="products" aria-labelledby="products">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header p-4 d-flex align-items-center justify-content-between">
-					<div class="d-flex align-items-center">
-						<h5 class="me-4">Products</h5>
-						<span class="badge bg-info d-inline-block mb-0">Order ID : #666614</span>
-					</div>
-					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body p-4">
-					<form action="pos.html">
-						<div class="product-wrap">
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-16.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0005</span>
-											<h6><a href="javascript:void(0);">Red Nike Laser</a></h6>
-										</div>
-										<p>$2000</p>
-									</div>
-								</div>
-
-							</div>
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-17.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0235</span>
-											<h6><a href="javascript:void(0);">Iphone 14</a></h6>
-										</div>
-										<p>$3000</p>
-									</div>
-								</div>
-							</div>
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-16.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0005</span>
-											<h6><a href="javascript:void(0);">Red Nike Laser</a></h6>
-										</div>
-										<p>$2000</p>
-									</div>
-								</div>
-							</div>
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-17.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0005</span>
-											<h6><a href="javascript:void(0);">Red Nike Laser</a></h6>
-										</div>
-										<p>$2000</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer d-sm-flex justify-content-end">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-							<button type="submit" class="btn btn-primary">Submit</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /Products -->
+	
 <!-- /Agregar Cliente -->
 	<div class="modal fade" id="create" tabindex="-1" aria-labelledby="create" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -804,6 +677,111 @@
 		</div>
 	</div>
 <!-- /Agregar Cliente -->
+<!-- /Tipos de Pizza -->
+<div class="modal fade" id="tipo-pizza" tabindex="-1" aria-labelledby="create" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Seleccione Tipos de Pizza</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body checkboxes-container">
+				@* <form action="pos.html"> *@
+					<div class="row">
+						<div class="row align-items-center">
+							<div class="col-sm-6">
+								<div class="setting-info">
+									<h6>"De la casa"</h6>
+									<p>Peperoni/Jamón/Carne Tocitena y Queso</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="localization-select d-flex align-items-center">
+									<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
+										<input type="checkbox" id="tipo1" class="check">
+										<label for="tipo1" class="checktoggle"></label>
+									</div>
+								</div>
+							</div>	
+					   </div>
+					</div>
+
+					<br />
+					<div class="row">
+						<div class="row align-items-center">
+							<div class="col-sm-6">
+								<div class="setting-info">
+									<h6>"Pizza Tepez"</h6>
+									<p>Salame/Cebolla/Chile Dulce/Carne/Jalapeños/Tocineta/Hongos</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="localization-select d-flex align-items-center">
+									<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
+										<input type="checkbox" id="tipo2" class="check">
+										<label for="tipo2" class="checktoggle"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="row align-items-center">
+							<div class="col-sm-6">
+								<div class="setting-info">
+									<h6>"Pizza Pica"</h6>
+									<p>Peperoni/Cebolla/Chile Dulce/Queso/Tocineta/Jalapeños/Aderezo Orégano</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="localization-select d-flex align-items-center">
+									<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
+										<input type="checkbox" id="tipo3" class="check">
+										<label for="tipo3" class="checktoggle"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="row align-items-center">
+							<div class="col-sm-6">
+								<div class="setting-info">
+									<h6>"Suprema"</h6>
+									<p>Chile dulce/Cebolla/Salame/Carne/Queso</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="localization-select d-flex align-items-center">
+									<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
+										<input type="checkbox" id="tipo4" class="check">
+										<label for="tipo4" class="checktoggle"></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer d-sm-flex justify-content-end">
+						<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+					<button type="submit" class="btn btn-submit me-2" data-bs-dismiss="modal">Aceptar</button>
+					</div>
+				@* </form> *@
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Agregar Cliente -->
+
+
+
+
+
+
 	<!-- Hold -->
 	@* <div class="modal fade modal-default pos-modal" id="hold-order" aria-labelledby="hold-order">
 		<div class="modal-dialog modal-dialog-centered">
