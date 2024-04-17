@@ -62,5 +62,13 @@ namespace WEB_APP_Panaderia.Controllers
         {
             return View();
         }
+        public IActionResult RegistroClientes()
+        {
+            return View();
+        }
+        public IActionResult ListaClientes()
+        {
+            return View();
+        }
     }
 }
