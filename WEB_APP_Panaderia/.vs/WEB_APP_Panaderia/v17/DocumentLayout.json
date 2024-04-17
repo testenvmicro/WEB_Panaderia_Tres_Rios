@@ -1,30 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\",
+  "WorkspaceRootPath": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\registrodeshechos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\registrodeshechos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\listanotificaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\listanotificaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\editartransaccion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\editartransaccion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\punto_de_venta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\punto_de_venta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\editarcuenta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\editarcuenta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\creartransaccion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\creartransaccion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\crearcuenta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\crearcuenta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\vernotificacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\vernotificacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\crearnotificaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\crearnotificaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\editarnotificaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\editarnotificaciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\listarcuentas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\listarcuentas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\listartransacciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\listartransacciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\accounting\\listarestadofinanciero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\accounting\\listarestadofinanciero.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\metricas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\metricas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\accountingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\accountingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalerts.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalerts.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalert2.all.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalert2.all.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\assets\\plugins\\apexchart\\apexcharts.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\assets\\plugins\\apexchart\\apexcharts.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\assets\\js\\modal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\assets\\js\\modal.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\jonha\\source\\repos\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,80 +94,249 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Metricas.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Metricas.cshtml",
-              "ViewState": "AQIAANgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 9,
+              "Title": "ListarCuentas.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\ListarCuentas.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\ListarCuentas.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\ListarCuentas.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\ListarCuentas.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T13:53:27.379Z",
+              "WhenOpened": "2024-04-17T00:30:39.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "CrearCuenta.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\CrearCuenta.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\CrearCuenta.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\CrearCuenta.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\CrearCuenta.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACsAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T13:53:24.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Punto_De_Venta.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T13:53:21.92Z",
+              "WhenOpened": "2024-04-17T00:30:30.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Usuarios.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml",
-              "ViewState": "AQIAADcCAAAAAAAAAAAwwKsCAAAQAAAA",
+              "Title": "EditarTransaccion.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\EditarTransaccion.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\EditarTransaccion.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\EditarTransaccion.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\EditarTransaccion.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEIAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T13:51:17.71Z",
+              "WhenOpened": "2024-04-17T01:07:46.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditarCuenta.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\EditarCuenta.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\EditarCuenta.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\EditarCuenta.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\EditarCuenta.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACsAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T01:04:41.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VerNotificacion.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\VerNotificacion.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\VerNotificacion.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\VerNotificacion.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\VerNotificacion.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAcwB4AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T11:05:30.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegistroDeshechos.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
-              "ViewState": "AQIAACIAAAAAAAAAAAAjwDsAAAAhAAAA",
+              "Title": "ListaNotificaciones.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\ListaNotificaciones.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\ListaNotificaciones.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\ListaNotificaciones.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\ListaNotificaciones.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T13:45:32.811Z",
+              "WhenOpened": "2024-04-17T10:25:43.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditarNotificaciones.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\EditarNotificaciones.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\EditarNotificaciones.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\EditarNotificaciones.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\EditarNotificaciones.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACsAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T11:03:50.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CrearNotificaciones.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\CrearNotificaciones.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\CrearNotificaciones.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\CrearNotificaciones.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\CrearNotificaciones.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADAAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T11:04:54.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAALYAAAAAAAAAAAAowL8AAAA8AAAA",
+              "Title": "CrearTransaccion.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\CrearTransaccion.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\CrearTransaccion.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\CrearTransaccion.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\CrearTransaccion.cshtml",
+              "ViewState": "AQIAADEAAAAAAAAAAAAuwEMAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-06T01:33:42.603Z",
+              "WhenOpened": "2024-04-17T01:06:32.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ListarTransacciones.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\ListarTransacciones.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\ListarTransacciones.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\ListarTransacciones.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\ListarTransacciones.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T02:15:08.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAQwDwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T10:09:09.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ListarEstadoFinanciero.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\ListarEstadoFinanciero.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Accounting\\ListarEstadoFinanciero.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Accounting\\ListarEstadoFinanciero.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Accounting\\ListarEstadoFinanciero.cshtml",
+              "ViewState": "AQIAALwAAAAAAAAAAAAgwNcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T09:51:30.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T00:53:42.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "apexcharts.min.js",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\apexchart\\apexcharts.min.js",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\apexchart\\apexcharts.min.js",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\apexchart\\apexcharts.min.js",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\apexchart\\apexcharts.min.js",
+              "ViewState": "AQIAAAIAAAAAAAAAAAApwA0AAADRogAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-17T00:39:35.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountingController.cs",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\AccountingController.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\AccountingController.cs",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\AccountingController.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\AccountingController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAcwDAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T01:06:09.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "sweetalerts.min.js",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalerts.min.js",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalerts.min.js",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalerts.min.js",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalerts.min.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMBAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-17T00:40:23.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "sweetalert2.all.min.js",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalert2.all.min.js",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalert2.all.min.js",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalert2.all.min.js",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\assets\\plugins\\sweetalert\\sweetalert2.all.min.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAD4AQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-17T00:39:23.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "modal.js",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\js\\modal.js",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\assets\\js\\modal.js",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\assets\\js\\modal.js",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\assets\\js\\modal.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-17T00:38:17.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "ToolTip": "C:\\Users\\jonha\\source\\repos\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Home.cshtml",
+              "ViewState": "AQIAAPIHAAAAAAAAAAApwAAIAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T00:36:41.253Z",
               "EditorCaption": ""
             }
           ]
