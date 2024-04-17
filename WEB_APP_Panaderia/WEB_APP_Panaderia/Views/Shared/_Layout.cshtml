@@ -172,11 +172,11 @@
 						<li class="submenu-open">
 							<h6 class="submenu-hdr">Inventory</h6>
 							<ul>
-								<li><a href="product-list.html"><i data-feather="box"></i><span>Products</span></a></li>
-								<li><a href="add-product.html"><i data-feather="plus-square"></i><span>Create Product</span></a></li>
+								<li><a href="@Url.Action("InventarioLista","Inventario")"><i data-feather="box"></i><span>Lista de Insumos</span></a></li>
+								<li><a href="@Url.Action("NuevoInsumo", "Inventario")"><i data-feather="plus-square"></i><span>Nuevo Insumo</span></a></li>@*
 								<li><a href="expired-products.html"><i data-feather="codesandbox"></i><span>Expired Products</span></a></li>
 								<li><a href="low-stocks.html"><i data-feather="trending-down"></i><span>Low Stocks</span></a></li>
-@* 								<li><a href="category-list.html"><i data-feather="codepen"></i><span>Category</span></a></li>
+								<li><a href="category-list.html"><i data-feather="codepen"></i><span>Category</span></a></li>
 								<li><a href="sub-categories.html"><i data-feather="speaker"></i><span>Sub Category</span></a></li>
 								<li><a href="brand-list.html"><i data-feather="tag"></i><span>Brands</span></a></li>
 								<li><a href="units.html"><i data-feather="speaker"></i><span>Units</span></a></li>
@@ -1577,7 +1577,22 @@
 	<!-- Custom JS -->
 	<script src="~/assets/js/theme-script.js"></script>
 	<script src="~/assets/js/script.js"></script>
+	@section Scripts
+ {
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
 
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(function () {
+				$("#datepicker").datepicker();
+			});
+		</script>
+	}
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
