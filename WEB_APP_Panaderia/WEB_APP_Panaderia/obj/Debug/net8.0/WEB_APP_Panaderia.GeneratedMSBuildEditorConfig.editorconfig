@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\josue\Source\Repos\testenvmicro\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/josue/Source/Repos/testenvmicro/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Cotizacion/CotizacionesLista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvblxDb3RpemFjaW9uZXNMaXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josue/Source/Repos/testenvmicro/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Cotizacion/EditarCotizacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvblxFZGl0YXJDb3RpemFjaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/josue/Source/Repos/testenvmicro/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/josue/Source/Repos/testenvmicro/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josue/Source/Repos/testenvmicro/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/EditarInsumo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xFZGl0YXJJbnN1bW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josue/Source/Repos/testenvmicro/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/InventarioLista.cshtml]

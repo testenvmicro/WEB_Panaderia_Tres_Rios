@@ -12,5 +12,9 @@ namespace WEB_APP_Panaderia.Controllers
 		{
 			return View();
 		}
+		public IActionResult EditarInsumo()
+		{
+			return View();
+		}
 	}
 }

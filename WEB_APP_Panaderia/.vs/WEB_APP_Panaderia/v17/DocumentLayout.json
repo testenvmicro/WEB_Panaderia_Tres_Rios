@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\inventario\\inventariolista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\inventario\\inventariolista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\inventario\\editarinsumo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\inventario\\editarinsumo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\inventario\\nuevoinsumo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\inventario\\nuevoinsumo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\inventario\\inventariolista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\inventario\\inventariolista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\cotizacion\\editarcotizacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\cotizacion\\editarcotizacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\inventario controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\inventario controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\registrodeshechos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\registrodeshechos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\inventario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\inventario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\inventario controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\inventario controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\cotizacion\\cotizacioneslista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\cotizacion\\cotizacioneslista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\cotizacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\cotizacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\josue\\source\\repos\\testenvmicro\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,6 +52,19 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventarioLista.cshtml",
+              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml",
+              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml*",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T17:14:59.101Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -50,77 +79,124 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditarInsumo.cshtml",
+              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\EditarInsumo.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Inventario\\EditarInsumo.cshtml",
+              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\EditarInsumo.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Inventario\\EditarInsumo.cshtml",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAswHsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T17:14:50.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Inventario Controller.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
+              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T17:14:17.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\HomeController.cs*",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\HomeController.cs*",
+              "ViewState": "AQIAABcAAAAAAAAAAAAwwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T17:10:13.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "NuevoInsumo.cshtml",
               "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
               "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
               "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAEAAAAArAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAEsAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T18:20:48.335Z",
+              "WhenOpened": "2024-04-17T16:11:47.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InventarioLista.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Inventario\\InventarioLista.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAACAAAAAHAAAA",
+              "DocumentIndex": 3,
+              "Title": "EditarCotizacion.cshtml",
+              "DocumentMoniker": "C:\\Users\\josue\\Source\\Repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Cotizacion\\EditarCotizacion.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Cotizacion\\EditarCotizacion.cshtml",
+              "ToolTip": "C:\\Users\\josue\\Source\\Repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Cotizacion\\EditarCotizacion.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Cotizacion\\EditarCotizacion.cshtml",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAswI4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T18:16:31.59Z",
+              "WhenOpened": "2024-04-17T16:11:43.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CotizacionesLista.cshtml",
+              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Cotizacion\\CotizacionesLista.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Cotizacion\\CotizacionesLista.cshtml",
+              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Cotizacion\\CotizacionesLista.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Cotizacion\\CotizacionesLista.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAIcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-17T15:52:19.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CotizacionController.cs",
+              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\CotizacionController.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\CotizacionController.cs",
+              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\CotizacionController.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\CotizacionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T15:51:42.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Inventario Controller.cs",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:15:56.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "RegistroDeshechos.cshtml",
               "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
               "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
               "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
-              "ViewState": "AQIAAF0BAAAAAAAAAAAAwIYBAAAGAAAA",
+              "ViewState": "AQIAAMkAAAAAAAAAAAAAANoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T17:56:25.686Z"
+              "WhenOpened": "2024-04-14T17:56:25.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inventario.cshtml",
-              "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Inventario.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Inventario.cshtml",
-              "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Inventario.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Inventario.cshtml",
-              "ViewState": "AQIAACUBAAAAAAAAAAAQwEsBAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T17:41:25.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAAAK8AAAAUAAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAYwMYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-06T01:33:42.603Z"
+              "WhenOpened": "2024-04-06T01:33:42.603Z",
+              "EditorCaption": ""
             }
           ]
         }
