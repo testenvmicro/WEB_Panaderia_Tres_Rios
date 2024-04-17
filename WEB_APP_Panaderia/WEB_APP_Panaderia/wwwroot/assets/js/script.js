@@ -2016,6 +2016,15 @@ $(document).ready(function(){
 
 });
 
-
+/* Makes the checkbox only allow 2 items to be selected */
+document.querySelectorAll('.checkboxes-container input[type=checkbox]').forEach(el => {
+	el.addEventListener('change', function () {
+		if (el.closest('.checkboxes-container').querySelectorAll('input:checked').length > 2) {
+			this.setCustomValidity('There is a max of two items that can be selected')
+			this.checked = false
+			this.reportValidity()
+		}
+	})
+});
 
 

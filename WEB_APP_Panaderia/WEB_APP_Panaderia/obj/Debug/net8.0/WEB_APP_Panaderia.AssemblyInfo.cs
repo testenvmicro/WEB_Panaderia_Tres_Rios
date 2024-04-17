@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WEB_APP_Panaderia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1efada9c0e204cf75aa02e5da14aae1be49f1db6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f921ce75f22e43eea2067d7b1560049d8d8cfd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("WEB_APP_Panaderia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WEB_APP_Panaderia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

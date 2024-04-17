@@ -34,23 +34,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
@@ -60,7 +52,7 @@
               "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
               "ToolTip": "C:\\Users\\josue\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Inventario\\NuevoInsumo.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADYAAAAbAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADAAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-14T18:20:48.335Z",
               "EditorCaption": ""
@@ -88,7 +80,8 @@
               "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\Inventario Controller.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T18:15:56.425Z"
+              "WhenOpened": "2024-04-14T18:15:56.425Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -100,7 +93,8 @@
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\RegistroDeshechos.cshtml",
               "ViewState": "AQIAAF0BAAAAAAAAAAAAwIYBAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T17:56:25.686Z"
+              "WhenOpened": "2024-04-14T17:56:25.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,7 +119,8 @@
               "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAKQAAAAAAAAAAAAAAK8AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-06T01:33:42.603Z"
+              "WhenOpened": "2024-04-06T01:33:42.603Z",
+              "EditorCaption": ""
             }
           ]
         }
