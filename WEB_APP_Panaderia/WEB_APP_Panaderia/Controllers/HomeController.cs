@@ -61,5 +61,30 @@ namespace WEB_APP_Panaderia.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public IActionResult ListaNotificaciones()
+        {
+            return View();
+        }
+        public IActionResult CrearNotificaciones()
+        {
+            return View();
+        }
+        public IActionResult EditarNotificaciones()
+        {
+            return View();
+        }
+        public IActionResult VerNotificacion()
+        {
+            return View();
+        }
+        public IActionResult RegistroClientes()
+        {
+            return View();
+        }
+        public IActionResult ListaClientes()
+        {
+            return View();
+        }
     }
 }
+

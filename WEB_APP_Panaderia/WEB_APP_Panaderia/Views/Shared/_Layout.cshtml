@@ -1,35 +1,68 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta name="description" content="POS - Bootstrap Admin Template">
-    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
-    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
-    <meta name="robots" content="noindex, nofollow">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<meta name="description" content="POS - Bootstrap Admin Template">
+	<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+	<meta name="author" content="Dreamguys - Bootstrap Admin Template">
+	<meta name="robots" content="noindex, nofollow">
 
-    <title>@ViewData["Title"] - Panadería Tres Rios</title>
-    <!-- Favicon -->
+	<title>@ViewData["Title"] - Panadería Tres Rios</title>
+	<!-- Favicon -->
 	<link rel="shortcut icon" type="~/image/x-icon" href="~/assets/img/favicon.png">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
 
-    <!-- Datetimepicker CSS -->
-    <link rel="stylesheet" href="~/assets/css/bootstrap-datetimepicker.min.css">
+	<!-- Datetimepicker CSS -->
+	<link rel="stylesheet" href="~/assets/css/bootstrap-datetimepicker.min.css">
 
-    <!-- animation CSS -->
-    <link rel="stylesheet" href="~/assets/css/animate.css">
+	<!-- animation CSS -->
+	<link rel="stylesheet" href="~/assets/css/animate.css">
 
-    <!-- Select2 CSS -->
-    <link rel="stylesheet" href="~/assets/plugins/select2/css/select2.min.css">
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="~/assets/plugins/select2/css/select2.min.css">
 
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="~/assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="~/assets/plugins/fontawesome/css/all.min.css" />
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="~/assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="~/assets/plugins/fontawesome/css/all.min.css" />
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="~/assets/css/style.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="~/assets/css/style.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="~/assets/css/dataTables.bootstrap5.min.css">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- animation CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+	<!-- Summernote CSS -->
+	<link rel="stylesheet" href="assets/plugins/summernote/summernote-bs4.min.css">
+
+	<!-- Datetimepicker CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+	<!-- Mobile CSS-->
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
+	<link rel="stylesheet" href="assets/plugins/intltelinput/css/demo.css">
+
+	<!-- Datatable CSS -->
+	<link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
@@ -82,11 +115,14 @@
 					</a>
 				</li>
 		
-				
-
 				<li class="nav-item nav-item-box">
-					<a href="general-settings.html"><i data-feather="settings"></i></a>
+					<a href="@Url.Action("ListaNotificaciones","Home")">
+						<i data-feather="mail"></i>
+						<span class="badge rounded-pill">1</span>
+					</a>
 				</li>
+
+				
 				<li class="nav-item dropdown has-arrow main-drop">
 					<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
 						<span class="user-info">
@@ -112,10 +148,10 @@
 								</div>
 							</div>
 							<hr class="m-0">
-							<a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="user"></i> Mi Perfil</a>
-							<a class="dropdown-item" href="general-settings.html"><i class="me-2" data-feather="settings"></i>Configuraciones</a>
+							
+							
 							<hr class="m-0">
-							<a class="dropdown-item logout pb-0" href="signin.html"><img src="~/assets/img/icons/log-out.svg" class="me-2" alt="img">Cerrar Sesión</a>
+							<a class="dropdown-item logout pb-0" href="@Url.Action("Index","Home")"><img src="~/assets/img/icons/log-out.svg" class="me-2" alt="img">Cerrar Sesión</a>
 						</div>
 					</div>
 				</li>
@@ -169,23 +205,7 @@
 								</li> *@
 							</ul>
 						</li>
-						<li class="submenu-open">
-							<h6 class="submenu-hdr">Inventory</h6>
-							<ul>
-								<li><a href="product-list.html"><i data-feather="box"></i><span>Products</span></a></li>
-								<li><a href="add-product.html"><i data-feather="plus-square"></i><span>Create Product</span></a></li>
-								<li><a href="expired-products.html"><i data-feather="codesandbox"></i><span>Expired Products</span></a></li>
-								<li><a href="low-stocks.html"><i data-feather="trending-down"></i><span>Low Stocks</span></a></li>
-@* 								<li><a href="category-list.html"><i data-feather="codepen"></i><span>Category</span></a></li>
-								<li><a href="sub-categories.html"><i data-feather="speaker"></i><span>Sub Category</span></a></li>
-								<li><a href="brand-list.html"><i data-feather="tag"></i><span>Brands</span></a></li>
-								<li><a href="units.html"><i data-feather="speaker"></i><span>Units</span></a></li>
-								<li><a href="varriant-attributes.html"><i data-feather="layers"></i><span>Variant Attributes</span></a></li>
-								<li><a href="warranty.html"><i data-feather="bookmark"></i><span>Warranties</span></a></li>
-								<li><a href="barcode.html"><i data-feather="align-justify"></i><span>Print Barcode</span></a></li>
-								<li><a href="qrcode.html"><i data-feather="maximize"></i><span>Print QR Code</span></a></li> *@
-							</ul>
-						</li>
+						
 						<li class="submenu-open">
 							<h6 class="submenu-hdr">Bitacoras</h6>
 							<ul>
@@ -213,6 +233,18 @@
 							</ul>
 						</li>
 						<li class="submenu-open">
+							<h6 class="submenu-hdr">Contabilidad</h6>
+							<ul>
+								<li><a href="@Url.Action("CrearCuenta","Accounting")"><i data-feather="box"></i><span>Crear Cuenta Contable</span></a></li>
+								<li><a href="@Url.Action("ListarCuentas","Accounting")"><i data-feather="box"></i><span>Cierre Contable de diario</span></a></li>
+								<li><a href="@Url.Action("CrearTransaccion","Accounting")"><i data-feather="box"></i><span>Crear Transacción</span></a></li>
+								<li><a href="@Url.Action("ListarTransacciones","Accounting")"><i data-feather="box"></i><span>Lista de transacciones</span></a></li>
+								<li><a href="@Url.Action("ListarEstadoFinanciero","Accounting")"><i data-feather="box"></i><span>Estado Financiero</span></a></li>
+
+							</ul>
+						</li>
+						
+						<li class="submenu-open">
 							<ul>
 							<h6 class="submenu-hdr">Ordenes</h6>
 								@* 								<li><a href="sales-list.html"><i data-feather="shopping-cart"></i><span>Sales</span></a></li>
@@ -228,14 +260,7 @@
 								<li><a href="coupons.html"><i data-feather="shopping-cart"></i><span>Coupons</span></a></li>
 							</ul>
 						</li> *@
-						<li class="submenu-open">
-							<h6 class="submenu-hdr">Purchases</h6>
-							<ul>
-								<li><a href="purchase-list.html"><i data-feather="shopping-bag"></i><span>Purchases</span></a></li>
-								<li><a href="purchase-order-report.html"><i data-feather="file-minus"></i><span>Purchase Order</span></a></li>
-								<li><a href="purchase-returns.html"><i data-feather="refresh-cw"></i><span>Purchase Return</span></a></li>
-							</ul>
-						</li>
+						
 						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Finance & Accounts</h6>
 							<ul>
@@ -253,7 +278,7 @@
 							<ul>
 								@* <li><a href="Clientes.html"><i data-feather="user"></i><span>Clientes</span></a></li> *@
 								@*<li><a href="Proveedores.html"><i data-feather="users"></i><span>Proveedores</span></a></li>*@
-								<li><a href="@Url.Action("Clientes","Home")"><i data-feather="hard-drive"></i><span>Clientes</span></a></li>
+								<li><a href="@Url.Action("ListaClientes","Home")"><i data-feather="box"></i><span>Lista de clientes</span></a></li>
 								<li><a href="@Url.Action("Proveedores","Home")"><i data-feather="hard-drive"></i><span>Proveedores</span></a></li>
 								@* <li><a href="store-list.html"><i data-feather="home"></i><span>Stores</span></a></li>
 								<li><a href="warehouse.html"><i data-feather="archive"></i><span>Warehouses</span></a>
@@ -294,29 +319,7 @@
 								</li> *@
 							</ul>
 						</li>
-						<li class="submenu-open">
-							<h6 class="submenu-hdr">Reports</h6>
-							<ul>
-								<li><a href="sales-report.html"><i data-feather="bar-chart-2"></i><span>Sales Report</span></a></li>
-								<li><a href="purchase-report.html"><i data-feather="pie-chart"></i><span>Purchase report</span></a></li>
-								<li><a href="inventory-report.html"><i data-feather="inbox"></i><span>Inventory Report</span></a></li>
-								<li><a href="invoice-report.html"><i data-feather="file"></i><span>Invoice Report</span></a></li>
-								<li><a href="supplier-report.html"><i data-feather="user-check"></i><span>Supplier Report</span></a></li>
-								<li><a href="customer-report.html"><i data-feather="user"></i><span>Customer Report</span></a></li>
-								<li><a href="expense-report.html"><i data-feather="file"></i><span>Expense Report</span></a></li>
-								<li><a href="income-report.html"><i data-feather="bar-chart"></i><span>Income Report</span></a></li>
-								<li><a href="tax-reports.html"><i data-feather="database"></i><span>Tax Report</span></a></li>
-								<li><a href="profit-and-loss.html"><i data-feather="pie-chart"></i><span>Profit & Loss</span></a></li>
-							</ul>
-						</li>
-						<li class="submenu-open">
-							<h6 class="submenu-hdr">User Management</h6>
-							<ul>
-								<li><a href="users.html"><i data-feather="user-check"></i><span>Users</span></a></li>
-								<li><a href="roles-permissions.html"><i data-feather="shield"></i><span>Roles & Permissions</span></a></li>
-								<li><a href="delete-account.html"><i data-feather="lock"></i><span>Delete Account Request</span></a></li>
-							</ul>
-						</li>
+						
 						@* <li class="submenu-open">
 							<h6 class="submenu-hdr">Pages</h6>
 							<ul>
@@ -1134,27 +1137,7 @@
 							</li>
 						</ul>
 					</li>
-					<li class="submenu">
-						<a href="javascript:void(0);">
-							<img src="assets/img/icons/product.svg" alt="img"><span>
-								Inventory
-							</span> <span class="menu-arrow"></span>
-						</a>
-						<ul>
-							<li><a href="product-list.html"><span>Products</span></a></li>
-							<li><a href="add-product.html"><span>Create Product</span></a></li>
-							<li><a href="expired-products.html"><span>Expired Products</span></a></li>
-							<li><a href="low-stocks.html"><span>Low Stocks</span></a></li>
-@* 							<li><a href="category-list.html"><span>Category</span></a></li>
-							<li><a href="sub-categories.html"><span>Sub Category</span></a></li>
-							<li><a href="brand-list.html"><span>Brands</span></a></li>
-							<li><a href="units.html"><span>Units</span></a></li>
-							<li><a href="varriant-attributes.html"><span>Variant Attributes</span></a></li>
-							<li><a href="warranty.html"><span>Warranties</span></a></li>
-							<li><a href="barcode.html"><span>Print Barcode</span></a></li>
-							<li><a href="qrcode.html"><span>Print QR Code</span></a></li> *@
-						</ul>
-					</li>
+					
 					<li class="submenu">
 						<a href="javascript:void(0);"><img src="assets/img/icons/purchase1.svg" alt="img"><span>Sales &amp; Purchase</span> <span class="menu-arrow"></span></a>
 						<ul>
@@ -1169,24 +1152,8 @@
 									<li><a href="coupons.html"><span>Coupons</span></a></li>
 								</ul>
 							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);"><span>Purchase</span><span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="purchase-list.html"><span>Purchases</span></a></li>
-									<li><a href="purchase-order-report.html"><span>Purchase Order</span></a></li>
-									<li><a href="purchase-returns.html"><span>Purchase Return</span></a></li>
-									<li><a href="manage-stocks.html"><span>Manage Stock</span></a></li>
-									<li><a href="stock-adjustment.html"><span>Stock Adjustment</span></a></li>
-									<li><a href="stock-transfer.html"><span>Stock Transfer</span></a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);"><span>Expenses</span><span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="expense-list.html">Expenses</a></li>
-									<li><a href="expense-category.html">Expense Category</a></li>
-								</ul>
-							</li>
+						
+							
 						</ul>
 					</li>
 					<li class="submenu">
@@ -1540,7 +1507,7 @@
 
 		@RenderBody()
 
-		<div class="customizer-links" id="setdata">
+		@* <div class="customizer-links" id="setdata">
 			<ul class="sticky-sidebar">
 				<li class="sidebar-icons">
 					<a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Theme">
@@ -1548,7 +1515,7 @@
 					</a>
 				</li>
 			</ul>
-		</div>
+		</div> *@
 
 	</div>
 	<!-- /Main Wrapper -->
@@ -1589,7 +1556,43 @@
 	<!-- Custom JS -->
 	<script src="~/assets/js/theme-script.js"></script>
 	<script src="~/assets/js/script.js"></script>
+	<!-- jQuery -->
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+	<!-- Feather Icon JS -->
+	<script src="assets/js/feather.min.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+	<!-- Datatable JS -->
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/dataTables.bootstrap5.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Datetimepicker JS -->
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+	<!-- Summernote JS -->
+	<script src="assets/plugins/summernote/summernote-bs4.min.js"></script>
+
+	<!-- Mobile Input -->
+	<script src="assets/plugins/intltelinput/js/intlTelInput.js"></script>
+
+	<!-- Select2 JS -->
+	<script src="assets/plugins/select2/js/select2.min.js"></script>
+
+	<!-- Sweetalert 2 -->
+	<script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+	<script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/theme-script.js"></script>
+	<script src="assets/js/script.js"></script>
+
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
