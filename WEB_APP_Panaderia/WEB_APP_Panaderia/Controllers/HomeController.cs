@@ -23,6 +23,11 @@ namespace WEB_APP_Panaderia.Controllers
 			return View();
 		}
 
+		public IActionResult Recuperar_contrasenna()
+		{
+			return View();
+		}
+
 		public IActionResult Usuarios()
 		{
 			return View();
