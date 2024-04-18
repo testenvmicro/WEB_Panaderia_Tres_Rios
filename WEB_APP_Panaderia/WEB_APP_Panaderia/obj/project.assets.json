@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\JorgeG\\.nuget\\packages\\": {}
+    "C:\\Users\\davigonz\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JorgeG\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
+      "projectUniqueName": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
       "projectName": "WEB_APP_Panaderia",
-      "projectPath": "C:\\Users\\JorgeG\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
-      "packagesPath": "C:\\Users\\JorgeG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JorgeG\\source\\repos\\testenvmicro\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\obj\\",
+      "projectPath": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
+      "packagesPath": "C:\\Users\\davigonz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\JorgeG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\davigonz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -69,7 +74,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
