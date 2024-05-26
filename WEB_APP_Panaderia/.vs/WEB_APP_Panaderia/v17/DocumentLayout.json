@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\punto_de_venta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\punto_de_venta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\models\\usuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\models\\usuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\entities\\usuariosentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\entities\\usuariosentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\davigonz\\onedrive - microsoft\\desktop\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\interfaces\\iusuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\interfaces\\iusuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +31,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Punto_De_Venta.cshtml",
-              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Punto_De_Venta.cshtml",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAEwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T18:10:56.468Z",
+              "Title": "UsuariosModel.cs",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:53:19.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsuariosModel.cs",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:21:55.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuariosEntities.cs",
+              "DocumentMoniker": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
+              "ToolTip": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T15:20:25.973Z",
               "EditorCaption": ""
             }
           ]
