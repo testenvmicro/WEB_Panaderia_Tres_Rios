@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
 
 namespace WEB_APP_Panaderia.Controllers
@@ -7,6 +8,7 @@ namespace WEB_APP_Panaderia.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+    
 
         public HomeController(ILogger<HomeController> logger)
         {
