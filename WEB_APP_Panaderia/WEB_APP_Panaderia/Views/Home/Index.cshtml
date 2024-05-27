@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WEB_APP_Panaderia.Entities.UsuariosEntities
+@{
     ViewData["Title"] = "Ingresar";
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
 }
@@ -16,47 +17,50 @@
                                 </a>
 
                             </div>
-
-                            <form>
                                 <div class="login-userset">
                                     <div class="login-userheading">
                                         <h3>Inicio de Sesión</h3>
                                         <h4>Inicie sesión en el sistema con su correo y contraseña.</h4>
                                     </div>
-                                    <div class="form-login">
-                                        <label class="form-label">Correo electrónico</label>
-                                        <div class="form-addons">
-                                            <input type="text" class="form-control">
-                                            <img src="assets/img/icons/mail.svg" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="form-login">
-                                        <label>Contraseña</label>
-                                        <div class="pass-group">
-                                            <input type="password" class="pass-input">
-                                            <span class="fas toggle-password fa-eye-slash"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-login authentication-check">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                
-                                            </div>
-                                            <div class="col-6 text-end">
-                                        <a class="forgot-link" href="@Url.Action("Recuperar_contrasenna","Home")">¿Olvidó su contraseña?</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-login">
-                                <a href="@Url.Action("Metricas","Home")" class="btn btn-login" type="submit">Iniciar Sesión</a>
-                                    </div>
-                            <!-- <div class="signinform">
-                                        <h4>New on our platform?<a href="register-3.html" class="hover-a"> Create an account</a></h4>
-                                    </div>-->
-                                 
-                                  
+                        @using (Html.BeginForm("ValidarCredenciales", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
+                        {
+                            <div class="form-login">
+                                <label class="form-label">Correo electrónico</label>
+                                <div class="form-addons">
+                                    @Html.TextBoxFor(m => m.correo, new { @class = "form-control", @onblur = "validarCampoCorreo();", @placeholder = "Correo", @required = true })
+                                    <span id="alertaCorreo"></span>
+                                    <img src="assets/img/icons/mail.svg" alt="img">
                                 </div>
-                            </form>
+                            </div>
+                            <div class="form-login">
+                                <label>Contraseña</label>
+                                <div class="pass-group">
+                                    @Html.TextBoxFor(m => m.contrasenna, new { @class = "form-control", @type = "Password", @onblur = "validarCampoContrasenna();", @placeholder = "Contraseña", @required = true })
+                                    <span class="alert-danger" id="alertaContrasenna"></span>
+                                    <span class="fas toggle-password fa-eye-slash"></span>
+                                </div>
+                            </div>
+                            <div class="form-login authentication-check">
+                                <div class="row">
+                                    <div class="col-6">
+
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <a class="forgot-link" href="@Url.Action("Recuperar_contrasenna","Home")">¿Olvidó su contraseña?</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-login">
+                     
+                                <input type="submit" id="btnIniciarSesion" class="btn btn-login" value="Iniciar Sesión" />
+                            </div>
+                            <!-- <div class="signinform">
+                            <h4>New on our platform?<a href="register-3.html" class="hover-a"> Create an account</a></h4>
+                            </div>-->
+
+                        }    
+                    </div>
+                       
                            
                         </div>
                         <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
