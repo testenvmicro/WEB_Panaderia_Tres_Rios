@@ -49,5 +49,34 @@ namespace WEB_APP_Panaderia.Controllers
 
         }
 
-    }
+		[HttpPost]
+		public IActionResult RegistrarUsuarios(UsuariosEntities entidad)
+		{
+			try
+			{
+				var resultado = _usuariosModel.RegistrarUsuarios(entidad);
+
+				if (resultado > 0)
+				{
+
+					return RedirectToAction("Usuarios", "Home");
+				}
+
+				else
+				{
+					ViewBag.mensaje = "<div class='alert alert-warning' role='alert'> No se puede agregar el usuario </div>";
+					return View("Usuarios");
+				}
+
+			}
+			catch (Exception ex)
+			{
+				// RegistrarBitacora(ex, ControllerContext);
+				return View("Error");
+
+			}
+
+		}
+
+	}
 }

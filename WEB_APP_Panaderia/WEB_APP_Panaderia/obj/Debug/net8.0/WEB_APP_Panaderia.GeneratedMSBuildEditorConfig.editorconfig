@@ -9,151 +9,151 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WEB_APP_Panaderia
 build_property.RootNamespace = WEB_APP_Panaderia
-build_property.ProjectDir = C:\Users\jonha\OneDrive\Documents\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\
+build_property.ProjectDir = C:\Users\j_gon\OneDrive\Documentos\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jonha\OneDrive\Documents\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia
+build_property.MSBuildProjectDirectory = C:\Users\j_gon\OneDrive\Documentos\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/CrearCuenta.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/CrearCuenta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xDcmVhckN1ZW50YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/CrearTransaccion.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/CrearTransaccion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xDcmVhclRyYW5zYWNjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/EditarCuenta.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/EditarCuenta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xFZGl0YXJDdWVudGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/EditarTransaccion.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/EditarTransaccion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xFZGl0YXJUcmFuc2FjY2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/ListarCuentas.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/ListarCuentas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xMaXN0YXJDdWVudGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/ListarEstadoFinanciero.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/ListarEstadoFinanciero.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xMaXN0YXJFc3RhZG9GaW5hbmNpZXJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/ListarTransacciones.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Accounting/ListarTransacciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudGluZ1xMaXN0YXJUcmFuc2FjY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Cotizacion/CotizacionesLista.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Cotizacion/CotizacionesLista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvblxDb3RpemFjaW9uZXNMaXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Cotizacion/EditarCotizacion.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Cotizacion/EditarCotizacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvblxFZGl0YXJDb3RpemFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Clientes.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Clientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDbGllbnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/CrearNotificaciones.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/CrearNotificaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhck5vdGlmaWNhY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/EditarNotificaciones.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/EditarNotificaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXJOb3RpZmljYWNpb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Home.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Index.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/ListaClientes.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/ListaClientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0YUNsaWVudGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/ListaNotificaciones.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/ListaNotificaciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0YU5vdGlmaWNhY2lvbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Metricas.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Metricas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZXRyaWNhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Ordenes_Pizzeria.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Ordenes_Pizzeria.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlbmVzX1BpenplcmlhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Privacy.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Proveedores.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Proveedores.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm92ZWVkb3Jlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Punto_De_Venta.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Punto_De_Venta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQdW50b19EZV9WZW50YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Recuperar_contrasenna.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Recuperar_contrasenna.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWN1cGVyYXJfY29udHJhc2VubmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/RegistroDeshechos.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/RegistroDeshechos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Ryb0Rlc2hlY2hvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Usuarios.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc3Vhcmlvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/VerNotificacion.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Home/VerNotificacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJOb3RpZmljYWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/EditarInsumo.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/EditarInsumo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xFZGl0YXJJbnN1bW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/InventarioLista.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/InventarioLista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbnZlbnRhcmlvTGlzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/NuevoInsumo.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Inventario/NuevoInsumo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xOdWV2b0luc3Vtby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/Error.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_Layout_Login.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_Layout_Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_Layout_PDV.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_Layout_PDV.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfUERWLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/_ViewImports.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/_ViewStart.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonha/OneDrive/Documents/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_Layout.cshtml]
+[C:/Users/j_gon/OneDrive/Documentos/GitHub/WEB_Panaderia_Tres_Rios/WEB_APP_Panaderia/WEB_APP_Panaderia/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-m16ix24ckf
