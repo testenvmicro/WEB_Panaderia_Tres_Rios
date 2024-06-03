@@ -78,5 +78,20 @@ namespace WEB_APP_Panaderia.Controllers
 
 		}
 
-	}
+        [HttpPost]
+        public IActionResult RecuperarContrasenna(UsuariosEntities entidad)
+        {
+            try
+            {
+                _usuariosModel.RecuperarContrasenna(entidad);
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                //RegistrarBitacora(ex, ControllerContext);
+                return View("Error");
+            }
+        }
+
+    }
 }

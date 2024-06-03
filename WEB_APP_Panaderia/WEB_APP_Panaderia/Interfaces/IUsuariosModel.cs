@@ -8,5 +8,7 @@ namespace WEB_APP_Panaderia.Interfaces
 
 		public int RegistrarUsuarios(UsuariosEntities entidad);
 
-	}
+        public void RecuperarContrasenna(UsuariosEntities entidad);
+
+    }
 }
