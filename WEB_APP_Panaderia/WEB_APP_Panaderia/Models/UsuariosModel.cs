@@ -55,6 +55,18 @@ namespace WEB_APP_Panaderia.Models
 			}
 		}
 
+        public void RecuperarContrasenna(UsuariosEntities entidad)
+        {
+            using (var client = new HttpClient())
+            {
+                string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Usuarios/RecuperarContrasenna";
 
-	}
+                //Serializar convertir un objeto a json
+                JsonContent body = JsonContent.Create(entidad);
+                HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
+            }
+        }
+
+
+    }
 }
