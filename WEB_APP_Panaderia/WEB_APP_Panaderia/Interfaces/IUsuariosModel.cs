@@ -6,7 +6,9 @@ namespace WEB_APP_Panaderia.Interfaces
     {
         public UsuariosEntities? ValidarCredenciales(UsuariosEntities entidad);
 
-		public int RegistrarUsuarios(UsuariosEntities entidad);
+        public void RecuperarContrasenna(UsuariosEntities entidad);
+
+        public int RegistrarUsuarios(UsuariosEntities entidad);
 
 	}
 }

@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Ingresar";
+﻿@model WEB_APP_Panaderia.Entities.UsuariosEntities
+@{
+    ViewData["Title"] = "Recuperar Contraseña";
     Layout = "~/Views/Shared/_Layout_Login.cshtml";
 }
 
@@ -20,29 +21,32 @@
                             <img src="assets/img/logo-white.png" alt="">
                         </a>
                     </div>
-                    <form action="signin-3.html">
+  
                         <div class="login-userset">
                             <div class="login-userheading">
                                 <h3>¿Olvidó su contraseña?</h3>
                                 <h4>Por favor introduzca su correo electrónico para enviarle instrucciones para recuperar la contraseña</h4>
-                            </div>
-                            <div class="form-login">
-                                <label>Correo Electrónico</label>
-                                <div class="form-addons">
-                                    <input type="email" class="form-control">
-                                    <img src="~/assets/img/icons/mail.svg" alt="img">
-                                </div>
-                            </div>
-                            <div class="form-login">
-                                <a href="@Url.Action("Index", "Home")" type="submit" class="btn btn-login">Enviar</a>
-                            </div>
-                            <div class="signinform text-center">
-                                <h4>Regresar al <a href="@Url.Action("Index","Home")" class="hover-a"> iniciar sesión </a></h4>
-                            </div>
-                       
-                        
+                                  </div>
+                            @using (Html.BeginForm("RecuperarContrasenna", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
+                            {
+                                    <div class="form-login">
+                                        <label>Correo Electrónico</label>
+                                        <div class="form-addons">
+                                        @Html.TextBoxFor(m => m.correo, new { @class = "form-control", @onblur = "BuscarCorreo();", @placeholder = "Correo" })
+                                        <span id="alertaCorreo"></span>
+                                            <img src="~/assets/img/icons/mail.svg" alt="img">
+                                        </div>
+                                    </div>
+                                    <div class="form-login">
+                                        <input type="submit" class="btn btn-login" value="Enviar" />
+                                    </div>
+                             
+                                    <div class="signinform text-center">
+                                        <h4>Regresar a <a href="@Url.Action("Index","Home")" class="hover-a"> iniciar sesión </a></h4>
+                                    </div>
+                              }  
+
                         </div>
-                    </form>
                 </div>
               @*   <div class="my-4 d-flex justify-content-center align-items-center copyright-text">
                     <p>Copyright &copy; 2023 DreamsPOS. All rights reserved</p>
