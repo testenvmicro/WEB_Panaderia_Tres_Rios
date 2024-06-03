@@ -41,3 +41,7 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+WEB_APP_Panaderia/WEB_APP_Panaderia/obj/Debug/net8.0/WEB_APP_Panaderia.AssemblyInfo.cs
+WEB_APP_Panaderia/WEB_APP_Panaderia/obj/Debug/net8.0/WEB_APP_Panaderia.AssemblyInfoInputs.cache
+WEB_APP_Panaderia/WEB_APP_Panaderia/obj/Debug/net8.0/WEB_APP_Panaderia.assets.cache
+WEB_APP_Panaderia/WEB_APP_Panaderia/obj/Debug/net8.0/WEB_APP_Panaderia.GeneratedMSBuildEditorConfig.editorconfig
