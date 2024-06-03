@@ -50,11 +50,11 @@ namespace WEB_APP_Panaderia.Controllers
         }
 
         [HttpPost]
-        public IActionResult RecuperarContrasenna(UsuariosEntities entidad)
+        public IActionResult Recuperar_Contrasenna(UsuariosEntities entidad)
         {
             try
             {
-                _usuariosModel.RecuperarContrasenna(entidad);
+                _usuariosModel.Recuperar_Contrasenna(entidad);
                 return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)

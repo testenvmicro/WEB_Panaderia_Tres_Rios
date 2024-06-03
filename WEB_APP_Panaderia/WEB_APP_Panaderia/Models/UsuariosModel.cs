@@ -35,7 +35,7 @@ namespace WEB_APP_Panaderia.Models
             }
         }
 
-        public void RecuperarContrasenna(UsuariosEntities entidad)
+        public void Recuperar_Contrasenna(UsuariosEntities entidad)
         {
             using (var client = new HttpClient())
             {
