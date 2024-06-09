@@ -12,12 +12,12 @@
             dataType: 'text',
             success: function (res) {
 
-                if (res === "2") {
+                if (res == '2') {
                     $("#alertaCorreo").html('');
                     $("#btnRecuperarContrasenna").prop("disabled", false);
                 }
 
-                if (res === "1") {
+                else if (res == '1') {
                     $("#alertaCorreo").html('<p class="text-danger"> El usuario existe en el sistema, pero la cuenta está inactiva. Por favor contacte al administrador </p>');
                     $("#btnRecuperarContrasenna").prop("disabled", true);
                 }

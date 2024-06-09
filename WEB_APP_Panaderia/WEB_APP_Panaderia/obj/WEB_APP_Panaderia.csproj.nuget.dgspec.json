@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj": {}
+    "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj": {
+    "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
+        "projectUniqueName": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
         "projectName": "WEB_APP_Panaderia",
-        "projectPath": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
-        "packagesPath": "C:\\Users\\j_gon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\obj\\",
+        "projectPath": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj",
+        "packagesPath": "C:\\Users\\davigonz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\davigonz\\OneDrive - Microsoft\\Desktop\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\j_gon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\davigonz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +48,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
