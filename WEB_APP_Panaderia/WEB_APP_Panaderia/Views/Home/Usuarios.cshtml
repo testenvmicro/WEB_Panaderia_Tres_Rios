@@ -1,4 +1,6 @@
-﻿@{
+﻿@model WEB_APP_Panaderia.Entities.UsuariosEntities
+
+@{
 	ViewData["Title"] = "Home";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -532,11 +534,15 @@
 												</div>
 											</div>
 										</div>
+
+
+										@using (Html.BeginForm("RegistrarUsuarios", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
+                            {
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Nombre Usuario</label>
-												<input type="text" class="form-control">
-											</div>
+													@Html.TextBoxFor(m => m.nombre, new { @class = "form-control", @placeholder = "nombre" })
+										</div>
 										</div>
 										<!--<div class="col-lg-6">
 											<div class="input-blocks">
@@ -548,7 +554,8 @@
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Correo</label>
-												<input type="email" class="form-control">
+												@Html.TextBoxFor(m => m.correo, new { @class = "form-control", @placeholder = "correo" })
+												
 											</div>
 										</div>
 										<div class="col-lg-6">
@@ -563,7 +570,7 @@
 											<div class="input-blocks">
 												<label>Contraseña</label>
 												<div class="pass-group">
-													<input type="password" class="pass-input">
+														@Html.PasswordFor(m => m.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })													
 													<span class="fas toggle-password fa-eye-slash"></span>
 												</div>
 											</div>
@@ -572,24 +579,19 @@
 											<div class="input-blocks">
 												<label>Confirmar contraseña</label>
 												<div class="pass-group">
-													<input type="password" class="pass-input">
+														@Html.PasswordFor(m => m.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })																										
 													<span class="fas toggle-password fa-eye-slash"></span>
 												</div>
 											</div>
 										</div>
 
-										<!--<div class="col-lg-12">
-											<div class="mb-0 input-blocks">
-												<label class="form-label">Descripción</label>
-												<textarea class="form-control mb-1">Escriba mensaje</textarea>
-												<p>Máximo 600 Caracteres</p>
+											<div class="modal-footer-btn">
+												<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
+												<button type="submit" class="btn btn-submit">Enviar</button>
 											</div>
-										</div>-->
+										}
 									</div>
-									<div class="modal-footer-btn">
-										<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
-										<button type="submit" class="btn btn-submit">Enviar</button>
-									</div>
+									
 								</form>
 							</div>
 						</div>
