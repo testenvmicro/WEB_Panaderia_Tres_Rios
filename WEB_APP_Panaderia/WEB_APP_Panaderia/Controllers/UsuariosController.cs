@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 
@@ -91,6 +92,14 @@ namespace WEB_APP_Panaderia.Controllers
                 //RegistrarBitacora(ex, ControllerContext);
                 return View("Error");
             }
+        }
+
+        [HttpGet]
+        public IActionResult BuscarExisteCorreo(string Correo)
+        {
+            var resultado = _usuariosModel.BuscarExisteCorreo(Correo);
+            var jsonResult = JsonConvert.SerializeObject(resultado);
+            return Content(jsonResult, "application/json");
         }
 
     }

@@ -67,6 +67,23 @@ namespace WEB_APP_Panaderia.Models
             }
         }
 
+        public int BuscarExisteCorreo(string Correo)
+        {
+            using (var client = new HttpClient())
+            {
+                string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Usuarios/BuscarExisteCorreo?Correo=" + Correo;
+                HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+                if (response.IsSuccessStatusCode)
+                    return response.Content.ReadFromJsonAsync<int>().Result;
+
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                    throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+
+                return response.Content.ReadFromJsonAsync<int>().Result;
+            }
+        }
+
 
     }
 }
