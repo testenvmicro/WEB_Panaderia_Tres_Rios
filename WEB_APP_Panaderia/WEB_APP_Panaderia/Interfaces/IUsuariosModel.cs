@@ -10,5 +10,7 @@ namespace WEB_APP_Panaderia.Interfaces
 
         public void RecuperarContrasenna(UsuariosEntities entidad);
 
+        public int BuscarExisteCorreo(string Correo);
+
     }
 }
