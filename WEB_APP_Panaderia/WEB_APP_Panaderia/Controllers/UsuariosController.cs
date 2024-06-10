@@ -66,7 +66,7 @@ namespace WEB_APP_Panaderia.Controllers
 				else
 				{
 					ViewBag.mensaje = "<div class='alert alert-warning' role='alert'> No se puede agregar el usuario </div>";
-					return View("Usuarios");
+					return View("Home");
 				}
 
 			}
