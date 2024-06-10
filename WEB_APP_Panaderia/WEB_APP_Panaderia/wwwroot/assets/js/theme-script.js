@@ -49,7 +49,7 @@ setTimeout(function () {
         '<div class="status-toggle d-flex align-items-center me-2">' +
         '<input type="radio" name="theme-mode" id="light_mode" class="check color-check stylemode lmode" value="light_mode" checked>' +
         '<label for="light_mode" class="checktoggles">' +
-        '<img src="assets/img/theme/theme-img-01.jpg" alt="">' +
+        '<img src="~/assets/img/theme/theme-img-01.jpg" alt="">' +
         '<span class="theme-name">Light Mode</span>' +
         '</label>' +
         '</div>' +
@@ -62,7 +62,7 @@ setTimeout(function () {
         '<div class="status-toggle d-flex align-items-center me-2">' +
         '<input type="radio" name="theme-mode" id="dark_mode" class="check color-check stylemode" value="dark_mode">' +
         '<label for="dark_mode" class="checktoggles">' +
-        '<img src="assets/img/theme/theme-img-02.jpg" alt="">' +
+        '<img src="~/assets/img/theme/theme-img-02.jpg" alt="">' +
         '<span class="theme-name">Dark Mode</span>' +
         '</label>' +
         '</div>' +
@@ -175,7 +175,7 @@ setTimeout(function () {
         '<div class="status-toggle d-flex align-items-center me-2">' +
         '<input type="radio" name="layout" id="modern_layout" class="check layout-mode" value="modern">' +
         '<label for="modern_layout" class="checktoggles">' +
-        '<img src="assets/img/theme/theme-img-04.jpg" alt="">' +
+        '<img src="~/assets/img/theme/theme-img-04.jpg" alt="">' +
         '<span class="theme-name">Modern</span>' +
         '</label>' +
         '</div>' +
