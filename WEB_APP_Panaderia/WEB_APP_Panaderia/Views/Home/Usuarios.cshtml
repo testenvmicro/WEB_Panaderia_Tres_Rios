@@ -523,20 +523,22 @@
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Nombre Usuario</label>
-													@Html.TextBoxFor(m => m.nombre, new { @class = "form-control", @placeholder = "nombre" })
+											@Html.TextBoxFor(m => m.nombre, new { @class = "form-control",  @placeholder = "Nombre" })
+											
 										</div>
 										</div>
 										
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Correo</label>
-												@Html.TextBoxFor(m => m.correo, new { @class = "form-control", @placeholder = "correo" })
-												
+											@Html.TextBoxFor(m => m.correo, new { @class = "form-control", @onchange = "BuscarCorreo();", @onblur = "validarCampoCorreo();", @placeholder = "Correo electrónico" })
+											<span id="alertaCorreo"></span>
+											<span id="alertaCorreo2"></span>
 											</div>
 										</div>
 										<div class="col-lg-6">
 											<div class="input-blocks">
-												<label>Roles</label>
+												<label>Rol</label>
 												<select class="select roles" required name="id_roles" id="id_roles">
 													
 												</select>
@@ -563,7 +565,8 @@
 
 											<div class="modal-footer-btn">
 												<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
-										<button type="submit" class="btn btn-submit">Enviar</button>
+										<input type="submit" id="btnRegistrarUsuario" disabled class="btn btn-submit" value="Enviar" />
+										@* <button type="submit" class="btn btn-submit">Enviar</button> *@
 											</div>
 										}
 
