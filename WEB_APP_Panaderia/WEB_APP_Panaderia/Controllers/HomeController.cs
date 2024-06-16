@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
 
@@ -8,12 +10,13 @@ namespace WEB_APP_Panaderia.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-    
 
-        public HomeController(ILogger<HomeController> logger)
+		private readonly IUsuariosModel _usuariosModel;
+		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel)
         {
             _logger = logger;
-        }
+			_usuariosModel = usuariosModel;
+		}
 
         public IActionResult Index()
         {
@@ -32,7 +35,23 @@ namespace WEB_APP_Panaderia.Controllers
 
 		public IActionResult Usuarios()
 		{
-			return View();
+			try
+			{
+				var viewModel = new ViewModel
+				{
+					Usuarios = _usuariosModel.GetAllUsers(),
+					Usuario = new UsuariosEntities()
+				};
+				//var usuarios = _usuariosModel.GetAllUsers();
+
+				return View(viewModel);
+			}
+			catch (Exception ex)
+			{
+
+				return View("Error");
+			}
+
 		}
 
 		public IActionResult Punto_De_Venta()

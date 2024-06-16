@@ -1,5 +1,5 @@
 ﻿function BuscarCorreo() {
-    let Correo = $("#correo").val();
+    let Correo = $("#Usuario.correo").val();
     $("#btnRegistrarUsuario").prop("disabled", true);
 
     if (Correo.trim() != "") {

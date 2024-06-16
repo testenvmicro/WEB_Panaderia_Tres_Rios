@@ -1,5 +1,5 @@
 ﻿function validarCampoCorreo() {
-    var correo = $("#correo").val();
+    var correo = $("#Usuario.correo").val();
     $("#btnRegistrarUsuario").prop("disabled", true);
 
     if (correo == null || correo == "") {
