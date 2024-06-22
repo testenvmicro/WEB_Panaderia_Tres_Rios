@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Linq.Expressions;
+using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
 
@@ -8,11 +10,12 @@ namespace WEB_APP_Panaderia.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-    
+        private readonly IRegistroDesechosModel _reportesModel;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, IRegistroDesechosModel bitacoraModel)
         {
             _logger = logger;
+            _reportesModel = bitacoraModel;
         }
 
         public IActionResult Index()
@@ -61,7 +64,19 @@ namespace WEB_APP_Panaderia.Controllers
         }
 		public IActionResult RegistroDeshechos()
 		{
-			return View();
+            try
+            {
+                var viewModel = new RegistroDesechosViewModel
+                {
+                    Reportes = _reportesModel.ConsultarRegistroDesechos(),
+                    Reporte = new RegistroDesechosEntities()
+                };
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
 		}
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
