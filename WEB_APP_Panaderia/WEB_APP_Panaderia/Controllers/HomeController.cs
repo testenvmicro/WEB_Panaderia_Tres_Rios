@@ -1,9 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using System.Linq.Expressions;
 using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+
 
 namespace WEB_APP_Panaderia.Controllers
 {
@@ -78,6 +82,24 @@ namespace WEB_APP_Panaderia.Controllers
                 return View("Error");
             }
 		}
+
+		public IActionResult RegistroDeshechosPdf()
+		{
+
+			var resultado = _reportesModel.ConsultarRegistroDesechos();
+
+			if (resultado == null || resultado.Count == 0)
+			{
+				return NotFound("No se encontraron registros.");
+			}
+
+			var pdfBytes = _reportesModel.GenerarPdfRegistroDesechos(resultado); 
+
+			return File(pdfBytes, "application/pdf", "ReporteDesechos.pdf");
+		}
+
+		
+
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
