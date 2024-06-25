@@ -7,5 +7,7 @@ namespace WEB_APP_Panaderia.Interfaces
 		public List<RegistroDesechosEntities> ConsultarRegistroDesechos();
 
 		public byte[] GenerarPdfRegistroDesechos(List<RegistroDesechosEntities> registros);
+
+		public byte[] GenerarExcelRegistroDesechos(List<RegistroDesechosEntities> registros);
 	}
 }

@@ -98,7 +98,20 @@ namespace WEB_APP_Panaderia.Controllers
 			return File(pdfBytes, "application/pdf", "ReporteDesechos.pdf");
 		}
 
-		
+		public IActionResult RegistroDeshechosExcel()
+		{
+			var resultado = _reportesModel.ConsultarRegistroDesechos();
+
+			if (resultado == null || resultado.Count == 0)
+			{
+				return NotFound("No se encontraron registros.");
+			}
+
+			var excelBytes = _reportesModel.GenerarExcelRegistroDesechos(resultado);
+
+			return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "RegistroDesechos.xlsx");
+		}
+
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
