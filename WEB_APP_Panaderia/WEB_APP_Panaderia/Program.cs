@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUsuariosModel, UsuariosModel>();
+builder.Services.AddScoped<IProveedoresModel, ProveedoresModel>();
 builder.Services.AddScoped<IUsuariosRolesModel, UsuariosRolesModel>();
 
 var app = builder.Build();

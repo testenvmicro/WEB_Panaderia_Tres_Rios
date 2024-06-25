@@ -12,10 +12,12 @@ namespace WEB_APP_Panaderia.Controllers
         private readonly ILogger<HomeController> _logger;
 
 		private readonly IUsuariosModel _usuariosModel;
-		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel)
+		private readonly IProveedoresModel _proveedoresModel;
+		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel)
         {
             _logger = logger;
 			_usuariosModel = usuariosModel;
+			_proveedoresModel = proveedoresModel;
 		}
 
         public IActionResult Index()
@@ -63,13 +65,80 @@ namespace WEB_APP_Panaderia.Controllers
 		{
 			return View();
 		}
+        [HttpPost]
+        public IActionResult RegistrarProveedores(ProveedoresEntities proveedor)
+        {
+            try
+            {
+                _proveedoresModel.RegistrarProveedores(proveedor);
+                return RedirectToAction("Proveedores");
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+           
+        }
+        [HttpPost]
+        public IActionResult EliminarProveedor(int idProveedor)
+        {
+            try
+            {
+                _proveedoresModel.EliminarProveedor(idProveedor);
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+    
 
-		public IActionResult Proveedores()
+
+    public IActionResult Proveedores()
 		{
-			return View();
-		}
+			try
+			{
+				var viewModel = new ViewModelProveedores
+				{
+					Proveedores = _proveedoresModel.GetAllProveedores(),
+					Proveedor = new ProveedoresEntities()
 
-		public IActionResult Ordenes_Pizzeria()
+				};
+                if (Proveedores == null)
+                {
+                    ViewData["Message"] = "No hay registros de proveedores.";
+                }
+
+                return View(viewModel);
+			}
+			catch (Exception ex)
+			{
+
+				return View("Error");
+			}
+		}
+        [HttpPost]
+        public IActionResult ActualizarProveedor(ProveedoresEntities proveedor)
+        {
+            try
+            {
+                _proveedoresModel.ActualizarProveedor(proveedor);
+                return RedirectToAction("Proveedores");
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+        [HttpGet]
+        public IActionResult ObtenerProveedor(int id)
+        {
+            var proveedor = _proveedoresModel.GetProveedorById(id);
+            return Json(proveedor);
+        }
+
+        public IActionResult Ordenes_Pizzeria()
 		{
 			return View();
 		}
