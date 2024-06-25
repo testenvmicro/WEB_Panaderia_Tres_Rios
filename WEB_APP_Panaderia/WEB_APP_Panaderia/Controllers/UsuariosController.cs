@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
+using WEB_APP_Panaderia.Models;
 
 namespace WEB_APP_Panaderia.Controllers
 {
@@ -17,7 +18,29 @@ namespace WEB_APP_Panaderia.Controllers
  
         }
 
-        [HttpPost]
+
+        [HttpGet]
+		public IActionResult ListaUsuarios()
+		{
+			try
+			{
+                var viewModel = new ViewModel
+                {
+                    Usuarios = _usuariosModel.GetAllUsers(),
+                    Usuario = new UsuariosEntities()
+			};
+				//var usuarios = _usuariosModel.GetAllUsers();
+				
+				return View(viewModel);
+			}
+			catch (Exception ex)
+			{
+				
+				return View("Error");
+			}
+		}
+
+		[HttpPost]
         public IActionResult ValidarCredenciales(UsuariosEntities entidad)
         {
             try
@@ -48,7 +71,22 @@ namespace WEB_APP_Panaderia.Controllers
 
             }
 
+                
         }
+		[HttpPost]
+		public IActionResult ActualizarUsuario(UsuariosEntities entidad)
+		{
+			try
+			{
+				_usuariosModel.ActualizarUsuario(entidad);
+				return RedirectToAction("ListaUsuarios");
+			}
+			catch (Exception ex)
+			{
+				// Manejar error
+				return View("Error");
+			}
+		}
 
 		[HttpPost]
 		public IActionResult RegistrarUsuarios(UsuariosEntities entidad)

@@ -1,7 +1,7 @@
-﻿@model WEB_APP_Panaderia.Entities.UsuariosEntities
+﻿@model WEB_APP_Panaderia.Models.ViewModel
 
 @{
-	ViewData["Title"] = "Home";
+	ViewData["Title"] = "Usuarios";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -33,10 +33,14 @@
 			</ul>
 			<div class="page-btn">
 				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#add-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Usuario</a>
+				
 			</div>
-		</div>
-
-		<!-- /user list -->
+			<br />
+			<div class="page-btn">
+				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#edit-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Usuario</a>
+			</div>
+			</div>
+			<!-- /user list -->
 		<div class="card table-list-card">
 			<div class="card-body">
 				<div class="table-top">
@@ -105,398 +109,60 @@
 				</div>
 				<!-- /Filter -->
 				
+
 				<div class="table-responsive">
 					<table class="table datanew">
 						<thead>
 							<tr>
-								<th class="no-sort">
-									<label class="checkboxs">
-										<input type="checkbox" id="select-all">
-										<span class="checkmarks"></span>
-									</label>
-								</th>
-								<th>Usuario</th>
-								<th>Teléfono</th>
+								<th>idUsuario</th>
 								<th>Correo</th>
-								<th>Rol</th>
-								<th>Fecha Creación</th>
+								<th>Contrasena</th>
 								<th>Estado</th>
-								<th class="no-sort">Acción</th>
-								</tr>
+								<th>Rol</th>
+								<th>Nombre</th>
+							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img bg-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Thomas</a>
+							
+								
+								@foreach (var user in Model.Usuarios)
+								{
+									<tr>
+										<td>@user.idUsuario</td>
+										<td>@user.correo</td>
+										<td>@user.contrasenna</td>
+										<td>@user.estado</td>
+										<td>@user.idRol</td>
+										<td>@user.nombre</td>
+									<td class="action-table-data">
+										<div class="edit-delete-action">
+											<a class="me-2 p-2 mb-0" href="javascript:void(0);">
+												<i data-feather="eye" class="action-eye"></i>
+											</a>
+											<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
+												<i data-feather="edit" class="feather-edit"></i>
+											</a>
+											<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
+												<i data-feather="trash-2" class="feather-trash-2"></i>
+											</a>
 										</div>
-
-									</div>
-								</td>
-								<td>+50687451245</td>
-								<td>thomas@example.com</td>
-								<td>Administrador</td>
-								<td>19 Ener 2023</td>
-								<td><span class="badge badge-linedanger">Inactivo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Rose</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154 </td>
-								<td>rose@example.com</td>
-								<td>Operario</td>
-								<td>23 Ener 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img bg-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Benjamin</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154 </td>
-								<td>benjamin@example.com</td>
-								<td>Ventas</td>
-								<td>07 Feb 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Kaitlin</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>kaitlin@example.com</td>
-								<td>Supervisor</td>
-								<td>18 Feb 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img bg-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Lilly</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>lilly@example.com</td>
-								<td>Operario</td>
-								<td>16 Mar 2023</td>
-								<td><span class="badge badge-linedanger">Inactivo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img bg-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Freda</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>freda@example.com</td>
-								<td>Operario</td>
-								<td>29 Mar 2023</td>
-								<td><span class="badge badge-linedanger">Inactivo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Alwin</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>alwin@example.com</td>
-								<td>Operario</td>
-								<td>03 Abril 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Mayobelle</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>maybelle@example.com</td>
-								<td>Mantenimiento</td>
-								<td>13 Abril 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img bg-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Ellen</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>ellen@example.com</td>
-								<td>Operario</td>
-								<td>17 Mayo 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>
-									<div class="userimgname">
-										<a href="javascript:void(0);" class="userslist-img">
-											<img src="~/assets/img/users/user-generic.png" alt="product">
-										</a>
-										<div>
-											<a href="javascript:void(0);">Grace</a>
-										</div>
-
-									</div>
-								</td>
-								<td>+5062754154</td>
-								<td>grace@example.com</td>
-								<td>Contador</td>
-								<td>21 Mayo 2023</td>
-								<td><span class="badge badge-linesuccess">Activo</span></td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="eye" class="action-eye"></i>
-										</a>
-										<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
+									</td>
+									</tr>
+								}
+							
+							
 						</tbody>
 					</table>
+					@* <script>
+						$(document).ready(function () {
+							$('#dataTable').DataTable({
+								"processing": true,
+								"serverSide": false,
+								"paging": true,
+								"autoWidth": false
+							});
+						});
+					</script> *@
 				</div>
 			</div>
 		</div>
@@ -523,7 +189,7 @@
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Nombre Usuario</label>
-											@Html.TextBoxFor(m => m.nombre, new { @class = "form-control",  @placeholder = "Nombre" })
+											@Html.TextBoxFor(m => m.Usuario.nombre, new { @class = "form-control",  @placeholder = "Nombre" })
 											
 										</div>
 										</div>
@@ -531,7 +197,7 @@
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Correo</label>
-											@Html.TextBoxFor(m => m.correo, new { @class = "form-control", @onchange = "BuscarCorreo();", @onblur = "validarCampoCorreo();", @placeholder = "Correo electrónico" })
+											@Html.TextBoxFor(m => m.Usuario.correo, new { @class = "form-control", @onchange = "BuscarCorreo();", @onblur = "validarCampoCorreo();", @placeholder = "Correo electrónico" })
 											<span id="alertaCorreo"></span>
 											<span id="alertaCorreo2"></span>
 											</div>
@@ -548,7 +214,7 @@
 											<div class="input-blocks">
 												<label>Contraseña</label>
 												<div class="pass-group">
-														@Html.PasswordFor(m => m.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })													
+														@Html.PasswordFor(m => m.Usuario.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })													
 													<span class="fas toggle-password fa-eye-slash"></span>
 												</div>
 											</div>
@@ -557,7 +223,7 @@
 											<div class="input-blocks">
 												<label>Confirmar contraseña</label>
 												<div class="pass-group">
-														@Html.PasswordFor(m => m.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })																										
+														@Html.PasswordFor(m => m.Usuario.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })																										
 													<span class="fas toggle-password fa-eye-slash"></span>
 												</div>
 											</div>
@@ -579,7 +245,7 @@
 			</div>
 		</div>
 
-	</div>
+		</div>
 	<!-- Add User -->
 	<!-- Edit User -->
 	<div class="modal fade" id="edit-units">
@@ -595,90 +261,30 @@
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
-						<div class="modal-body custom-modal-body">
-							<form action="users.html">
-								<div class="row">
-									<div class="col-lg-12">
-										<div class="new-employee-field">
-											<span>Avatar</span>
-											<div class="profile-pic-upload edit-pic">
-												<div class="profile-pic">
-													<span><img src="~/assets/img/users/edit-user.jpg" class="user-editer" alt="User"></span>
-													<div class="close-img">
-														<i data-feather="x" class="info-img"></i>
-													</div>
-												</div>
-												<div class="input-blocks mb-0">
-													<div class="image-upload mb-0">
-														<input type="file">
-														<div class="image-uploads">
-															<h4>Cambiar imagen</h4>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="input-blocks">
-											<label>Usuario</label>
-											<input type="text" placeholder="Thomas">
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="input-blocks">
-											<label>Teléfono</label>
-											<input type="text" placeholder="+12163547758 ">
-										</div>
-									</div>
-
-									<div class="col-lg-6">
-										<div class="input-blocks">
-											<label>Correo</label>
-											<input type="email" placeholder="thomas@example.com">
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="input-blocks">
-											<label>Rol</label>
-											<select class="select">
-												<option>Administrador</option>
-												<option>Operario</option>
-												<option>Contador</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="input-blocks">
-											<label>Contraseña</label>
-											<div class="pass-group">
-												<input type="password" class="pass-input" placeholder="****">
-												<span class="fas toggle-password fa-eye-slash"></span>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="input-blocks">
-											<label>Confirmar Contraseña</label>
-											<div class="pass-group">
-												<input type="password" class="pass-input" placeholder="****">
-												<span class="fas toggle-password fa-eye-slash"></span>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-lg-12">
-										<div class="mb-0 input-blocks">
-											<label class="form-label">Descripción</label>
-											<textarea class="form-control mb-1"></textarea>
-											<p>Máximo 600 Caracteres</p>
-										</div>
-									</div>
+						<div class="modal-body">
+							<form id="editarUsuarioForm" method="post" action="/Usuarios/ActualizarUsuario">
+								<input type="text" id="editIdUsuario" name="idUsuario" />
+								<div class="form-group">
+									<label for="editNombre">Nombre</label>
+									<input type="text" class="form-control" id="editNombre" name="nombre" required />
 								</div>
-								<div class="modal-footer-btn">
-									<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
-									<button type="submit" class="btn btn-submit">Enviar</button>
+								<div class="form-group">
+									<label for="editCorreo">Correo</label>
+									<input type="email" class="form-control" id="editCorreo" name="correo" required />
 								</div>
+								<div class="form-group">
+									<label for="editContrasenna">Contraseña</label>
+									<input type="password" class="form-control" id="editContrasenna" name="contrasenna" required />
+								</div>
+								<div class="form-group">
+									<label for="editRol">Rol</label>
+									<input type="number" class="form-control" id="editRol" name="idRol" required />
+								</div>
+								<div class="form-group">
+									<label for="editEstado">Estado</label>
+									<input type="checkbox" id="editEstado" name="estado" />
+								</div>
+								<button type="submit" class="btn btn-primary">Guardar</button>
 							</form>
 						</div>
 					</div>
@@ -688,4 +294,3 @@
 	</div>
 	<!-- /Edit User -->
 </div>
-
