@@ -15,7 +15,7 @@ namespace WEB_APP_Panaderia.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+		private readonly IRegistroDesechosModel _reportesModel;
 		private readonly IUsuariosModel _usuariosModel;
 		private readonly IProveedoresModel _proveedoresModel;
 		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IRegistroDesechosModel bitacoraModel)
