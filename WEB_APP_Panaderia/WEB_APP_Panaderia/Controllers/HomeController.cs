@@ -67,7 +67,7 @@ namespace WEB_APP_Panaderia.Controllers
 		}
         [HttpPost]
         public IActionResult RegistrarProveedores(ProveedoresEntities proveedor)
-        {
+        {//
             try
             {
                 _proveedoresModel.RegistrarProveedores(proveedor);
