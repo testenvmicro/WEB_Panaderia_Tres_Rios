@@ -10,6 +10,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUsuariosModel, UsuariosModel>();
 builder.Services.AddScoped<IProveedoresModel, ProveedoresModel>();
 builder.Services.AddScoped<IUsuariosRolesModel, UsuariosRolesModel>();
+builder.Services.AddScoped<IRegistroDesechosModel, RegistroDesechosModel>();
 
 var app = builder.Build();
 

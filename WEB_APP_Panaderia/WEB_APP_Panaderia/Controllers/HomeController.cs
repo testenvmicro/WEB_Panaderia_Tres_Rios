@@ -4,6 +4,11 @@ using System.Diagnostics;
 using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+
 
 namespace WEB_APP_Panaderia.Controllers
 {
@@ -13,11 +18,12 @@ namespace WEB_APP_Panaderia.Controllers
 
 		private readonly IUsuariosModel _usuariosModel;
 		private readonly IProveedoresModel _proveedoresModel;
-		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel)
+		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IRegistroDesechosModel bitacoraModel)
         {
             _logger = logger;
 			_usuariosModel = usuariosModel;
 			_proveedoresModel = proveedoresModel;
+            _reportesModel = bitacoraModel;
 		}
 
         public IActionResult Index()
@@ -149,8 +155,51 @@ namespace WEB_APP_Panaderia.Controllers
         }
 		public IActionResult RegistroDeshechos()
 		{
-			return View();
+            try
+            {
+                var viewModel = new RegistroDesechosViewModel
+                {
+                    Reportes = _reportesModel.ConsultarRegistroDesechos(),
+                    Reporte = new RegistroDesechosEntities()
+                };
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
 		}
+
+		public IActionResult RegistroDeshechosPdf()
+		{
+
+			var resultado = _reportesModel.ConsultarRegistroDesechos();
+
+			if (resultado == null || resultado.Count == 0)
+			{
+				return NotFound("No se encontraron registros.");
+			}
+
+			var pdfBytes = _reportesModel.GenerarPdfRegistroDesechos(resultado); 
+
+			return File(pdfBytes, "application/pdf", "ReporteDesechos.pdf");
+		}
+
+		public IActionResult RegistroDeshechosExcel()
+		{
+			var resultado = _reportesModel.ConsultarRegistroDesechos();
+
+			if (resultado == null || resultado.Count == 0)
+			{
+				return NotFound("No se encontraron registros.");
+			}
+
+			var excelBytes = _reportesModel.GenerarExcelRegistroDesechos(resultado);
+
+			return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "RegistroDesechos.xlsx");
+		}
+
+
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
