@@ -20,9 +20,7 @@
 				<li>
 					<a href="@Url.Action("RegistroDeshechosExcel", "Home")" data-bs-toggle="tooltip" data-bs-placement="top" title="Excel"><img src="~/assets/img/icons/excel.svg" alt="img"></a>
 				</li>
-				<li>
-					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Print"><i data-feather="printer" class="feather-rotate-ccw"></i></a>
-				</li>
+			
 				<li>
 					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh"><i data-feather="rotate-ccw" class="feather-rotate-ccw"></i></a>
 				</li>
@@ -130,7 +128,7 @@
 				</div>
 				<!-- /Filter -->
 				<div class="table-responsive product-list">
-					<table class="table datanew">
+					<table class="table">
 						<thead>
 							
 							<tr>
@@ -287,3 +285,11 @@
 
 	</div>
 </div>
+
+<!-- Datatable JS -->
+<script src="~/assets/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Custom JS -->
+<script src="~/assets/js/theme-script.js"></script>
+<script src="~/assets/js/script.js"></script>
