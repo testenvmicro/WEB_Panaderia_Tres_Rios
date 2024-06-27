@@ -205,7 +205,13 @@ namespace WEB_APP_Panaderia.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public IActionResult ListaNotificaciones()
+
+		public IActionResult ErrorUsuario()
+		{
+            return View();
+		}
+
+		public IActionResult ListaNotificaciones()
         {
             return View();
         }
@@ -231,6 +237,6 @@ namespace WEB_APP_Panaderia.Controllers
         }
 
 
-    }
+	}
 }
 

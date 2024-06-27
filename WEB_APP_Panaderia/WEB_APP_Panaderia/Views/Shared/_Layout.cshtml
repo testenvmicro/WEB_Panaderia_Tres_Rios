@@ -66,6 +66,14 @@
 
 </head>
 <body>
+	@{
+		var id_usuario = Context.Session.GetString("id_usuario")?.ToString();
+		var usuario = Context.Session.GetString("Correo")?.ToString();
+		var nombre = Context.Session.GetString("Nombre")?.ToString();
+		var rol = Context.Session.GetString("Rol")?.ToString();
+
+
+	}
 	<div id="global-loader">
 		<div class="whirly-loader"> </div>
 	</div>
@@ -130,8 +138,8 @@
 								<img src="~/assets/img/logo-pizza.png" alt="" class="img-fluid">
 							</span>
 							<span class="user-detail">
-								<span class="user-name">Herson Calvo</span>
-								<span class="user-role">Administrador</span>
+								<span class="user-name">@nombre</span>
+								<span class="user-role">@rol</span>
 							</span>
 						</span>
 					</a>
@@ -143,8 +151,8 @@
 									<span class="status online"></span>
 								</span>
 								<div class="profilesets">
-									<h6>Herson Calvo</h6>
-									<h5>Administrador</h5>
+									<h6>@nombre</h6>
+									<h5>@rol</h5>
 								</div>
 							</div>
 							<hr class="m-0">

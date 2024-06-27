@@ -11,9 +11,9 @@
                     <div class="container">
                         <div class="login-content user-login">
                             <div class="login-logo">
-                                <img src="assets/img/logo-pizzeria-panaderia.png" alt="img">
-                                <a href="index.html" class="login-logo logo-white">
-                                    <img src="assets/img/logo-white.png"  alt="">
+                                <img src="~/assets/img/logo-pizzeria.png" alt="img">
+                                <a href="" class="login-logo logo-white">
+                                    <img src="~/assets/img/logo-white.png"  alt="">
                                 </a>
 
                             </div>
@@ -29,16 +29,17 @@
                                 <div class="form-addons">
                                     @Html.TextBoxFor(m => m.correo, new { @class = "form-control", @onblur = "validarCampoCorreo();", @placeholder = "Correo", @required = true })
                                     <span id="alertaCorreo"></span>
-                                    <img src="assets/img/icons/mail.svg" alt="img">
+                                    <img src="~/assets/img/icons/mail.svg" alt="img">
                                 </div>
                             </div>
                             <div class="form-login">
                                 <label>Contraseña</label>
                                 <div class="pass-group">
-                                    @Html.TextBoxFor(m => m.contrasenna, new { @class = "form-control", @type = "Password", @onblur = "validarCampoContrasenna();", @placeholder = "Contraseña", @required = true })
-                                    <span class="alert-danger" id="alertaContrasenna"></span>
+                                    @Html.TextBoxFor(m => m.contrasenna, new { @class = "pass-input", @type = "password", @onblur = "validarCampoContrasenna();", @placeholder = "Contraseña", @required = true })
                                     <span class="fas toggle-password fa-eye-slash"></span>
+                                    <span class="alert-danger" id="alertaContrasenna"></span>
                                 </div>
+
                             </div>
                             <div class="form-login authentication-check">
                                 <div class="row">
@@ -54,11 +55,18 @@
                      
                                 <input type="submit" id="btnIniciarSesion" class="btn btn-login" value="Iniciar Sesión" />
                             </div>
-                            <!-- <div class="signinform">
-                            <h4>New on our platform?<a href="register-3.html" class="hover-a"> Create an account</a></h4>
-                            </div>-->
+                       
 
-                        }    
+                            @if (@TempData["mensaje"] != null)
+                            {
+                                <div class="alert alert-warning" role="alert">
+                                    <h6> @Html.Raw(TempData["mensaje"].ToString().Replace("\n", "<br>"))</h6>
+                                </div>
+                            }
+               
+
+                        }  
+                        
                     </div>
                        
                            

@@ -9,14 +9,16 @@ namespace WEB_APP_Panaderia.Controllers
     public class UsuariosController : Controller
     {
         private readonly ILogger<UsuariosController> _logger;
-        private readonly IUsuariosModel _usuariosModel;
+		private readonly ILogsModel _generalesModel;
+		private readonly IUsuariosModel _usuariosModel;
 
-        public UsuariosController(ILogger<UsuariosController> logger, IUsuariosModel usuariosModel)
+
+        public UsuariosController(ILogger<UsuariosController> logger, IUsuariosModel usuariosModel, ILogsModel generalesModel)
         {
             _logger = logger;
             _usuariosModel = usuariosModel;
- 
-        }
+			_generalesModel = generalesModel;
+		}
 
 
         [HttpGet]
@@ -35,7 +37,7 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 			catch (Exception ex)
 			{
-				
+				RegistrarBitacora(ex, ControllerContext);
 				return View("Error");
 			}
 		}
@@ -45,34 +47,41 @@ namespace WEB_APP_Panaderia.Controllers
         {
             try
             {
+                
                 var resultado = _usuariosModel.ValidarCredenciales(entidad);
 
                 if (resultado != null)
                 {
-                    HttpContext.Session.SetString("id_usuario", resultado.idUsuario.ToString());
+					string rolDescripcion = string.Empty;
+
+					if (resultado.descripcion == "admin")
+					{
+						rolDescripcion = "Administrador";
+					}
+					HttpContext.Session.SetString("id_usuario", resultado.idUsuario.ToString());
                     HttpContext.Session.SetString("Correo", resultado.correo);
-                   // HttpContext.Session.SetString("Token", resultado.Token);
-                   // HttpContext.Session.SetString("Nombre", resultado.nombre);
-                   // HttpContext.Session.SetString("Prim_Ape", resultado.prim_ap);
+                    HttpContext.Session.SetString("Nombre", resultado.nombre);
+					HttpContext.Session.SetString("Rol", rolDescripcion);
+                    // HttpContext.Session.SetString("Token", resultado.Token);
                     return RedirectToAction("Metricas", "Home");
                 }
 
                 else
                 {
-                    ViewBag.mensaje = "<div class='alert alert-warning' role='alert'> Usuario y contraseña son incorrectos </div>";
-                    return View("Index");
-                }
+                    TempData["mensaje"] = "Usuario y contraseña incorrectos.\n Por favor verifique sus credenciales e intente de nuevo.";
+                    return RedirectToAction("Index", "Home");
+				}
 
             }
             catch (Exception ex)
             {
-               // RegistrarBitacora(ex, ControllerContext);
-                return View("Error");
+				//return View("Error");
+				return RedirectToAction("ErrorUsuario", "Home");
 
-            }
+			}
 
-                
-        }
+
+		}
 		[HttpPost]
 		public IActionResult ActualizarUsuario(UsuariosEntities entidad)
 		{
@@ -83,7 +92,7 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 			catch (Exception ex)
 			{
-				// Manejar error
+				RegistrarBitacora(ex, ControllerContext);
 				return View("Error");
 			}
 		}
@@ -110,7 +119,7 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 			catch (Exception ex)
 			{
-				// RegistrarBitacora(ex, ControllerContext);
+				RegistrarBitacora(ex, ControllerContext);
 				return View("Error");
 
 			}
@@ -127,8 +136,8 @@ namespace WEB_APP_Panaderia.Controllers
             }
             catch (Exception ex)
             {
-                //RegistrarBitacora(ex, ControllerContext);
-                return View("Error");
+				RegistrarBitacora(ex, ControllerContext);
+				return View("Error");
             }
         }
 
@@ -140,5 +149,17 @@ namespace WEB_APP_Panaderia.Controllers
             return Content(jsonResult, "application/json");
         }
 
-    }
+		public void RegistrarBitacora(Exception ex, ControllerContext contexto)
+		{
+			LogsEntities error = new LogsEntities();
+			error.Origen = ControllerContext.ActionDescriptor.ControllerName + " - " + ControllerContext.ActionDescriptor.ActionName;
+			error.Detalle = ex.Message;
+
+			_generalesModel.RegistrarBitacora(error);
+		}
+
+
+
+
+	}
 }
