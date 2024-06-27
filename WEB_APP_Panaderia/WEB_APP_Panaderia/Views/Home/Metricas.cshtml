@@ -2,12 +2,19 @@
 	ViewData["Title"] = "Home";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{
+	var id_usuario = Context.Session.GetString("id_usuario")?.ToString();
+	var usuario = Context.Session.GetString("Correo")?.ToString();
+	var nombre = Context.Session.GetString("Nombre")?.ToString();
+	var rol = Context.Session.GetString("Rol")?.ToString();
 
+
+}
 <div class="page-wrapper">
 	<div class="content">
 		<div class="welcome d-lg-flex align-items-center justify-content-between">
 			<div class="d-flex align-items-center welcome-text">
-				<h3 class="d-flex align-items-center"><img src="~/assets/img/icons/hi.svg" alt="img">&nbsp;Hola Herson,</h3>&nbsp;<h6>Aquí está lo que está sucediendo con tu tienda hoy.</h6>
+				<h3 class="d-flex align-items-center"><img src="~/assets/img/icons/hi.svg" alt="img">&nbsp;Hola @nombre,</h3>&nbsp;<h6>Mira un resumen de tu tienda hoy.</h6>
 			</div>
 			<div class="d-flex align-items-center">
 				<div class="position-relative daterange-wraper me-2">
