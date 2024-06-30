@@ -2,7 +2,14 @@
 	ViewData["Title"] = "Home";
 	Layout = "~/Views/Shared/_Layout_PDV.cshtml";
 }
+@{
+	var id_usuario = Context.Session.GetString("id_usuario")?.ToString();
+	var usuario = Context.Session.GetString("Correo")?.ToString();
+	var nombre = Context.Session.GetString("Nombre")?.ToString();
+	var rol = Context.Session.GetString("Rol")?.ToString();
 
+
+}
 	<div id="global-loader">
 		<div class="whirly-loader"> </div>
 	</div>
@@ -80,11 +87,11 @@
 					<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
 						<span class="user-info">
 							<span class="user-letter">
-								<img src="~/assets/img/profiles/avator1.jpg" alt="" class="img-fluid">
+							<img src="~/assets/img/logo-pizzeria.png" alt="" class="img-fluid">
 							</span>
 							<span class="user-detail">
-								<span class="user-name">Herson Calvo</span>
-								<span class="user-role">Administrador</span>
+								<span class="user-name">@nombre</span>
+								<span class="user-role">@rol</span>
 							</span>
 						</span>
 					</a>
@@ -92,12 +99,12 @@
 						<div class="profilename">
 							<div class="profileset">
 								<span class="user-img">
-									<img src="~/assets/img/profiles/avator1.jpg" alt="">
+									<img src="~/assets/img/logo-pizzeria.png" alt="">
 									<span class="status online"></span>
 								</span>
 								<div class="profilesets">
-									<h6>Herson Calvo</h6>
-									<h5>Administrador</h5>
+									<h6>@nombre</h6>
+									<h5>@rol</h5>
 								</div>
 							</div>
 							<hr class="m-0">
@@ -146,7 +153,7 @@
 								</li> *@
 								<li id="panaderia">
 									<a href="javascript:void(0);">
-										<img src="~/assets/img/logo-panaderia.png" alt="Categories">
+										<img src="~/assets/img/store/store-02.png" alt="Categories">
 									</a>
 									<h6><a href="javascript:void(0);">Panadería</a></h6>
 									<span>2 Productos</span>
@@ -158,8 +165,7 @@
 									<h6><a href="javascript:void(0);">Pizzería</a></h6>
 									<span>14 Productos</span>
 								</li>
-							
-						
+
 							</ul>
 							<div class="pos-products">
 								<div class="d-flex align-items-center justify-content-between">
@@ -171,153 +177,14 @@
 									</div>
 									<div class="tab_content" data-tab="panaderia">
 										<div class="row">
-											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-												<div class="product-info default-cover card">
-													<a href="javascript:void(0);" class="img-bg">
-														@* <img src="~/assets/img/panaderia/pos-product-05.png" alt="Products"> *@
-														<span><i data-feather="check" class="feather-16"></i></span>
-													</a>
-													<h6 class="cat-name"><a href="javascript:void(0);">Reposteria</a></h6>
-													<h6 class="product-name"><a href="javascript:void(0);">Enchilada</a></h6>
-													<div class="d-flex align-items-center justify-content-between price">
-														@* <span>47 Pcs</span> *@
-													<p>₡500</p>
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-												<div class="product-info default-cover card">
-													<a href="javascript:void(0);" class="img-bg">
-													@* 	<img src="~/assets/img/panaderia/pan-baguette.png" alt="Products"> *@
-														<span><i data-feather="check" class="feather-16"></i></span>
-													</a>
-													<h6 class="cat-name"><a href="javascript:void(0);">Pan</a></h6>
-													<h6 class="product-name"><a href="javascript:void(0);">Baguette</a></h6>
-													<div class="d-flex align-items-center justify-content-between price">
-														@* <span>14 Pcs</span> *@
-													<p>₡600</p>
-													</div>
-												</div>
-											</div>
+										<!-- Aquí se inyectan los productos dinámicamente -->
 										</div>
 									</div>
 
 									<div class="tab_content" data-tab="pizzeria">
 										<div class="row">
-											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-												<div class="product-info default-cover card">
-													<a href="javascript:void(0);" class="img-bg">
-														<img src="~/assets/img/pizzeria/pizza-personal.png" alt="Products">
-														<span><i data-feather="check" class="feather-16"></i></span>
-													</a>
-													<h6 class="cat-name"><a href="javascript:void(0);">Pizza Personal</a></h6>
-													<h6 class="product-name"><a href="javascript:void(0);">Jamón</a></h6>
-													<div class="d-flex align-items-center justify-content-between price">
-														<span>8 pulg. / 4 slices</span>
-													<p>₡1,800</p>
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-												<div class="product-info default-cover card">
-													<a href="javascript:void(0);" class="img-bg">
-													<img src="~/assets/img/pizzeria/pizza-personal.png" alt="Products">
-														<span><i data-feather="check" class="feather-16"></i></span>
-													</a>
-													<h6 class="cat-name"><a href="javascript:void(0);">Pizza Personal</a></h6>
-													<h6 class="product-name"><a href="javascript:void(0);">Suprema</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Jamón / Hongos</a></h6>
-													<div class="d-flex align-items-center justify-content-between price">
-														<span>8 pulg. / 4 slices</span>
-													<p>₡2,000</p>
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
-													<a href="javascript:void(0);" class="img-bg">
-														<img src="~/assets/img/pizzeria/pizza-pequenna.png" alt="Products">
-														<span><i data-feather="check" class="feather-16"></i></span>
-													</a>
-													<h6 class="cat-name"><a href="javascript:void(0);">Pizza Pequeña</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Solo un tipo de Pizza</a></h6>
-													<div class="d-flex align-items-center justify-content-between price">
-														<span>9,5 pulg. / 6 Slices</span>
-													<p>₡4,500</p>
-													</div>
-												</div>
-											</div>
-										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
-												<a href="javascript:void(0);" class="img-bg">
-													<img src="~/assets/img/pizzeria/pizza-mediana.png" alt="Products">
-													<span><i data-feather="check" class="feather-16"></i></span>
-												</a>
-												<h6 class="cat-name"><a href="javascript:void(0);">Pizza Mediana</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Uno o dos tipos de pizza</a></h6>
-												<div class="d-flex align-items-center justify-content-between price">
-													<span>12 pulg. / 8 Slices</span>
-													<p>₡6,800</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
-												<a href="javascript:void(0);" class="img-bg">
-													<img src="~/assets/img/pizzeria/pizza-grande.png" alt="Products">
-													<span><i data-feather="check" class="feather-16"></i></span>
-												</a>
-												<h6 class="cat-name"><a href="javascript:void(0);">Pizza Grande</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Uno o dos tipos de pizza</a></h6>
-												<div class="d-flex align-items-center justify-content-between price">
-													<span>14 pulg. / 12 Slices</span>
-													<p>₡8,500</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
-												<a href="javascript:void(0);" class="img-bg">
-													<img src="~/assets/img/pizzeria/pizza-extra-grande.png" alt="Products">
-													<span><i data-feather="check" class="feather-16"></i></span>
-												</a>
-												<h6 class="cat-name"><a href="javascript:void(0);">Pizza Extra Grande</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Uno o dos tipos de pizza</a></h6>
-												<div class="d-flex align-items-center justify-content-between price">
-													<span>16 pulg. / 16 Slices</span>
-													<p>₡9,500</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
-												<a href="javascript:void(0);" class="img-bg">
-													<img src="~/assets/img/pizzeria/pizza-jumbo.png" alt="Products">
-													<span><i data-feather="check" class="feather-16"></i></span>
-												</a>
-												<h6 class="cat-name"><a href="javascript:void(0);">Pizza Jumbo</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Uno o dos tipos de pizza</a></h6>
-												<div class="d-flex align-items-center justify-content-between price">
-													<span>18 pulg. / 20 Slices</span>
-													<p>₡10,500</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-											<div class="product-info default-cover card" data-bs-toggle="modal" data-bs-target="#tipo-pizza">
-												<a href="javascript:void(0);" class="img-bg">
-													<img src="~/assets/img/pizzeria/pizza-super-jumbo.png" alt="Products">
-													<span><i data-feather="check" class="feather-16"></i></span>
-												</a>
-												<h6 class="cat-name"><a href="javascript:void(0);">Pizza Super Jumbo</a></h6>
-												<h6 class="product-name"><a href="javascript:void(0);">Uno o dos tipos de pizza</a></h6>
-												<div class="d-flex align-items-center justify-content-between price">
-													<span>20 pulg. / 24 Slices</span>
-													<p>₡13,000</p>
-												</div>
-											</div>
-										</div>
-										</div>
+										<!-- Aquí se inyectan los productos dinámicamente -->
+									</div>
 									</div>
 
 								
