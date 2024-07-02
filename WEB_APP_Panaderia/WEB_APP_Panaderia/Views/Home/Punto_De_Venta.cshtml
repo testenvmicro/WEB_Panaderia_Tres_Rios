@@ -153,17 +153,27 @@
 								</li> *@
 								<li id="panaderia">
 									<a href="javascript:void(0);">
-										<img src="~/assets/img/store/store-02.png" alt="Categories">
+										<img src="~/assets/img/bread.png" alt="Categories">
 									</a>
-									<h6><a href="javascript:void(0);">Panadería</a></h6>
-									<span>2 Productos</span>
+									<h6><a>Panadería</a></h6>
 								</li>
 								<li id="pizzeria">
 									<a href="javascript:void(0);">
-										<img src="~/assets/img/logo-pizza.png" alt="Categories">
+										<img src="~/assets/img/pizza.png" alt="Categories">
 									</a>
-									<h6><a href="javascript:void(0);">Pizzería</a></h6>
-									<span>14 Productos</span>
+									<h6><a>Pizzería</a></h6>
+								</li>
+								<li id="pastas">
+									<a href="javascript:void(0);">
+										<img src="~/assets/img/spaguetti.png" alt="Categories">
+									</a>
+									<h6><a>Pastas</a></h6>
+								</li>
+								<li id="bebidas">
+									<a href="javascript:void(0);">
+										<img src="~/assets/img/softdrink.png" alt="Categories">
+									</a>
+									<h6><a>Bebidas</a></h6>
 								</li>
 
 							</ul>
@@ -184,7 +194,18 @@
 									<div class="tab_content" data-tab="pizzeria">
 										<div class="row">
 										<!-- Aquí se inyectan los productos dinámicamente -->
+										</div>
 									</div>
+
+									<div class="tab_content" data-tab="pastas">
+										<div class="row">
+											<!-- Aquí se inyectan los productos dinámicamente -->
+										</div>
+									</div>
+									<div class="tab_content" data-tab="bebidas">
+										<div class="row">
+											<!-- Aquí se inyectan los productos dinámicamente -->
+										</div>
 									</div>
 
 								
@@ -643,93 +664,19 @@
 				</button>
 			</div>
 			<div class="modal-body checkboxes-container">
-				@* <form action="pos.html"> *@
-				<div class="row">
-					<div class="row align-items-center">
-						<div class="col-sm-6">
-							<div class="setting-info">
-								<h6>"De la casa"</h6>
-								<p>Peperoni/Jamón/Carne Tocitena y Queso</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="localization-select d-flex align-items-center">
-								<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
-									<input type="checkbox" id="tipo1" class="check">
-									<label for="tipo1" class="checktoggle"></label>
-								</div>
-							</div>
-						</div>
-					</div>
+				<!-- Contenedor para el contenido dinámico -->
+				<div class="dynamic-content">
+					<!-- El contenido dinámico se inyectará aquí -->
 				</div>
-
-				<br />
-				<div class="row">
-					<div class="row align-items-center">
-						<div class="col-sm-6">
-							<div class="setting-info">
-								<h6>"Pizza Tepez"</h6>
-								<p>Salame/Cebolla/Chile Dulce/Carne/Jalapeños/Tocineta/Hongos</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="localization-select d-flex align-items-center">
-								<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
-									<input type="checkbox" id="tipo2" class="check">
-									<label for="tipo2" class="checktoggle"></label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<br />
-				<div class="row">
-					<div class="row align-items-center">
-						<div class="col-sm-6">
-							<div class="setting-info">
-								<h6>"Pizza Pica"</h6>
-								<p>Peperoni/Cebolla/Chile Dulce/Queso/Tocineta/Jalapeños/Aderezo Orégano</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="localization-select d-flex align-items-center">
-								<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
-									<input type="checkbox" id="tipo3" class="check">
-									<label for="tipo3" class="checktoggle"></label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<br />
-				<div class="row">
-					<div class="row align-items-center">
-						<div class="col-sm-6">
-							<div class="setting-info">
-								<h6>"Suprema"</h6>
-								<p>Chile dulce/Cebolla/Salame/Carne/Queso</p>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="localization-select d-flex align-items-center">
-								<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
-									<input type="checkbox" id="tipo4" class="check">
-									<label for="tipo4" class="checktoggle"></label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div class="modal-footer d-sm-flex justify-content-end">
 					<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
 					<button type="submit" class="btn btn-submit me-2" data-bs-dismiss="modal">Aceptar</button>
 				</div>
-				@* </form> *@
 			</div>
 		</div>
 	</div>
 </div>
+
 
 
 
