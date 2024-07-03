@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -7,24 +8,29 @@ using WEB_APP_Panaderia.Models;
 
 namespace WEB_APP_Panaderia.Controllers
 {
-    public class HomeController : Controller
+	
+	public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
 		private readonly IUsuariosModel _usuariosModel;
 		private readonly IProveedoresModel _proveedoresModel;
-		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel)
+        private readonly IUsuariosRolesModel _usuariosRolesModel;
+        public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IUsuariosRolesModel usuariosRolesModel)
         {
             _logger = logger;
 			_usuariosModel = usuariosModel;
 			_proveedoresModel = proveedoresModel;
-		}
+            _usuariosRolesModel = usuariosRolesModel;
 
-        public IActionResult Index()
+        }
+		[AllowAnonymous]
+		public IActionResult Index()
         {
             return View();
         }
 
+		[TypeFilter(typeof(JwtAuthorizationFilter))]
 		public IActionResult Metricas()
 		{
 			return View();
@@ -34,29 +40,26 @@ namespace WEB_APP_Panaderia.Controllers
 		{
 			return View();
 		}
+		[TypeFilter(typeof(JwtAuthorizationFilter))]
+        public IActionResult Usuarios()
+        {
+            try
+            {
+                var viewModel = new ViewModel
+                {
+                    Usuarios = _usuariosModel.GetAllUsers(),
+                    Usuario = new UsuariosEntities(),
+                    Roles = _usuariosRolesModel.ConsultarUsuariosRoles()
+                };
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+        }
 
-		public IActionResult Usuarios()
-		{
-			try
-			{
-				var viewModel = new ViewModel
-				{
-					Usuarios = _usuariosModel.GetAllUsers(),
-					Usuario = new UsuariosEntities()
-				};
-				//var usuarios = _usuariosModel.GetAllUsers();
-
-				return View(viewModel);
-			}
-			catch (Exception ex)
-			{
-
-				return View("Error");
-			}
-
-		}
-
-		public IActionResult Punto_De_Venta()
+        public IActionResult Punto_De_Venta()
 		{
 			return View();
 		}
@@ -65,7 +68,8 @@ namespace WEB_APP_Panaderia.Controllers
 		{
 			return View();
 		}
-        [HttpPost]
+		[TypeFilter(typeof(JwtAuthorizationFilter))]
+		[HttpPost]
         public IActionResult RegistrarProveedores(ProveedoresEntities proveedor)
         {//
             try
@@ -92,10 +96,11 @@ namespace WEB_APP_Panaderia.Controllers
                 return Json(new { success = false, message = ex.Message });
             }
         }
-    
 
 
-    public IActionResult Proveedores()
+
+		[TypeFilter(typeof(JwtAuthorizationFilter))]
+		public IActionResult Proveedores()
 		{
 			try
 			{
@@ -118,7 +123,63 @@ namespace WEB_APP_Panaderia.Controllers
 				return View("Error");
 			}
 		}
+
         [HttpPost]
+        public IActionResult ActualizarUsuario(UsuariosEntities entidad)
+        {
+            try
+            {
+                _usuariosModel.ActualizarUsuario(entidad);
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public IActionResult DesactivarUsuario(int idUsuario)
+        {
+            try
+            {
+                _usuariosModel.DesactivarUsuario(idUsuario);
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public IActionResult RegistrarUsuarios(UsuariosEntities entidad)
+        {
+            try
+            {
+                var resultado = _usuariosModel.RegistrarUsuarios(entidad);
+
+                if (resultado > 0)
+                {
+
+                    return RedirectToAction("Usuarios", "Home");
+                }
+
+                else
+                {
+                    ViewBag.mensaje = "<div class='alert alert-warning' role='alert'> No se puede agregar el usuario </div>";
+                    return View("Home");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // RegistrarBitacora(ex, ControllerContext);
+                return View("Error");
+            }
+        }
+
+                [HttpPost]
         public IActionResult ActualizarProveedor(ProveedoresEntities proveedor)
         {
             try
@@ -179,6 +240,19 @@ namespace WEB_APP_Panaderia.Controllers
         public IActionResult ListaClientes()
         {
             return View();
+        }
+        [HttpGet]
+        public IActionResult GetUsuarioById(int idUsuario)
+        {
+            try
+            {
+                var usuario = _usuariosModel.GetUsuarioById(idUsuario);
+                return Json(usuario);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
