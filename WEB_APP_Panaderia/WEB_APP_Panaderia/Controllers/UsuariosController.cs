@@ -14,14 +14,16 @@ namespace WEB_APP_Panaderia.Controllers
 	public class UsuariosController : Controller
     {
         private readonly ILogger<UsuariosController> _logger;
-        private readonly IUsuariosModel _usuariosModel;
+		private readonly ILogsModel _generalesModel;
+		private readonly IUsuariosModel _usuariosModel;
 
-        public UsuariosController(ILogger<UsuariosController> logger, IUsuariosModel usuariosModel)
+
+        public UsuariosController(ILogger<UsuariosController> logger, IUsuariosModel usuariosModel, ILogsModel generalesModel)
         {
             _logger = logger;
             _usuariosModel = usuariosModel;
- 
-        }
+			_generalesModel = generalesModel;
+		}
 
 
         [HttpGet]
@@ -40,17 +42,72 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 			catch (Exception ex)
 			{
-				
+				RegistrarBitacora(ex, ControllerContext);
 				return View("Error");
 			}
 		}
 		[AllowAnonymous]
 		[HttpPost]
+
 		public IActionResult ValidarCredenciales(UsuariosEntities entidad)
 		{
 			try
 			{
 				var resultado = _usuariosModel.ValidarCredenciales(entidad);
+
+        public IActionResult ValidarCredenciales(UsuariosEntities entidad)
+        {
+            try
+            {
+                
+                var resultado = _usuariosModel.ValidarCredenciales(entidad);
+
+                if (resultado != null)
+                {
+					string rolDescripcion = string.Empty;
+
+					if (resultado.descripcion == "admin")
+					{
+						rolDescripcion = "Administrador";
+					}
+					HttpContext.Session.SetString("id_usuario", resultado.idUsuario.ToString());
+                    HttpContext.Session.SetString("Correo", resultado.correo);
+                    HttpContext.Session.SetString("Nombre", resultado.nombre);
+					HttpContext.Session.SetString("Rol", rolDescripcion);
+                    // HttpContext.Session.SetString("Token", resultado.Token);
+                    return RedirectToAction("Metricas", "Home");
+                }
+
+                else
+                {
+                    TempData["mensaje"] = "Usuario y contraseña incorrectos.\n Por favor verifique sus credenciales e intente de nuevo.";
+                    return RedirectToAction("Index", "Home");
+				}
+
+            }
+            catch (Exception ex)
+            {
+				//return View("Error");
+				return RedirectToAction("ErrorUsuario", "Home");
+
+			}
+
+
+		}
+		[HttpPost]
+		public IActionResult ActualizarUsuario(UsuariosEntities entidad)
+		{
+			try
+			{
+				_usuariosModel.ActualizarUsuario(entidad);
+				return RedirectToAction("ListaUsuarios");
+			}
+			catch (Exception ex)
+			{
+				RegistrarBitacora(ex, ControllerContext);
+				return View("Error");
+			}
+		}
 
 				if (resultado != null)
 				{
@@ -66,7 +123,11 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 			catch (Exception ex)
 			{
+
 				// Log the exception
+
+				RegistrarBitacora(ex, ControllerContext);
+
 				return View("Error");
 			}
 		}
@@ -131,8 +192,8 @@ namespace WEB_APP_Panaderia.Controllers
             }
             catch (Exception ex)
             {
-                //RegistrarBitacora(ex, ControllerContext);
-                return View("Error");
+				RegistrarBitacora(ex, ControllerContext);
+				return View("Error");
             }
         }
 
@@ -143,6 +204,7 @@ namespace WEB_APP_Panaderia.Controllers
             var jsonResult = JsonConvert.SerializeObject(resultado);
             return Content(jsonResult, "application/json");
         }
+
 
         [HttpGet]
 		public IActionResult GetUsuarioById(int idUsuario)
@@ -175,4 +237,19 @@ namespace WEB_APP_Panaderia.Controllers
         }
 
     }
+
+		public void RegistrarBitacora(Exception ex, ControllerContext contexto)
+		{
+			LogsEntities error = new LogsEntities();
+			error.Origen = ControllerContext.ActionDescriptor.ControllerName + " - " + ControllerContext.ActionDescriptor.ActionName;
+			error.Detalle = ex.Message;
+
+			_generalesModel.RegistrarBitacora(error);
+		}
+
+
+
+
+	}
+
 }

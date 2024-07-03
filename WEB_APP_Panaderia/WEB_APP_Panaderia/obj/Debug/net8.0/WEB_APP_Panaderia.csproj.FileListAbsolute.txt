@@ -122,3 +122,30 @@ C:\Users\j_gon\OneDrive\Documentos\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panade
 C:\Users\j_gon\OneDrive\Documentos\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\obj\Debug\net8.0\WEB_APP_Panaderia.pdb
 C:\Users\j_gon\OneDrive\Documentos\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\obj\Debug\net8.0\WEB_APP_Panaderia.genruntimeconfig.cache
 C:\Users\j_gon\OneDrive\Documentos\GitHub\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\obj\Debug\net8.0\ref\WEB_APP_Panaderia.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.barcodes.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.bouncy-castle-connector.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.forms.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.io.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.kernel.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.layout.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.pdfa.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.pdfua.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.sign.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.styledxmlparser.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.svg.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.bouncy-castle-adapter.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\itext.commons.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\obj\Debug\net8.0\WEB_APP_Panaderia.csproj.AssemblyReference.cache
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\obj\Debug\net8.0\WEB_APP_.B216490E.Up2Date
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\EPPlus.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\davigonz\OneDrive - Microsoft\Desktop\WEB_Panaderia_Tres_Rios\WEB_APP_Panaderia\WEB_APP_Panaderia\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll

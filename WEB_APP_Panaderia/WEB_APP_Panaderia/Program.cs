@@ -10,6 +10,10 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IUsuariosModel, UsuariosModel>();
 builder.Services.AddScoped<IProveedoresModel, ProveedoresModel>();
 builder.Services.AddScoped<IUsuariosRolesModel, UsuariosRolesModel>();
+builder.Services.AddScoped<IRegistroDesechosModel, RegistroDesechosModel>();
+builder.Services.AddScoped<IProductosModel, ProductosModel>();
+builder.Services.AddScoped<ISaboresPizzaModel, SaboresPizzaModel>();
+builder.Services.AddScoped<ILogsModel, LogsModel>();
 
 var app = builder.Build();
 

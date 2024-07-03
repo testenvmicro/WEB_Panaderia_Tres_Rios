@@ -16,24 +16,12 @@
 			</div>
 			<ul class="table-top-head">
 				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Pdf"><img src="~/~/assets/img/icons/pdf.svg" alt="img"></a>-->
-				</li>
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Excel"><img src="~/~/assets/img/icons/excel.svg" alt="img"></a>-->
-				</li>
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Print"><i data-feather="printer" class="feather-rotate-ccw"></i></a>-->
-				</li>
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh"><i data-feather="rotate-ccw" class="feather-rotate-ccw"></i></a>-->
-				</li>
-				<li>
 					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Collapse" id="collapse-header"><i data-feather="chevron-up" class="feather-chevron-up"></i></a>
 				</li>
 			</ul>
 			<div class="page-btn">
 				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#add-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Usuario</a>
-				
+
 			</div>
 			<br />
 			<div class="page-btn">
@@ -108,10 +96,8 @@
 					</div>
 				</div>
 				<!-- /Filter -->
-				
-
 				<div class="table-responsive">
-					<table class="table datanew">
+					<table class="table">
 						<thead>
 							<tr>
 								<th>idUsuario</th>
@@ -120,11 +106,10 @@
 								<th>Estado</th>
 								<th>Rol</th>
 								<th>Nombre</th>
+								<th>Acción</th>
 							</tr>
 						</thead>
 						<tbody>
-							
-								
 								@foreach (var user in Model.Usuarios)
 								{
 									<tr>
@@ -149,24 +134,11 @@
 									</td>
 									</tr>
 								}
-							
-							
 						</tbody>
-					</table>
-					@* <script>
-						$(document).ready(function () {
-							$('#dataTable').DataTable({
-								"processing": true,
-								"serverSide": false,
-								"paging": true,
-								"autoWidth": false
-							});
-						});
-					</script> *@
+					</table>		
 				</div>
 			</div>
 		</div>
-	
 		<!-- /user list -->
 		<!-- Add User -->
 		<div class="modal fade" id="add-units">
@@ -205,9 +177,7 @@
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Rol</label>
-												<select class="select roles" required name="id_roles" id="id_roles">
-													
-												</select>
+												<select class="select roles" required name="id_roles" id="id_roles"></select>
 											</div>
 										</div>
 										<div class="col-lg-6">
@@ -228,7 +198,6 @@
 												</div>
 											</div>
 										</div>
-
 											<div class="modal-footer-btn">
 												<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
 										<input type="submit" id="btnRegistrarUsuario" disabled class="btn btn-submit" value="Enviar" />
@@ -294,3 +263,10 @@
 	</div>
 	<!-- /Edit User -->
 </div>
+<!-- Datatable JS -->
+<script src="~/assets/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Custom JS -->
+<script src="~/assets/js/theme-script.js"></script>
+<script src="~/assets/js/script.js"></script>
