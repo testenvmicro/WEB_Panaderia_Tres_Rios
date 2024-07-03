@@ -10,71 +10,66 @@ using System.Text.Json.Serialization;
 
 namespace WEB_APP_Panaderia.Controllers
 {
-	
-	public class UsuariosController : Controller
+
+    public class UsuariosController : Controller
     {
         private readonly ILogger<UsuariosController> _logger;
-		private readonly ILogsModel _generalesModel;
-		private readonly IUsuariosModel _usuariosModel;
+        private readonly ILogsModel _generalesModel;
+        private readonly IUsuariosModel _usuariosModel;
 
 
         public UsuariosController(ILogger<UsuariosController> logger, IUsuariosModel usuariosModel, ILogsModel generalesModel)
         {
             _logger = logger;
             _usuariosModel = usuariosModel;
-			_generalesModel = generalesModel;
-		}
+            _generalesModel = generalesModel;
+        }
 
 
         [HttpGet]
-		public IActionResult ListaUsuarios()
-		{
-			try
-			{
+        public IActionResult ListaUsuarios()
+        {
+            try
+            {
                 var viewModel = new ViewModel
                 {
                     Usuarios = _usuariosModel.GetAllUsers(),
                     Usuario = new UsuariosEntities()
-			};
-				//var usuarios = _usuariosModel.GetAllUsers();
-				
-				return View(viewModel);
-			}
-			catch (Exception ex)
-			{
-				RegistrarBitacora(ex, ControllerContext);
-				return View("Error");
-			}
-		}
-		[AllowAnonymous]
-		[HttpPost]
+                };
+                //var usuarios = _usuariosModel.GetAllUsers();
 
-		public IActionResult ValidarCredenciales(UsuariosEntities entidad)
-		{
-			try
-			{
-				var resultado = _usuariosModel.ValidarCredenciales(entidad);
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                RegistrarBitacora(ex, ControllerContext);
+                return View("Error");
+            }
+        }
+        [AllowAnonymous]
+        [HttpPost]
+
 
         public IActionResult ValidarCredenciales(UsuariosEntities entidad)
         {
             try
             {
-                
+
                 var resultado = _usuariosModel.ValidarCredenciales(entidad);
 
                 if (resultado != null)
                 {
-					string rolDescripcion = string.Empty;
+                    string rolDescripcion = string.Empty;
 
-					if (resultado.descripcion == "admin")
-					{
-						rolDescripcion = "Administrador";
-					}
-					HttpContext.Session.SetString("id_usuario", resultado.idUsuario.ToString());
+                    if (resultado.descripcion == "admin")
+                    {
+                        rolDescripcion = "Administrador";
+                    }
+                    HttpContext.Session.SetString("id_usuario", resultado.idUsuario.ToString());
                     HttpContext.Session.SetString("Correo", resultado.correo);
                     HttpContext.Session.SetString("Nombre", resultado.nombre);
-					HttpContext.Session.SetString("Rol", rolDescripcion);
-                    // HttpContext.Session.SetString("Token", resultado.Token);
+                    HttpContext.Session.SetString("Rol", rolDescripcion);
+                    HttpContext.Session.SetString("Token", resultado.Token);
                     return RedirectToAction("Metricas", "Home");
                 }
 
@@ -82,18 +77,18 @@ namespace WEB_APP_Panaderia.Controllers
                 {
                     TempData["mensaje"] = "Usuario y contraseña incorrectos.\n Por favor verifique sus credenciales e intente de nuevo.";
                     return RedirectToAction("Index", "Home");
-				}
+                }
 
             }
             catch (Exception ex)
             {
-				//return View("Error");
-				return RedirectToAction("ErrorUsuario", "Home");
+                //return View("Error");
+                return RedirectToAction("ErrorUsuario", "Home");
 
-			}
+            }
 
 
-		}
+        }
 		[HttpPost]
 		public IActionResult ActualizarUsuario(UsuariosEntities entidad)
 		{
@@ -104,61 +99,27 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 			catch (Exception ex)
 			{
-				RegistrarBitacora(ex, ControllerContext);
 				return View("Error");
 			}
 		}
 
-				if (resultado != null)
-				{
-					HttpContext.Session.SetString("Token", resultado.Token);
-					HttpContext.Session.SetString("Usuario", System.Text.Json.JsonSerializer.Serialize(resultado));
-					return RedirectToAction("Metricas", "Home");
-				}
-				else
-				{
-					ViewBag.mensaje = "<div class='alert alert-warning' role='alert'> Usuario y contraseña son incorrectos </div>";
-					return View("Index");
-				}
-			}
-			catch (Exception ex)
-			{
 
-				// Log the exception
-
-				RegistrarBitacora(ex, ControllerContext);
-
-				return View("Error");
-			}
-		}
 
 		public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-			return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home");
 
-		}
-
-        [HttpPost]
-        public IActionResult ActualizarUsuario(UsuariosEntities entidad)
-        {
-            try
-            {
-                _usuariosModel.ActualizarUsuario(entidad);
-                return RedirectToAction("ListaUsuarios");
-            }
-            catch (Exception ex)
-            {
-                return View("Error");
-            }
         }
+
+
 
         [HttpPost]
         public IActionResult RegistrarUsuarios(UsuariosEntities entidad)
         {
             try
             {
-               
+
                 Console.WriteLine($"WEB: Enviando datos al API: Correo={entidad.correo}, Nombre={entidad.nombre}, IdRol={entidad.idRol}, Contrasenna={entidad.contrasenna}");
 
                 var resultado = _usuariosModel.RegistrarUsuarios(entidad);
@@ -192,8 +153,8 @@ namespace WEB_APP_Panaderia.Controllers
             }
             catch (Exception ex)
             {
-				RegistrarBitacora(ex, ControllerContext);
-				return View("Error");
+                RegistrarBitacora(ex, ControllerContext);
+                return View("Error");
             }
         }
 
@@ -207,7 +168,7 @@ namespace WEB_APP_Panaderia.Controllers
 
 
         [HttpGet]
-		public IActionResult GetUsuarioById(int idUsuario)
+        public IActionResult GetUsuarioById(int idUsuario)
         {
             try
             {
@@ -236,20 +197,20 @@ namespace WEB_APP_Panaderia.Controllers
             }
         }
 
+
+
+        public void RegistrarBitacora(Exception ex, ControllerContext contexto)
+        {
+            LogsEntities error = new LogsEntities();
+            error.Origen = ControllerContext.ActionDescriptor.ControllerName + " - " + ControllerContext.ActionDescriptor.ActionName;
+            error.Detalle = ex.Message;
+
+            _generalesModel.RegistrarBitacora(error);
+        }
+
+
     }
-
-		public void RegistrarBitacora(Exception ex, ControllerContext contexto)
-		{
-			LogsEntities error = new LogsEntities();
-			error.Origen = ControllerContext.ActionDescriptor.ControllerName + " - " + ControllerContext.ActionDescriptor.ActionName;
-			error.Detalle = ex.Message;
-
-			_generalesModel.RegistrarBitacora(error);
-		}
-
-
-
 
 	}
 
-}
+

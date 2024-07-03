@@ -9,6 +9,7 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using System.Runtime.InteropServices;
 
 
 namespace WEB_APP_Panaderia.Controllers
@@ -22,9 +23,11 @@ namespace WEB_APP_Panaderia.Controllers
 		private readonly IProveedoresModel _proveedoresModel;
 
         private readonly IUsuariosRolesModel _usuariosRolesModel;
-        public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IUsuariosRolesModel usuariosRolesModel)
+		private readonly ILogsModel _generalesModel;
 
-		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IRegistroDesechosModel bitacoraModel)
+		public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IUsuariosRolesModel usuariosRolesModel, IRegistroDesechosModel bitacoraModel, ILogsModel generalesModel)
+
+		
 
         {
             _logger = logger;
@@ -34,10 +37,11 @@ namespace WEB_APP_Panaderia.Controllers
             _usuariosRolesModel = usuariosRolesModel;
 
 			_registroDesechosModel = bitacoraModel;
+			_generalesModel = generalesModel;
 		}
 
 
-        }
+        
 		[AllowAnonymous]
 		public IActionResult Index()
         {
@@ -324,5 +328,5 @@ namespace WEB_APP_Panaderia.Controllers
 
 	}
 
-}
+
 
