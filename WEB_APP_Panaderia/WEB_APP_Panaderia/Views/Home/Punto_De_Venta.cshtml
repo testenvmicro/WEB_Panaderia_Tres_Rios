@@ -217,13 +217,10 @@
 						<aside class="product-order-list">
 							<div class="head d-flex align-items-center justify-content-between w-100">
 								<div class="">
-									<h5>Orden</h5>
+									<h5>¿Pedido Express?</h5>
 									<span>ID : #65565</span>
 								</div>
-								<div class="">
-									@* <a class="confirm-text" href="javascript:void(0);"><i data-feather="trash-2" class="feather-16 text-danger"></i></a>
-									<a href="javascript:void(0);" class="text-default"><i data-feather="more-vertical" class="feather-16"></i></a> *@
-								</div>
+						
 							</div>
 							<div class="customer-info block-section">
 								<h6>Informacion de cliente</h6>
@@ -269,70 +266,15 @@
 								<div class="selling-info">
 									<div class="row">
 									<h6 class="d-flex align-items-center mb-0">Detalle</h6>
-										@* <div class="col-12 col-sm-4">
-											<div class="input-block">
-												<label>Order Tax</label>
-												<select class="select">
-													<option>GST 5%</option>
-													<option>GST 10%</option>
-													<option>GST 15%</option>
-													<option>GST 20%</option>
-													<option>GST 25%</option>
-													<option>GST 30%</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-12 col-sm-4">
-											<div class="input-block">
-												<label>Shipping</label>
-												<select class="select">
-													<option>15</option>
-													<option>20</option>
-													<option>25</option>
-													<option>30</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-12 col-sm-4">
-											<div class="input-block">
-												<label>Discount</label>
-												<select class="select">
-													<option>10%</option>
-													<option>10%</option>
-													<option>15%</option>
-													<option>20%</option>
-													<option>25%</option>
-													<option>30%</option>
-												</select>
-											</div>
-										</div> *@
+									
 									</div>
 								</div>
 								<div class="order-total">
 									<table class="table table-responsive table-borderless">
-									@* 	<tr>
-											<td>Sub Total</td>
-											<td class="text-end">$60,454</td>
-										</tr>
-										<tr>
-											<td>Tax (GST 5%)</td>
-											<td class="text-end">$40.21</td>
-										</tr>
-										<tr>
-											<td>Shipping</td>
-											<td class="text-end">$40.21</td>
-										</tr>
-										<tr>
-											<td>Sub Total</td>
-											<td class="text-end">$60,454</td>
-										</tr>
-										<tr>
-											<td class="danger">Discount (10%)</td>
-											<td class="danger text-end">$15.21</td>
-										</tr> *@
+									
 										<tr>
 											<td>Total</td>
-										<td class="text-end">₡20,024.5</td>
+										<td class="text-end">₡0,00</td>
 										</tr>
 									</table>
 								</div>
@@ -366,11 +308,6 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="d-grid btn-block">
-								<a class="btn btn-secondary" href="javascript:void(0);">
-								Gran Total : ₡24,024.5
-								</a>
 							</div>
 							<div class="btn-row d-sm-flex align-items-center justify-content-between">
 								@* <a href="javascript:void(0);" class="btn btn-info btn-icon flex-fill" data-bs-toggle="modal" data-bs-target="#hold-order"><span class="me-1 d-flex align-items-center"><i data-feather="pause" class="feather-16"></i></span>Hold</a> *@
@@ -481,90 +418,7 @@
 		</div>
 	</div>
 	<!-- /Print Receipt -->
-	<!-- Products -->
-	<div class="modal fade modal-default pos-modal" id="products" aria-labelledby="products">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header p-4 d-flex align-items-center justify-content-between">
-					<div class="d-flex align-items-center">
-						<h5 class="me-4">Products</h5>
-						<span class="badge bg-info d-inline-block mb-0">Order ID : #666614</span>
-					</div>
-					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body p-4">
-					<form action="pos.html">
-						<div class="product-wrap">
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-16.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0005</span>
-											<h6><a href="javascript:void(0);">Red Nike Laser</a></h6>
-										</div>
-										<p>$2000</p>
-									</div>
-								</div>
-
-							</div>
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-17.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0235</span>
-											<h6><a href="javascript:void(0);">Iphone 14</a></h6>
-										</div>
-										<p>$3000</p>
-									</div>
-								</div>
-							</div>
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-16.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0005</span>
-											<h6><a href="javascript:void(0);">Red Nike Laser</a></h6>
-										</div>
-										<p>$2000</p>
-									</div>
-								</div>
-							</div>
-							<div class="product-list d-flex align-items-center justify-content-between">
-								<div class="d-flex align-items-center flex-fill">
-									<a href="javascript:void(0);" class="img-bg me-2">
-										<img src="~/assets/img/products/pos-product-17.png" alt="Products">
-									</a>
-									<div class="info d-flex align-items-center justify-content-between flex-fill">
-										<div>
-											<span>PT0005</span>
-											<h6><a href="javascript:void(0);">Red Nike Laser</a></h6>
-										</div>
-										<p>$2000</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer d-sm-flex justify-content-end">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-							<button type="submit" class="btn btn-primary">Submit</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /Products -->
+	
 <!-- /Agregar Cliente -->
 	<div class="modal fade" id="create" tabindex="-1" aria-labelledby="create" aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -643,12 +497,13 @@
 				</div>
 				<div class="modal-footer d-sm-flex justify-content-end">
 					<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
-					<button type="submit" class="btn btn-submit me-2" data-bs-dismiss="modal">Aceptar</button>
+					<button type="button" id="accept-button" class="btn btn-submit me-2" data-bs-dismiss="modal">Aceptar</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 
 
 
