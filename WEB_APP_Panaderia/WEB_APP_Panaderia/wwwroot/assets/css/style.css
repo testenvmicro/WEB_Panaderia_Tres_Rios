@@ -32525,4 +32525,14 @@ label span {
   color: #5B6670;
 }
 
+.hidden {
+    display: none;
+}
+
+.selected-method {
+    border: 2px solid #007bff; /* Cambia el color y el estilo del borde según tu diseño */
+    background-color: #e6f7ff; /* Fondo ligero para indicar la selección */
+}
+
+
 /*# sourceMappingURL=style.css.map */

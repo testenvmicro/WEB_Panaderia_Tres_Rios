@@ -237,24 +237,14 @@
         let descripcionHTML = descripcion ? `<p>Descripcion: ${descripcion}</p>` : '';
         let saboresHTML = sabores ? `<p>Sabores: ${sabores}</p>` : '';
        
-        // Buscar si el producto ya está en la lista
-        let existingProduct = $(`.product-list[data-nombre="${nombre}"][data-tipo="${tipo}"][data-sabores="${sabores}"]`);
-        if (existingProduct.length > 0) {
-            // Incrementar la cantidad del producto existente
-            let qtyInput = existingProduct.find(".qty-input");
-            let currentQty = parseInt(qtyInput.val());
-            let newQty = currentQty + 1;
-            qtyInput.val(newQty);
-            updateSubtotal(existingProduct, newQty, precio);
-        } else {
             let productHTML = `
-                            <div class="product-list d-flex align-items-center justify-content-between">
+                            <div class="product-list d-flex align-items-center justify-content-between" data-nombre="${nombre}" data-tipo="${tipo}" data-sabores="${sabores}" data-precio="${precio}" data-descripcion="${descripcion}">
                                 <div class="d-flex align-items-center product-info">
                                     <div class="info">
-                                        <h6><a href="javascript:void(0);">${nombre}</a></h6>
-                                        <p>${tipo}</p>
+                                        <h6 class="product-name"><a>${nombre}</a></h6>
+                                        <p class="product-type">${tipo}</p>
                                          ${descripcionHTML}
-                                        ${saboresHTML}
+                                         ${saboresHTML}
                                         <p class="subtotal">Subtotal: ₡<span class="subtotal-amount">${precio}</span></p>
                                     </div>
                                 </div>
@@ -272,9 +262,67 @@
                             `;
             $("#product-list").append(productHTML);
             feather.replace(); // Actualiza los iconos de Feather
-        }
-       
-        
+        $(document).ready(function () {
+            $('#payButton').click(function () {
+                // Obtener la información de los productos
+                var products = [];
+                $('.product-list').each(function () {
+                    var productoNombre = $(this).data('nombre');
+                    var productoPrecio = $(this).data('precio');
+                    var productoTipo = $(this).data('tipo');
+                    var productoDescripcion = $(this).data('descripcion');
+                    products.push({
+                        nombre: productoNombre,
+                        precio: productoPrecio,
+                        tipo: productoTipo,
+                        descripcion: productoDescripcion
+                    });
+                });
+
+                // Obtener el total (asumiendo que tienes un elemento con el total)
+                var total = $('.order-total .text-end').text();
+
+                // Obtener el método de pago seleccionado
+                var selectedMethod = $('.payment-method .selected-method span').text();
+
+                // Verificar si el pedido es express
+                var isExpress = $('#express-order-checkbox').is(':checked');
+
+                // Obtener la información del cliente si existe
+                var customerInfo = '';
+                if ($('#customerNameHidden').text() !== '') {
+                    customerInfo += 'Nombre del cliente: ' + $('#customerNameHidden').text() + '\n';
+                }
+                if ($('#customerEmailHidden').text() !== '') {
+                    customerInfo += 'Correo: ' + $('#customerEmailHidden').text() + '\n';
+                }
+                if ($('#customerPhoneHidden').text() !== '') {
+                    customerInfo += 'Teléfono: ' + $('#customerPhoneHidden').text() + '\n';
+                }
+                if ($('#customerProvinceHidden').text() !== '') {
+                    customerInfo += 'Provincia: ' + $('#customerProvinceHidden').text() + '\n';
+                }
+                if ($('#customerCantonHidden').text() !== '') {
+                    customerInfo += 'Cantón: ' + $('#customerCantonHidden').text() + '\n';
+                }
+                if ($('#customerDistrictHidden').text() !== '') {
+                    customerInfo += 'Distrito: ' + $('#customerDistrictHidden').text() + '\n';
+                }
+
+                // Construir el mensaje para el alert
+                var message = 'Productos:\n';
+                products.forEach(function (product) {
+                    message += 'Nombre: ' + product.nombre + ', Precio: ' + product.precio + ', Tipos: ' + product.tipo + ', Descripcion: ' + product.descripcion + '\n';
+                });
+                message += '\nTotal: ' + total + '\n';
+                message += 'Método de pago: ' + selectedMethod + '\n';
+                message += 'Pedido Express: ' + (isExpress ? 'Sí' : 'No') + '\n';
+                message += '\nInformación del cliente:\n' + (customerInfo !== '' ? customerInfo : 'N/A');
+
+                // Mostrar la información en un alert
+                alert(message);
+            });
+        });
 
         // Añadir manejadores de eventos para los botones de incremento y decremento
         $(".inc").off('click').on('click', function () {
@@ -329,7 +377,88 @@
         updateOrderTotal();
     });
 
+});
 
+$(document).ready(function () {
+    // Manejar el checkbox de pedido express
+    $('#express-order-checkbox').change(function () {
+        if ($(this).is(':checked')) {
+            $('.customer-info.block-section').removeClass('hidden');
+        } else {
+            $('.customer-info.block-section').addClass('hidden');
+        }
+    });
+
+    // Manejar el envío del formulario del modal
+    $('#create-customer-form').submit(function (event) {
+        event.preventDefault(); // Prevenir el envío por defecto del formulario
+
+        // Obtener los valores del formulario
+        const nombre = $(this).find('input[name="nombre"]').val();
+        const correo = $(this).find('input[name="correo"]').val();
+        const telefono = $(this).find('input[name="telefono"]').val();
+        const provincia = $(this).find('input[name="provincia"]').val();
+        const canton = $(this).find('input[name="canton"]').val();
+        const distrito = $(this).find('input[name="distrito"]').val();
+
+        // Guardar la información en elementos ocultos para después usarlos
+        $('#customerNameHidden').text(nombre);
+        $('#customerEmailHidden').text(correo);
+        $('#customerPhoneHidden').text(telefono);
+        $('#customerProvinceHidden').text(provincia);
+        $('#customerCantonHidden').text(canton);
+        $('#customerDistrictHidden').text(distrito);
+
+        // Crear el HTML para mostrar la información del cliente solo si los campos no están vacíos
+        let customerInfoHTML = '<div class="customer-details">';
+        if (nombre) {
+            customerInfoHTML += `<p><strong>Nombre del cliente:</strong> ${nombre}</p>`;
+        }
+        if (correo) {
+            customerInfoHTML += `<p><strong>Correo:</strong> ${correo}</p>`;
+        }
+        if (telefono) {
+            customerInfoHTML += `<p><strong>Teléfono:</strong> ${telefono}</p>`;
+        }
+        if (provincia) {
+            customerInfoHTML += `<p><strong>Provincia:</strong> ${provincia}</p>`;
+        }
+        if (canton) {
+            customerInfoHTML += `<p><strong>Cantón:</strong> ${canton}</p>`;
+        }
+        if (distrito) {
+            customerInfoHTML += `<p><strong>Distrito:</strong> ${distrito}</p>`;
+        }
+        customerInfoHTML += '</div>';
+
+        // Limpiar la información anterior del cliente
+        $('.customer-info.block-section .customer-details').remove();
+
+        // Añadir la nueva información del cliente al div .customer-info.block-section solo si hay información para mostrar
+        if (customerInfoHTML !== '<div class="customer-details"></div>') {
+            $('.customer-info.block-section').append(customerInfoHTML);
+        }
+
+        // Cerrar el modal
+        $('#create').modal('hide');
+
+        // Limpiar el formulario
+        $('#create-customer-form')[0].reset();
+    });
+
+    $(document).ready(function () {
+        $('.payment-method .item .default-cover a').click(function () {
+            // Remover la clase 'selected-method' de todos los métodos de pago
+            $('.payment-method .item .default-cover').removeClass('selected-method');
+
+            // Añadir la clase 'selected-method' al contenedor seleccionado
+            $(this).closest('.default-cover').addClass('selected-method');
+        });
+    });
+
+   
 
 
 });
+
+
