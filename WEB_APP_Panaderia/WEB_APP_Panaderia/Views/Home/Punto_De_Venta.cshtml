@@ -218,38 +218,21 @@
 							<div class="head d-flex align-items-center justify-content-between w-100">
 								<div class="">
 									<h5>¿Pedido Express?</h5>
-									<span>ID : #65565</span>
+								<div class="status-toggle modal-status d-flex justify-content-between align-items-center me-3">
+									<input type="checkbox" id="express-order-checkbox" class="check">
+									<label for="express-order-checkbox" class="checktoggle"></label>
 								</div>
+							</div>
 						
 							</div>
-							<div class="customer-info block-section">
+						<div class="customer-info block-section  hidden">
 								<h6>Informacion de cliente</h6>
 								<div class="input-block d-flex align-items-center">
 									 <div class="flex-grow-1">
 									<p>Agregar Cliente</p>
 									</div> 
-									@* <div class="flex-grow-1">
-										<select class="select">
-											<option>Walk in Customer</option>
-											<option>John</option>
-											<option>Smith</option>
-											<option>Ana</option>
-											<option>Elza</option>
-										</select>
-									</div> *@
 									<a href="#" class="btn btn-primary btn-icon" data-bs-toggle="modal" data-bs-target="#create"><i data-feather="user-plus" class="feather-16"></i></a>
 								</div> 
-							 	@* <div class="input-block">
-									<select class="select">
-										<option>Search Products</option>
-										<option>IPhone 14 64GB</option>
-										<option>MacBook Pro</option>
-										<option>Rolex Tribute V3</option>
-										<option>Red Nike Angelo</option>
-										<option>Airpod 2</option>
-										<option>Oldest</option>
-									</select>
-								</div> *@
 							</div>
 
 						<div class="product-added block-section">
@@ -280,39 +263,38 @@
 								</div>
 							</div>
 
-							<div class="block-section payment-method">
-								<h6>Metodo de Pago</h6>
-								<div class="row d-flex align-items-center justify-content-center methods">
-									<div class="col-md-6 col-lg-4 item">
-										<div class="default-cover">
-											<a href="javascript:void(0);">
-												<img src="~/assets/img/icons/cash-pay.svg" alt="Payment Method">
-												<span>Efectivo</span>
-											</a>
-										</div>
+						<div class="block-section payment-method">
+							<h6>Método de Pago</h6>
+							<div class="row d-flex align-items-center justify-content-center methods">
+								<div class="col-md-6 col-lg-4 item">
+									<div class="default-cover">
+										<a href="javascript:void(0);">
+											<img src="~/assets/img/icons/cash-pay.svg" alt="Payment Method">
+											<span>Efectivo</span>
+										</a>
 									</div>
-									<div class="col-md-6 col-lg-4 item">
-										<div class="default-cover">
-											<a href="javascript:void(0);">
-												<img src="~/assets/img/icons/credit-card.svg" alt="Payment Method">
-												<span>Tarjeta</span>
-											</a>
-										</div>
+								</div>
+								<div class="col-md-6 col-lg-4 item">
+									<div class="default-cover">
+										<a href="javascript:void(0);">
+											<img src="~/assets/img/icons/credit-card.svg" alt="Payment Method">
+											<span>Tarjeta</span>
+										</a>
 									</div>
-									<div class="col-md-6 col-lg-4 item">
-										<div class="default-cover">
-											<a href="javascript:void(0);">
-												<img src="~/assets/img/icons/qr-scan.svg" alt="Payment Method">
-												<span>Simpe</span>
-											</a>
-										</div>
+								</div>
+								<div class="col-md-6 col-lg-4 item">
+									<div class="default-cover">
+										<a href="javascript:void(0);">
+											<img src="~/assets/img/icons/qr-scan.svg" alt="Payment Method">
+											<span>Simpe</span>
+										</a>
 									</div>
 								</div>
 							</div>
+						</div>
+
 							<div class="btn-row d-sm-flex align-items-center justify-content-between">
-								@* <a href="javascript:void(0);" class="btn btn-info btn-icon flex-fill" data-bs-toggle="modal" data-bs-target="#hold-order"><span class="me-1 d-flex align-items-center"><i data-feather="pause" class="feather-16"></i></span>Hold</a> *@
-								<a href="javascript:void(0);" class="btn btn-danger btn-icon flex-fill"><span class="me-1 d-flex align-items-center"><i data-feather="trash-2" class="feather-16"></i></span>Vaciar</a>
-								<a href="javascript:void(0);" class="btn btn-success btn-icon flex-fill" data-bs-toggle="modal" data-bs-target="#payment-completed"><span class="me-1 d-flex align-items-center"><i data-feather="credit-card" class="feather-16"></i></span>Pagar</a>
+							<a href="javascript:void(0);" id="payButton"  class="btn btn-success btn-icon flex-fill" data-bs-toggle="modal" data-bs-target="#payment-completed"><span class="me-1 d-flex align-items-center"><i data-feather="credit-card" class="feather-16"></i></span>Pagar</a>
 							</div>
 
 						</aside>
@@ -420,65 +402,73 @@
 	<!-- /Print Receipt -->
 	
 <!-- /Agregar Cliente -->
-	<div class="modal fade" id="create" tabindex="-1" aria-labelledby="create" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Crear</h5>
-					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form action="pos.html">
-						<div class="row">
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="input-blocks">
-									<label>Nombre del cliente</label>
-									<input type="text" class="form-control">
-								</div>
+<div class="modal fade" id="create" tabindex="-1" aria-labelledby="create" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Crear</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="create-customer-form">
+					<div class="row">
+						<div class="col-lg-6 col-sm-12 col-12">
+							<div class="input-blocks">
+								<label>Nombre del cliente</label>
+								<input type="text" class="form-control" name="nombre">
 							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="input-blocks">
-									<label>Correo</label>
-									<input type="email" class="form-control">
-								</div>
+						</div>
+						<div class="col-lg-6 col-sm-12 col-12">
+							<div class="input-blocks">
+								<label>Correo</label>
+								<input  type="email" class="form-control" name="correo">
 							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="input-blocks">
-									<label>Telefono</label>
-									<input type="text" class="form-control">
-								</div>
+						</div>
+						<div class="col-lg-6 col-sm-12 col-12">
+							<div class="input-blocks">
+								<label>Teléfono</label>
+								<input type="text" class="form-control" name="telefono">
 							</div>
-							
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="input-blocks">
-									<label>Provincia</label>
-									<input type="text">
-								</div>
+						</div>
+						<div class="col-lg-6 col-sm-12 col-12">
+							<div class="input-blocks">
+								<label>Provincia</label>
+								<input type="text" class="form-control" name="provincia">
 							</div>
-							<div class="col-lg-6 col-sm-12 col-12">
-								<div class="input-blocks">
-									<label>Canton</label>
-									<input type="text">
-								</div>
+						</div>
+						<div class="col-lg-6 col-sm-12 col-12">
+							<div class="input-blocks">
+								<label>Cantón</label>
+								<input type="text" class="form-control" name="canton">
 							</div>
+						</div>
 						<div class="col-lg-6 col-sm-12 col-12">
 							<div class="input-blocks">
 								<label>Distrito</label>
-								<input type="text">
+								<input type="text" class="form-control" name="distrito">
 							</div>
 						</div>
-						</div>
-						<div class="modal-footer d-sm-flex justify-content-end">
-							<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
-							<button type="submit" class="btn btn-submit me-2">Aceptar</button>
-						</div>
-					</form>
-				</div>
+					</div>
+					<div class="modal-footer d-sm-flex justify-content-end">
+						<button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+						<button type="submit" class="btn btn-submit me-2">Aceptar</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
+</div>
+
+<!-- Elementos ocultos para guardar la información del cliente -->
+<div id="customerNameHidden" class="d-none"></div>
+<div id="customerEmailHidden" class="d-none"></div>
+<div id="customerPhoneHidden" class="d-none"></div>
+<div id="customerProvinceHidden" class="d-none"></div>
+<div id="customerCantonHidden" class="d-none"></div>
+<div id="customerDistrictHidden" class="d-none"></div>
+
 
 <!-- /Tipo de Pizza -->
 <div class="modal fade" id="tipo-pizza" tabindex="-1" aria-labelledby="create" aria-hidden="true">
