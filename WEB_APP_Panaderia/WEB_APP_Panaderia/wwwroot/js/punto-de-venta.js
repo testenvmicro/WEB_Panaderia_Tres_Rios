@@ -77,7 +77,7 @@
             if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
                 openModal(productoId, $(this).data('producto-nombre'), $(this).data('producto-precio'));
             } else {
-                addProductToCart($(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
+                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
             }
         });
     }
@@ -107,7 +107,7 @@
             if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
                 openModal(productoId, $(this).data('producto-nombre'), productoTipo, $(this).data('producto-precio'));
             } else {
-                addProductToCart($(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
+                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
             }
         });
     }
@@ -136,7 +136,7 @@
             if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
                 openModal(productoId, $(this).data('producto-nombre'), $(this).data('producto-precio'));
             } else {
-                addProductToCart($(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
+                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
             }
         });
     }
@@ -166,7 +166,7 @@
             if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
                 openModal(productoId, $(this).data('producto-nombre'), $(this).data('producto-precio'));
             } else {
-                addProductToCart($(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'), productoDescripcion); 
+                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'), productoDescripcion); 
             }
         });
     }
@@ -184,7 +184,7 @@
                     let selectedSabores = $(".sabor-check:checked").map(function () {
                         return $(this).closest('.row').find('h6').text();
                     }).get();
-                    addProductToCart(productoNombre, productoTipo, productoPrecio, selectedSabores.join(', '));
+                    addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, selectedSabores.join(', '));
                 });
 
             },
@@ -233,12 +233,12 @@
     }
 
     // Función para agregar productos al carrito
-    function addProductToCart(nombre, tipo, precio, descripcion, sabores) {
-        let descripcionHTML = descripcion ? `<p>Descripcion: ${descripcion}</p>` : '';
+    function addProductToCart(producto_id, nombre, tipo, precio, descripcion, sabores) {
+        let descripcionHTML = descripcion ? `<p>Sabores: ${descripcion}</p>` : '';
         let saboresHTML = sabores ? `<p>Sabores: ${sabores}</p>` : '';
        
             let productHTML = `
-                            <div class="product-list d-flex align-items-center justify-content-between" data-nombre="${nombre}" data-tipo="${tipo}" data-sabores="${sabores}" data-precio="${precio}" data-descripcion="${descripcion}">
+                            <div class="product-list d-flex align-items-center justify-content-between" data-productoid="${producto_id}" data-nombre="${nombre}" data-tipo="${tipo}" data-sabores="${sabores}" data-precio="${precio}" data-descripcion="${descripcion}">
                                 <div class="d-flex align-items-center product-info">
                                     <div class="info">
                                         <h6 class="product-name"><a>${nombre}</a></h6>
@@ -246,6 +246,7 @@
                                          ${descripcionHTML}
                                          ${saboresHTML}
                                         <p class="subtotal">Subtotal: ₡<span class="subtotal-amount">${precio}</span></p>
+                                         <input type="text" class="form-control product-note" placeholder="Nota">
                                     </div>
                                 </div>
                                 <div class="qty-item text-center">
@@ -262,67 +263,6 @@
                             `;
             $("#product-list").append(productHTML);
             feather.replace(); // Actualiza los iconos de Feather
-        $(document).ready(function () {
-            $('#payButton').click(function () {
-                // Obtener la información de los productos
-                var products = [];
-                $('.product-list').each(function () {
-                    var productoNombre = $(this).data('nombre');
-                    var productoPrecio = $(this).data('precio');
-                    var productoTipo = $(this).data('tipo');
-                    var productoDescripcion = $(this).data('descripcion');
-                    products.push({
-                        nombre: productoNombre,
-                        precio: productoPrecio,
-                        tipo: productoTipo,
-                        descripcion: productoDescripcion
-                    });
-                });
-
-                // Obtener el total (asumiendo que tienes un elemento con el total)
-                var total = $('.order-total .text-end').text();
-
-                // Obtener el método de pago seleccionado
-                var selectedMethod = $('.payment-method .selected-method span').text();
-
-                // Verificar si el pedido es express
-                var isExpress = $('#express-order-checkbox').is(':checked');
-
-                // Obtener la información del cliente si existe
-                var customerInfo = '';
-                if ($('#customerNameHidden').text() !== '') {
-                    customerInfo += 'Nombre del cliente: ' + $('#customerNameHidden').text() + '\n';
-                }
-                if ($('#customerEmailHidden').text() !== '') {
-                    customerInfo += 'Correo: ' + $('#customerEmailHidden').text() + '\n';
-                }
-                if ($('#customerPhoneHidden').text() !== '') {
-                    customerInfo += 'Teléfono: ' + $('#customerPhoneHidden').text() + '\n';
-                }
-                if ($('#customerProvinceHidden').text() !== '') {
-                    customerInfo += 'Provincia: ' + $('#customerProvinceHidden').text() + '\n';
-                }
-                if ($('#customerCantonHidden').text() !== '') {
-                    customerInfo += 'Cantón: ' + $('#customerCantonHidden').text() + '\n';
-                }
-                if ($('#customerDistrictHidden').text() !== '') {
-                    customerInfo += 'Distrito: ' + $('#customerDistrictHidden').text() + '\n';
-                }
-
-                // Construir el mensaje para el alert
-                var message = 'Productos:\n';
-                products.forEach(function (product) {
-                    message += 'Nombre: ' + product.nombre + ', Precio: ' + product.precio + ', Tipos: ' + product.tipo + ', Descripcion: ' + product.descripcion + '\n';
-                });
-                message += '\nTotal: ' + total + '\n';
-                message += 'Método de pago: ' + selectedMethod + '\n';
-                message += 'Pedido Express: ' + (isExpress ? 'Sí' : 'No') + '\n';
-                message += '\nInformación del cliente:\n' + (customerInfo !== '' ? customerInfo : 'N/A');
-
-                // Mostrar la información en un alert
-                alert(message);
-            });
-        });
 
         // Añadir manejadores de eventos para los botones de incremento y decremento
         $(".inc").off('click').on('click', function () {
@@ -344,6 +284,8 @@
                 updateOrderTotal();
             }
         });
+
+
 
         // Añadir manejador de evento para el botón de eliminar
         $(".delete-icon").off('click').on('click', function () {
@@ -377,6 +319,156 @@
         updateOrderTotal();
     });
 
+    $(document).ready(function () {
+        $('#payButton').click(function () {
+            // Obtener la información de los productos
+            var products = [];
+            var totalAmount = 0;
+            $('.product-list').each(function () {
+                var productoId = $(this).data('productoid');
+                var productoNombre = $(this).data('nombre');
+                var productoPrecio = parseFloat($(this).data('precio'));
+                var productoTipo = $(this).data('tipo') || 'N/A';
+                var productoDescripcion = $(this).data('descripcion');
+                if (productoDescripcion === 'undefined') {
+                    var productoDescripcion = '';
+                }
+                var productoCantidad = parseInt($(this).find('.qty-input').val());
+                var productoTotal = productoPrecio * productoCantidad;
+                totalAmount += productoTotal;
+                var productoNota = $(this).find('.product-note').val() || 'N/A';
+
+                products.push({
+                    idProducto: productoId,
+                    nombre: productoNombre,
+                    precio: productoPrecio,
+                    tipo: productoTipo,
+                    descripcion: productoDescripcion,
+                    cantidad: productoCantidad,
+                    total: productoTotal,
+                    nota: productoNota
+                });
+            });
+
+            // Obtener el total
+            var total = $('.order-total .text-end').text();
+
+            // Obtener el método de pago seleccionado
+            var selectedMethod = $('.payment-method .selected-method span').text();
+
+            // Verificar si el pedido es express
+            var isExpress = $('#express-order-checkbox').is(':checked');
+
+            // Obtener la información del cliente
+            var customerNombre = $('#customerNombreHidden').text() || 'N/A';
+            var customerCorreo = $('#customerCorreoHidden').text() || 'N/A';
+            var customerTelefono = $('#customerTelefonoHidden').text() || 'N/A';
+            var customerDireccion = $('#customerDireccionHidden').text() || 'N/A';
+
+            // Llenar los datos del cliente en el modal
+            $('#ordenCustomerNombre').text(customerNombre);
+            $('#ordenCustomerTelefono').text(customerTelefono);
+            $('#ordenCustomerDireccion').text(customerDireccion);
+
+            // Llenar la fecha actual en el modal
+            var fechaActual = new Date().toLocaleDateString();
+            $('#ordenFecha').text(fechaActual);
+
+            // Llenar la tabla de productos en el modal
+            var productRows = '';
+            products.forEach(function (product, index) {
+                var descripcion = (product.descripcion && product.descripcion.trim()) ? product.descripcion : 'N/A';
+                var tipo = (product.tipo && product.tipo.trim()) ? product.tipo : 'N/A';
+                productRows += `
+                 <tr>
+                    <td>${index + 1}. ${product.nombre}</td>
+                    <td>₡${product.precio.toFixed(2)}</td>
+                    <td>${product.cantidad}</td>
+                    <td>${tipo}</td>
+                    <td>${descripcion}</td>
+                    <td>${product.nota}</td>
+                    <td class="text-end">₡${product.total.toFixed(2)}</td>
+                </tr>
+            `;
+            });
+            $('#ordenProductList').html(productRows);
+
+            // Llenar el total en el modal
+            $('#ordenTotalAmount').text(`₡${totalAmount.toFixed(2)}`);
+
+            // Mostrar el modal
+            $('#detalle-orden').modal('show');
+        });
+
+        $('#confirmOrderButton').click(function () {
+            // Obtener la información de los productos
+            var products = [];
+            var totalAmount = 0;
+            $('.product-list').each(function () {
+                var productoId = $(this).data('productoid');
+                var productoNombre = $(this).data('nombre');
+                var productoPrecio = parseFloat($(this).data('precio'));
+                var productoTipo = $(this).data('tipo') || 'N/A';
+                var productoDescripcion = $(this).data('descripcion');
+                if (productoDescripcion === 'undefined') {
+                    productoDescripcion = 'N/A';
+                }
+                var productoCantidad = parseInt($(this).find('.qty-input').val());
+                var productoTotal = productoPrecio * productoCantidad;
+                totalAmount += productoTotal;
+                var productoNota = $(this).find('.product-note').val() || 'N/A';
+
+                products.push({
+                    idProducto: productoId,
+                    nombre: productoNombre,
+                    precio: productoPrecio,
+                    tipo: productoTipo,
+                    descripcion: productoDescripcion,
+                    cantidad: productoCantidad,
+                    total: productoTotal,
+                    nota: productoNota
+                });
+            });
+
+            // Obtener el método de pago seleccionado
+            var selectedMethod = $('.payment-method .selected-method span').text();
+
+            // Verificar si el pedido es express
+            var isExpress = $('#express-order-checkbox').is(':checked');
+
+            // Obtener la información del cliente
+            var customerNombre = $('#customerNombreHidden').text() || 'N/A';
+            var customerCorreo = $('#customerCorreoHidden').text() || 'N/A';
+            var customerTelefono = $('#customerTelefonoHidden').text() || 'N/A';
+            var customerDireccion = $('#customerDireccionHidden').text() || 'N/A';
+
+            // Crear el objeto JSON con toda la información
+            var orderData = {
+                products: products,
+                totalAmount: totalAmount,
+                paymentMethod: selectedMethod,
+                isExpress: isExpress,
+                customer: {
+                    nombre: customerNombre,
+                    correo: customerCorreo,
+                    telefono: customerTelefono,
+                    direccion: customerDireccion
+                }
+            };
+
+            // Convertir el objeto a una cadena JSON
+            var orderDataJSON = JSON.stringify(orderData, null, 2);
+
+            // Mostrar el JSON en la consola para verificar
+            console.log(orderDataJSON);
+
+            // O mostrarlo en un alert (opcional)
+            alert(orderDataJSON);
+        });
+    });
+
+
+
 });
 
 $(document).ready(function () {
@@ -397,17 +489,14 @@ $(document).ready(function () {
         const nombre = $(this).find('input[name="nombre"]').val();
         const correo = $(this).find('input[name="correo"]').val();
         const telefono = $(this).find('input[name="telefono"]').val();
-        const provincia = $(this).find('input[name="provincia"]').val();
-        const canton = $(this).find('input[name="canton"]').val();
-        const distrito = $(this).find('input[name="distrito"]').val();
+        const direccion = $(this).find('input[name="direccion"]').val();
+
 
         // Guardar la información en elementos ocultos para después usarlos
-        $('#customerNameHidden').text(nombre);
-        $('#customerEmailHidden').text(correo);
-        $('#customerPhoneHidden').text(telefono);
-        $('#customerProvinceHidden').text(provincia);
-        $('#customerCantonHidden').text(canton);
-        $('#customerDistrictHidden').text(distrito);
+        $('#customerNombreHidden').text(nombre);
+        $('#customerCorreoHidden').text(correo);
+        $('#customerTelefonoHidden').text(telefono);
+        $('#customerDireccionHidden').text(direccion);
 
         // Crear el HTML para mostrar la información del cliente solo si los campos no están vacíos
         let customerInfoHTML = '<div class="customer-details">';
@@ -420,15 +509,10 @@ $(document).ready(function () {
         if (telefono) {
             customerInfoHTML += `<p><strong>Teléfono:</strong> ${telefono}</p>`;
         }
-        if (provincia) {
-            customerInfoHTML += `<p><strong>Provincia:</strong> ${provincia}</p>`;
+        if (direccion) {
+            customerInfoHTML += `<p><strong>Dirección:</strong> ${direccion}</p>`;
         }
-        if (canton) {
-            customerInfoHTML += `<p><strong>Cantón:</strong> ${canton}</p>`;
-        }
-        if (distrito) {
-            customerInfoHTML += `<p><strong>Distrito:</strong> ${distrito}</p>`;
-        }
+ 
         customerInfoHTML += '</div>';
 
         // Limpiar la información anterior del cliente
@@ -456,6 +540,39 @@ $(document).ready(function () {
         });
     });
 
+    $(document).ready(function () {
+        var phoneInput = $('input[name="telefono"]');
+        phoneInput.val('+506 '); // Inicializar el campo con +506
+
+        phoneInput.on('focus', function () {
+            if (phoneInput.val() === '') {
+                phoneInput.val('+506 ');
+            }
+        });
+
+        phoneInput.on('input', function () {
+            var currentValue = phoneInput.val();
+            if (!currentValue.startsWith('+506 ')) {
+                phoneInput.val('+506 ' + currentValue.replace(/[^0-9]/g, '').substring(0, 8));
+            }
+        });
+
+        phoneInput.on('keydown', function (event) {
+            // Permitir borrar
+            if (event.key === "Backspace" || event.key === "Delete") {
+                var currentValue = phoneInput.val();
+                if (currentValue.length <= 5) {
+                    event.preventDefault();
+                }
+            }
+        });
+
+        phoneInput.mask('+506 0000-0000', {
+            onKeyPress: function (val, e, field, options) {
+                field.mask('+506 0000-0000', options);
+            }
+        });
+    });
    
 
 

@@ -32534,5 +32534,9 @@ label span {
     background-color: #e6f7ff; /* Fondo ligero para indicar la selección */
 }
 
+.modal-lg-custom {
+    max-width: 60%;
+}
+
 
 /*# sourceMappingURL=style.css.map */

@@ -294,7 +294,7 @@
 						</div>
 
 							<div class="btn-row d-sm-flex align-items-center justify-content-between">
-							<a href="javascript:void(0);" id="payButton"  class="btn btn-success btn-icon flex-fill" data-bs-toggle="modal" data-bs-target="#payment-completed"><span class="me-1 d-flex align-items-center"><i data-feather="credit-card" class="feather-16"></i></span>Pagar</a>
+							<a href="javascript:void(0);" id="payButton" class="btn btn-success btn-icon flex-fill" data-bs-toggle="modal" data-bs-target="#payment-completed"><span class="me-1 d-flex align-items-center"><i data-feather="credit-card" class="feather-16"></i></span>Pagar</a>
 							</div>
 
 						</aside>
@@ -328,6 +328,72 @@
 		</div>
 	</div>
 	<!-- /Payment Completed -->
+<!-- Order detail -->
+<div class="modal fade modal-default" id="detalle-orden" aria-labelledby="detalle-orden">
+	<div class="modal-dialog modal-lg-custom modal-dialog-centered">
+		<div class="modal-content">
+			<div class="d-flex justify-content-end">
+				<button type="button" class="close p-0" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="icon-head text-center">
+					<a href="javascript:void(0);">
+						<img src="~/assets/img/logo-pizzeria.png" width="100" height="30" alt="Receipt Logo">
+					</a>
+				</div>
+				<div class="text-center info text-center">
+					<h6>3 Rios Pizzeria.,</h6>
+					<p class="mb-0">Telefono: +506 2279 8626 / 2278 1596</p>
+					<p class="mb-0">Correo: <a>tresriospizzeria@gmail.com</a></p>
+				</div>
+				<div class="tax-invoice">
+					<h6 class="text-center">Detalle Orden</h6>
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<div class="invoice-user-name"><span>Nombre: </span><span id="ordenCustomerNombre"></span></div>
+							<div class="invoice-user-name"><span>Teléfono: </span><span id="ordenCustomerTelefono"></span></div>
+							<div class="invoice-user-name"><span>Dirección: </span><span id="ordenCustomerDireccion"></span></div>
+						</div>
+						@* <div class="col-sm-12 col-md-6">
+							<div class="invoice-user-name"><span>Fecha: </span><span id="ordenFecha"></span></div>
+						</div> *@
+					</div>
+				</div>
+				<table class="table-borderless w-100 table-fit">
+					<thead>
+						<tr>
+							<th># Producto</th>
+							<th>Precio</th>
+							<th>Cantidad</th>
+							<th>Tipo</th>
+							<th>Sabores</th>
+							<th>Nota</th>
+							<th class="text-end">Total</th>
+						</tr>
+					</thead>
+					<tbody id="ordenProductList">
+						<!-- Productos se agregarán aquí -->
+					</tbody>
+				</table>
+				<div class="text-center invoice-bar">
+					<div class="d-flex justify-content-between">
+						<span>Total por Pagar :</span>
+						<span id="ordenTotalAmount" class="text-end"></span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer d-sm-flex justify-content-between">
+				<button type="button" class="btn btn-primary flex-fill">Cancelar<i class="feather-arrow-right-circle icon-me-5"></i></button>
+				<a class="btn btn-secondary flex-fill" id="confirmOrderButton">Confirmar Orden<i class="feather-arrow-right-circle icon-me-5"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Order detail -->
+
 	<!-- Print Receipt -->
 	<div class="modal fade modal-default" id="print-receipt" aria-labelledby="print-receipt">
 		<div class="modal-dialog modal-dialog-centered">
@@ -416,38 +482,26 @@
 					<div class="row">
 						<div class="col-lg-6 col-sm-12 col-12">
 							<div class="input-blocks">
-								<label>Nombre del cliente</label>
-								<input type="text" class="form-control" name="nombre">
+								<label>Nombre (obligatorio)</label>
+								<input type="text" class="form-control" name="nombre" required>
 							</div>
 						</div>
 						<div class="col-lg-6 col-sm-12 col-12">
 							<div class="input-blocks">
-								<label>Correo</label>
+								<label>Correo (opcional)</label>
 								<input  type="email" class="form-control" name="correo">
 							</div>
 						</div>
 						<div class="col-lg-6 col-sm-12 col-12">
 							<div class="input-blocks">
-								<label>Teléfono</label>
-								<input type="text" class="form-control" name="telefono">
+								<label>Teléfono (obligatorio)</label>
+								<input type="text" class="form-control" name="telefono" required>
 							</div>
 						</div>
 						<div class="col-lg-6 col-sm-12 col-12">
 							<div class="input-blocks">
-								<label>Provincia</label>
-								<input type="text" class="form-control" name="provincia">
-							</div>
-						</div>
-						<div class="col-lg-6 col-sm-12 col-12">
-							<div class="input-blocks">
-								<label>Cantón</label>
-								<input type="text" class="form-control" name="canton">
-							</div>
-						</div>
-						<div class="col-lg-6 col-sm-12 col-12">
-							<div class="input-blocks">
-								<label>Distrito</label>
-								<input type="text" class="form-control" name="distrito">
+								<label>Dirección (obligatorio)</label>
+								<input type="text" class="form-control" name="direccion" required>
 							</div>
 						</div>
 					</div>
@@ -462,12 +516,10 @@
 </div>
 
 <!-- Elementos ocultos para guardar la información del cliente -->
-<div id="customerNameHidden" class="d-none"></div>
-<div id="customerEmailHidden" class="d-none"></div>
-<div id="customerPhoneHidden" class="d-none"></div>
-<div id="customerProvinceHidden" class="d-none"></div>
-<div id="customerCantonHidden" class="d-none"></div>
-<div id="customerDistrictHidden" class="d-none"></div>
+<div id="customerNombreHidden" class="d-none"></div>
+<div id="customerCorreoHidden" class="d-none"></div>
+<div id="customerTelefonoHidden" class="d-none"></div>
+<div id="customerDireccionHidden" class="d-none"></div>
 
 
 <!-- /Tipo de Pizza -->
