@@ -153,51 +153,6 @@ namespace WEB_APP_Panaderia.Controllers
         {
             return View();
         }
-		public IActionResult RegistroDeshechos()
-		{
-            try
-            {
-                var viewModel = new RegistroDesechosViewModel
-                {
-                    Reportes = _registroDesechosModel.ConsultarRegistroDesechos(),
-                    Reporte = new RegistroDesechosEntities()
-                };
-                return View(viewModel);
-            }
-            catch (Exception ex)
-            {
-                return View("Error");
-            }
-		}
-
-		public IActionResult RegistroDeshechosPdf()
-		{
-
-			var resultado = _registroDesechosModel.ConsultarRegistroDesechos();
-
-			if (resultado == null || resultado.Count == 0)
-			{
-				return NotFound("No se encontraron registros.");
-			}
-
-			var pdfBytes = _registroDesechosModel.GenerarPdfRegistroDesechos(resultado); 
-
-			return File(pdfBytes, "application/pdf", "ReporteDesechos.pdf");
-		}
-
-		public IActionResult RegistroDeshechosExcel()
-		{
-			var resultado = _registroDesechosModel.ConsultarRegistroDesechos();
-
-			if (resultado == null || resultado.Count == 0)
-			{
-				return NotFound("No se encontraron registros.");
-			}
-
-			var excelBytes = _registroDesechosModel.GenerarExcelRegistroDesechos(resultado);
-
-			return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "RegistroDesechos.xlsx");
-		}
 
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
