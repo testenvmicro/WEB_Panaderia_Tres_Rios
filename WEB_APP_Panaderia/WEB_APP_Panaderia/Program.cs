@@ -14,6 +14,8 @@ builder.Services.AddScoped<IRegistroDesechosModel, RegistroDesechosModel>();
 builder.Services.AddScoped<IProductosModel, ProductosModel>();
 builder.Services.AddScoped<ISaboresPizzaModel, SaboresPizzaModel>();
 builder.Services.AddScoped<ILogsModel, LogsModel>();
+builder.Services.AddScoped<IInsumosModel, InsumosModel>();
+
 
 var app = builder.Build();
 
