@@ -40,49 +40,7 @@
         </div>
         <!-- /user list -->
       
-                <!-- /Filter -->
-                <div class="card" id="filter_inputs">
-                    <div class="card-body pb-0">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="input-blocks">
-                                    <i data-feather="user" class="info-img"></i>
-                                    <select class="select">
-                                        <option>Seleccione Nombre</option>
-                                        <option>Herson</option>
-                                        <option>Laura</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="input-blocks">
-                                    <i data-feather="stop-circle" class="info-img"></i>
-                                    <select class="select">
-                                        <option>Seleccione estado</option>
-                                        <option>Activo</option>
-                                        <option>Inactivo</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="input-blocks">
-                                    <i data-feather="zap" class="info-img"></i>
-                                    <select class="select">
-                                        <option>Seleccione Rol</option>
-                                        <option>Operario</option>
-                                        <option>Vendedor</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6 col-12">
-                                <div class="input-blocks">
-                                    <a class="btn btn-filters ms-auto"> <i data-feather="search" class="feather-search"></i> Search </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+              
 @if (ViewData["Message"] != null)
 {
     <div>@ViewData["Message"]</div>
@@ -139,24 +97,24 @@ else
                             @using (Html.BeginForm("RegistrarInsumos", "Home", FormMethod.Post, new { @class = "pt-3" }))
                             {
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Agregar Proveedor</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Agregar Insumo</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="mb-3">
-                                        <label for="descripcion" class="form-label">Descripción</label>
+                                        <label for="nombre" class="form-label">Nombre</label>
                                         @Html.TextBoxFor(m => m.Insumo.nombre, new { @class = "form-control", @required = "required" })
                                     </div>
                                     <div class="mb-3">
-                                        <label for="telefono" class="form-label">Teléfono</label>
+                                        <label for="tipo" class="form-label">Tipo</label>
                                         @Html.TextBoxFor(m => m.Insumo.tipo, new { @class = "form-control", @required = "required" })
                                     </div>
                                     <div class="mb-3">
-                                        <label for="correo" class="form-label">Correo</label>
-                                        @Html.TextBoxFor(m => m.Insumo.marca, new { @class = "form-control", @required = "required", @type = "email" })
+                                        <label for="marca" class="form-label">Marca</label>
+                                        @Html.TextBoxFor(m => m.Insumo.marca, new { @class = "form-control", @required = "required" })
                                     </div>
                                     <div class="mb-3">
-                                        <label for="direccion" class="form-label">Dirección</label>
+                                        <label for="categoria" class="form-label">Categoría</label>
                                         @Html.TextBoxFor(m => m.Insumo.categoria, new { @class = "form-control", @required = "required" })
                                     </div>
                                 </div>
