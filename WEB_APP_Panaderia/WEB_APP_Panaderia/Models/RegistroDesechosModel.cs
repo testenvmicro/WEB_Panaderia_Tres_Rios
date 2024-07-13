@@ -1,4 +1,4 @@
-﻿using iText.Kernel.Pdf;
+using iText.Kernel.Pdf;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using WEB_APP_Panaderia.Entities;
@@ -21,7 +21,7 @@ namespace WEB_APP_Panaderia.Models
 			_contextAccessor = contextAccessor;
 		}
 
-		public List<RegistroDesechosEntities> ConsultarRegistroDesechos() 
+		public List<RegistroDesechosEntities>? ConsultarRegistroDesechos() 
 		{
 			using (var client = new HttpClient()) 
 			{
@@ -41,6 +41,157 @@ namespace WEB_APP_Panaderia.Models
 			}
 		
 		}
+
+		public void ActualizarRegistroDesecho(RegistroDesechosEntities reporte)
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/ActualizarRegistroDesechos";
+
+				JsonContent body = JsonContent.Create(reporte);
+				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
+
+			}
+		}
+
+		public RegistroDesechosEntities? ConsultarUnRegistroDesecho(int id)
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + $"/RegistroDesechos/ConsultarUnRegistroDesecho/{id}";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<RegistroDesechosEntities>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+
+				return null;
+			}
+		}
+
+
+		public List<CategoriaDesechoEntities> ConsultarCategoriaDesecho()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/ConsultarCategoriaDesecho";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<CategoriaDesechoEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+				return new List<CategoriaDesechoEntities>();
+			}
+
+		}
+
+		public List<CategoriaDesechoTratamientoEntities> ConsultarCategoriaDesechoTratamiento()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/ConsultarCategoriaDesechoTratamiento";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<CategoriaDesechoTratamientoEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+				return new List<CategoriaDesechoTratamientoEntities>();
+			}
+
+		}
+
+		public List<DesechoDisposicionFinalEntities> ConsultarDesechoDisposicionFinal()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/ConsultarDesechoDisposicionFinal";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<DesechoDisposicionFinalEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+				return new List<DesechoDisposicionFinalEntities>();
+			}
+
+		}
+
+		public List<DesechoTransporteEntities> ConsultarDesechoTransporte()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/ConsultarDesechoTransporte";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<DesechoTransporteEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+				return new List<DesechoTransporteEntities>();
+			}
+
+		}
+
+		public int AgregarRegistroDesecho(RegistroDesechosEntities reporte)
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/AgregarRegistroDesechos";
+
+				JsonContent body = JsonContent.Create(reporte);
+				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
+
+				if (response.IsSuccessStatusCode)
+					return response.Content.ReadFromJsonAsync<int>().Result;
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+
+				return 0;
+			}
+		}
+
+		public void EliminarRegistroDesecho(int idProveedor)
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/EliminarRegistroDesechos";
+
+				JsonContent body = JsonContent.Create(idProveedor);
+				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
+
+				if (!response.IsSuccessStatusCode)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+			}
+		}
+
 
 		public byte[] GenerarPdfRegistroDesechos(List<RegistroDesechosEntities> registros)
 		{
