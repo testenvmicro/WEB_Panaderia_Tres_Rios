@@ -1,296 +1,224 @@
 ﻿@model WEB_APP_Panaderia.Models.ViewModel
 
 @{
-	ViewData["Title"] = "Usuarios";
-	Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="page-wrapper">
-	<div class="content">
-		<div class="page-header">
-			<div class="add-item d-flex">
-				<div class="page-title">
-					<h4>Lista de Usuarios</h4>
-					<h6>Gestionar Usuarios</h6>
-				</div>
-			</div>
-			<ul class="table-top-head">
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Pdf"><img src="~/~/assets/img/icons/pdf.svg" alt="img"></a>-->
-				</li>
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Excel"><img src="~/~/assets/img/icons/excel.svg" alt="img"></a>-->
-				</li>
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Print"><i data-feather="printer" class="feather-rotate-ccw"></i></a>-->
-				</li>
-				<li>
-					<!--<a data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh"><i data-feather="rotate-ccw" class="feather-rotate-ccw"></i></a>-->
-				</li>
-				<li>
-					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Collapse" id="collapse-header"><i data-feather="chevron-up" class="feather-chevron-up"></i></a>
-				</li>
-			</ul>
-			<div class="page-btn">
-				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#add-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Usuario</a>
-				
-			</div>
-			<br />
-			<div class="page-btn">
-				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#edit-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Usuario</a>
-			</div>
-			</div>
-			<!-- /user list -->
-		<div class="card table-list-card">
-			<div class="card-body">
-				<div class="table-top">
-					<div class="search-set">
-						<div class="search-input">
-							<a href="javascript:void(0);" class="btn btn-searchset"><i data-feather="search" class="feather-search"></i></a>
-						</div>
-					</div>
-					<div class="search-path">
-						<a class="btn btn-filter" id="filter_search">
-							<i data-feather="filter" class="filter-icon"></i>
-							<span><img src="~/assets/img/icons/closes.svg" alt="img"></span>
+    <div class="content">
+        <div class="page-header">
+            <div class="add-item d-flex">
+                <div class="page-title">
+                    <h4>Lista de Usuarios</h4>
+                    <h6>Gestionar Usuarios</h6>
+                </div>
+            </div>
+            <div class="page-btn">
+                <a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#add-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Usuario</a>
+            </div>
+        </div>
 
-						</a>
-					</div>
-					<div class="form-sort">
-						<i data-feather="sliders" class="info-img"></i>
-						<select class="select">
-							<option>Ordenar por Fecha</option>
-							<option>14 09 23</option>
-							<option>11 09 23</option>
-						</select>
-					</div>
-				</div>
-				<!-- /Filter -->
-				<div class="card" id="filter_inputs">
-					<div class="card-body pb-0">
-						<div class="row">
-							<div class="col-lg-3 col-sm-6 col-12">
-								<div class="input-blocks">
-									<i data-feather="user" class="info-img"></i>
-									<select class="select">
-										<option>Seleccione Nombre</option>
-										<option>Herson</option>
-										<option>Laura</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-sm-6 col-12">
-								<div class="input-blocks">
-									<i data-feather="stop-circle" class="info-img"></i>
-									<select class="select">
-										<option>Seleccione estado</option>
-										<option>Activo</option>
-										<option>Inactivo</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-sm-6 col-12">
-								<div class="input-blocks">
-									<i data-feather="zap" class="info-img"></i>
-									<select class="select">
-										<option>Seleccione Rol</option>
-										<option>Operario</option>
-										<option>Vendedor</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-3 col-sm-6 col-12">
-								<div class="input-blocks">
-									<a class="btn btn-filters ms-auto"> <i data-feather="search" class="feather-search"></i> Search </a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Filter -->
-				
-
-				<div class="table-responsive">
-					<table class="table datanew">
-						<thead>
-							<tr>
-								<th>idUsuario</th>
-								<th>Correo</th>
-								<th>Contrasena</th>
-								<th>Estado</th>
-								<th>Rol</th>
-								<th>Nombre</th>
-							</tr>
-						</thead>
-						<tbody>
-							
-								
-								@foreach (var user in Model.Usuarios)
-								{
-									<tr>
-										<td>@user.idUsuario</td>
-										<td>@user.correo</td>
-										<td>@user.contrasenna</td>
-										<td>@user.estado</td>
-										<td>@user.idRol</td>
-										<td>@user.nombre</td>
-									<td class="action-table-data">
-										<div class="edit-delete-action">
-											<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-												<i data-feather="eye" class="action-eye"></i>
-											</a>
-											<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-												<i data-feather="edit" class="feather-edit"></i>
-											</a>
-											<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-												<i data-feather="trash-2" class="feather-trash-2"></i>
-											</a>
-										</div>
-									</td>
-									</tr>
-								}
-							
-							
-						</tbody>
-					</table>
-					@* <script>
-						$(document).ready(function () {
-							$('#dataTable').DataTable({
-								"processing": true,
-								"serverSide": false,
-								"paging": true,
-								"autoWidth": false
-							});
-						});
-					</script> *@
-				</div>
-			</div>
-		</div>
-	
-		<!-- /user list -->
-		<!-- Add User -->
-		<div class="modal fade" id="add-units">
-			<div class="modal-dialog modal-dialog-centered custom-modal-two">
-				<div class="modal-content">
-					<div class="page-wrapper-new p-0">
-						<div class="content">
-							<div class="modal-header border-0 custom-modal-header">
-								<div class="page-title">
-									<h4>Agregar Usuario</h4>
-								</div>
-								<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body custom-modal-body">
-								
-									@using (Html.BeginForm("RegistrarUsuarios", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
+        <div class="card table-list-card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table datanew">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Correo</th>
+                                <th>Estado</th>
+                                <th>Rol</th>
+                                <th>Nombre</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model.Usuarios)
                             {
-										<div class="col-lg-6">
-											<div class="input-blocks">
-												<label>Nombre Usuario</label>
-											@Html.TextBoxFor(m => m.Usuario.nombre, new { @class = "form-control",  @placeholder = "Nombre" })
-											
-										</div>
-										</div>
-										
-										<div class="col-lg-6">
-											<div class="input-blocks">
-												<label>Correo</label>
-											@Html.TextBoxFor(m => m.Usuario.correo, new { @class = "form-control", @onchange = "BuscarCorreo();", @onblur = "validarCampoCorreo();", @placeholder = "Correo electrónico" })
-											<span id="alertaCorreo"></span>
-											<span id="alertaCorreo2"></span>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="input-blocks">
-												<label>Rol</label>
-												<select class="select roles" required name="id_roles" id="id_roles">
-													
-												</select>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="input-blocks">
-												<label>Contraseña</label>
-												<div class="pass-group">
-														@Html.PasswordFor(m => m.Usuario.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })													
-													<span class="fas toggle-password fa-eye-slash"></span>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-6">
-											<div class="input-blocks">
-												<label>Confirmar contraseña</label>
-												<div class="pass-group">
-														@Html.PasswordFor(m => m.Usuario.contrasenna, new { @class = "form-control", @placeholder = "Contraseña" })																										
-													<span class="fas toggle-password fa-eye-slash"></span>
-												</div>
-											</div>
-										</div>
-
-											<div class="modal-footer-btn">
-												<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
-										<input type="submit" id="btnRegistrarUsuario" disabled class="btn btn-submit" value="Enviar" />
-										@* <button type="submit" class="btn btn-submit">Enviar</button> *@
-											</div>
-										}
-
-									</div>
-									
-								</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		</div>
-	<!-- Add User -->
-	<!-- Edit User -->
-	<div class="modal fade" id="edit-units">
-		<div class="modal-dialog modal-dialog-centered custom-modal-two">
-			<div class="modal-content">
-				<div class="page-wrapper-new p-0">
-					<div class="content">
-						<div class="modal-header border-0 custom-modal-header">
-							<div class="page-title">
-								<h4>Editar Usuario</h4>
-							</div>
-							<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<form id="editarUsuarioForm" method="post" action="/Usuarios/ActualizarUsuario">
-								<input type="text" id="editIdUsuario" name="idUsuario" />
-								<div class="form-group">
-									<label for="editNombre">Nombre</label>
-									<input type="text" class="form-control" id="editNombre" name="nombre" required />
-								</div>
-								<div class="form-group">
-									<label for="editCorreo">Correo</label>
-									<input type="email" class="form-control" id="editCorreo" name="correo" required />
-								</div>
-								<div class="form-group">
-									<label for="editContrasenna">Contraseña</label>
-									<input type="password" class="form-control" id="editContrasenna" name="contrasenna" required />
-								</div>
-								<div class="form-group">
-									<label for="editRol">Rol</label>
-									<input type="number" class="form-control" id="editRol" name="idRol" required />
-								</div>
-								<div class="form-group">
-									<label for="editEstado">Estado</label>
-									<input type="checkbox" id="editEstado" name="estado" />
-								</div>
-								<button type="submit" class="btn btn-primary">Guardar</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /Edit User -->
+                                <tr>
+                                    <td>@user.idUsuario</td>
+                                    <td>@user.correo</td>
+                                    <td>@(user.estado ? "Activo" : "Inactivo")</td>
+                                    <td>@user.idRol</td>
+                                    <td>@user.nombre</td>
+                                    <td class="action-table-data">
+                                        <div class="edit-delete-action">
+                                            <a class="me-2 p-2 mb-0" href="javascript:void(0);" onclick="cargarDatosUsuario(@user.idUsuario)" data-bs-toggle="modal" data-bs-target="#edit-units">
+                                                <i data-feather="edit" class="feather-edit"></i>
+                                            </a>
+                                            <a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);" onclick="desactivarUsuario(@user.idUsuario)">
+                                                <i data-feather="trash-2" class="feather-trash-2"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Modal para agregar usuario -->
+<div class="modal fade" id="add-units" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @using (Html.BeginForm("RegistrarUsuarios", "Usuarios", FormMethod.Post, new { @class = "pt-3" }))
+            {
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        @Html.TextBoxFor(m => m.Usuario.nombre, new { @class = "form-control", @required = "required" })
+                    </div>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo</label>
+                        @Html.TextBoxFor(m => m.Usuario.correo, new { @class = "form-control", @required = "required", @type = "email" })
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasenna" class="form-label">Contraseña</label>
+                        @Html.PasswordFor(m => m.Usuario.contrasenna, new { @class = "form-control", @required = "required" })
+                    </div>
+                    <div class="mb-3">
+                        <label for="idRol" class="form-label">Rol</label>
+                        @Html.DropDownListFor(m => m.Usuario.idRol, new SelectList(Model.Roles, "idRol", "descripcion"), "Seleccione un rol", new { @class = "form-control", @required = "required" })
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar usuario -->
+<div class="modal fade" id="edit-units" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @using (Html.BeginForm("Usuarios", "Home", FormMethod.Post, new { @class = "pt-3", @id = "editUsuarioForm" }))
+            {
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editIdUsuario" name="idUsuario" />
+                    <div class="mb-3">
+                        <label for="editNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="editNombre" name="nombre" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editCorreo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="editCorreo" name="correo" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editContrasenna" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="editContrasenna" name="contrasenna" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editIdRol" class="form-label">Rol</label>
+                        <select class="form-control" id="editIdRol" name="idRol" required>
+                            @foreach (var rol in Model.Roles)
+                            {
+                                <option value="@rol.idRol">@rol.descripcion</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editEstado" class="form-label">Estado</label>
+                        <select class="form-control" id="editEstado" name="estado">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    function cargarDatosUsuario(idUsuario) {
+        $.ajax({
+            url: '@Url.Action("GetUsuarioById", "Usuarios")',
+            type: 'GET',
+            data: { idUsuario: idUsuario },
+            success: function (data) {
+                $('#editIdUsuario').val(data.idUsuario);
+                $('#editNombre').val(data.nombre);
+                $('#editCorreo').val(data.correo);
+                $('#editIdRol').val(data.idRol);
+                $('#editEstado').val(data.estado.toString());
+                $('#edit-units').modal('show');
+            },
+            error: function (error) {
+                console.log('Error al cargar los datos del usuario:', error);
+            }
+        });
+    }
+
+    function eliminarUsuario(idUsuario) {
+        if (confirm('¿Está seguro de que desea eliminar este usuario?')) {
+            $.ajax({
+                url: '@Url.Action("EliminarUsuario", "Usuarios")',
+                type: 'POST',
+                data: { idUsuario: idUsuario },
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (error) {
+                    console.log('Error al eliminar el usuario:', error);
+                }
+            });
+        }
+    }
+
+    $(document).ready(function () {
+        $('#editUsuarioForm').submit(function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("ActualizarUsuario", "Usuarios")',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (error) {
+                    console.log('Error al actualizar el usuario:', error);
+                }
+            });
+        });
+    });
+
+    function desactivarUsuario(idUsuario) {
+        if (confirm('¿Está seguro de que desea desactivar este usuario?')) {
+            $.ajax({
+                url: '@Url.Action("DesactivarUsuario", "Usuarios")',
+                type: 'POST',
+                data: { idUsuario: idUsuario },
+                success: function (data) {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert('Error al desactivar el usuario: ' + data.message);
+                    }
+                },
+                error: function (error) {
+                    console.log('Error al desactivar el usuario:', error);
+                }
+            });
+        }
+    }
+</script>
