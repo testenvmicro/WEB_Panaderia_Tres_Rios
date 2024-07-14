@@ -1,4 +1,4 @@
-﻿namespace WEB_APP_Panaderia.Entities
+namespace WEB_APP_Panaderia.Entities
 {
 	public class DesechoTransporteEntities
 	{
@@ -6,3 +6,4 @@
 		public string descripcion { get; set; } = string.Empty;
 	}
 }
+

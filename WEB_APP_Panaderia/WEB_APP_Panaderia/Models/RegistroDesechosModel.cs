@@ -1,4 +1,4 @@
-﻿using iText.Kernel.Pdf;
+using iText.Kernel.Pdf;
 using iText.Layout.Element;
 using iText.Layout.Properties;
 using WEB_APP_Panaderia.Entities;

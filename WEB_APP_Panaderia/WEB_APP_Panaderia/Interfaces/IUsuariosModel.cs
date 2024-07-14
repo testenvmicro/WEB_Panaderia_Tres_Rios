@@ -13,7 +13,10 @@ namespace WEB_APP_Panaderia.Interfaces
         public int BuscarExisteCorreo(string Correo);
 		public List<UsuariosEntities> GetAllUsers();
 		public void ActualizarUsuario(UsuariosEntities entidad);
+        public UsuariosEntities GetUsuarioById(int idUsuario);
+        void DesactivarUsuario(int idUsuario);
+      
 
 
-	}
+    }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
@@ -148,3 +148,4 @@ namespace WEB_APP_Panaderia.Controllers
 	}
 
 }
+
