@@ -43,6 +43,15 @@
 	<link rel="stylesheet" href="~/assets/css/style.css">
 </head>
 <body>
+
+	@{
+		var id_usuario = Context.Session.GetString("id_usuario")?.ToString();
+		var usuario = Context.Session.GetString("Correo")?.ToString();
+		var nombre = Context.Session.GetString("Nombre")?.ToString();
+		var rol = Context.Session.GetString("Rol")?.ToString();
+
+
+	}
     <div>
         @RenderBody()
     </div>
@@ -83,6 +92,7 @@
 	<!-- Custom JS -->
 	<script src="~/assets/js/theme-script.js"></script>
 	<script src="~/assets/js/script.js"></script>
+	<script src="~/js/punto-de-venta.js"></script>
 
 	@await RenderSectionAsync("Scripts", required: false)
 </body>
