@@ -402,7 +402,7 @@
 
         $('#confirmOrderButton').click(function () {
             // Obtener la información de los productos
-            var products = [];
+            var ordenProductos = [];
             var totalAmount = 0;
             $('.product-list').each(function () {
                 var productoId = $(this).data('productoid');
@@ -418,10 +418,10 @@
                 totalAmount += productoTotal;
                 var productoNota = $(this).find('.product-note').val() || 'N/A';
 
-                products.push({
+                ordenProductos.push({
                     idProducto: productoId,
                     nombre: productoNombre,
-                    precio: productoPrecio,
+                    precioUnitario: productoPrecio,
                     tipo: productoTipo,
                     descripcion: productoDescripcion,
                     cantidad: productoCantidad,
@@ -444,11 +444,11 @@
 
             // Crear el objeto JSON con toda la información
             var orderData = {
-                products: products,
-                totalAmount: totalAmount,
-                paymentMethod: selectedMethod,
-                isExpress: isExpress,
-                customer: {
+                ordenProductos: ordenProductos,
+                montoTotal: totalAmount,
+                metodoPago: selectedMethod,
+                express: isExpress,
+                clienteOrden: {
                     nombre: customerNombre,
                     correo: customerCorreo,
                     telefono: customerTelefono,
@@ -456,18 +456,51 @@
                 }
             };
 
-            // Convertir el objeto a una cadena JSON
-            var orderDataJSON = JSON.stringify(orderData, null, 2);
+            // Enviar la solicitud AJAX al controlador
+            $.ajax({
+                type: 'POST',
+                url: '/OrdenPDV/CompletarOrden',
+                contentType: 'application/json',
+                data: JSON.stringify(orderData),
+                success: function (response) {
+                    console.log(response);
+                    if (response.success) {
+                        // Mostrar mensaje de éxito con SweetAlert
+                        Swal.fire({
+                            title: '¡Éxito!',
+                            text: "Orden completada exitosamente. Número de orden: " + response.idOrden + ", Cliente: " + response.nombre,
+                            icon: 'success',
+                            confirmButtonText: 'Aceptar'
+                        }).then(() => {
+                            // Cerrar el modal
+                            $('#detalle-orden').modal('hide');
+                            // Redirigir o realizar otra acción después de cerrar el SweetAlert
+                           /* window.location.href = "/TuRutaDeRedireccion"; // Cambia esta ruta a la que necesites*/
+                        });
+                    } else {
+                        // Mostrar mensaje de error con SweetAlert
+                        Swal.fire({
+                            title: 'Error',
+                            text: "Error al completar la orden: " + response.message,
+                            icon: 'error',
+                            confirmButtonText: 'Aceptar'
+                        });
+                    }
+                },
+                error: function (error) {
+                    console.error(error);
+                    // Mostrar mensaje de error con SweetAlert
+                    Swal.fire({
+                        title: 'Error',
+                        text: "Ocurrió un error al procesar la orden.",
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar'
+                    });
+                }
+               });
+           });
 
-            // Mostrar el JSON en la consola para verificar
-            console.log(orderDataJSON);
-
-            // O mostrarlo en un alert (opcional)
-            alert(orderDataJSON);
-        });
-    });
-
-
+  });
 
 });
 
