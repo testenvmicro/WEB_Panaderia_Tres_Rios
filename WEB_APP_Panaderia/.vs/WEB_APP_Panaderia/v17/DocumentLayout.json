@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\insumos\\consultainsumos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\insumos\\consultainsumos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\insumoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\insumoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\entities\\usuariosentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\entities\\usuariosentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\registrodesechos\\registrodesechos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\registrodesechos\\registrodesechos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\views\\home\\recuperar_contrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\views\\home\\recuperar_contrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\js\\consulta-insumos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\js\\consulta-insumos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\models\\usuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\models\\usuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\controllers\\registrodesechoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\controllers\\registrodesechoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\wwwroot\\js\\consultas-registro-desechos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\wwwroot\\js\\consultas-registro-desechos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\interfaces\\iusuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\interfaces\\iusuariosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\models\\insumosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\models\\insumosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|c:\\users\\j_gon\\onedrive\\documentos\\github\\web_panaderia_tres_rios\\web_app_panaderia\\web_app_panaderia\\models\\registrodesechosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA945DFB-CAE8-471F-A940-6A9F46BA75BA}|WEB_APP_Panaderia\\WEB_APP_Panaderia.csproj|solutionrelative:web_app_panaderia\\models\\registrodesechosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +50,102 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Usuarios.cshtml",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml*",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Usuarios.cshtml*",
-              "ViewState": "AQIAADICAAAAAAAAAAAowEwCAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-01T22:23:45.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Recuperar_contrasenna.cshtml",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Recuperar_contrasenna.cshtml",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Home\\Recuperar_contrasenna.cshtml",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Home\\Recuperar_contrasenna.cshtml",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Home\\Recuperar_contrasenna.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-01T21:37:54.196Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "RegistroDesechosModel.cs",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\RegistroDesechosModel.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Models\\RegistroDesechosModel.cs",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\RegistroDesechosModel.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Models\\RegistroDesechosModel.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAswDgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T03:17:49.966Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UsuariosEntities.cs",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Entities\\UsuariosEntities.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T03:20:24.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\UsuariosController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowE4AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T16:38:22.38Z",
+              "Title": "RegistroDesechos.cshtml",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\RegistroDesechos\\RegistroDesechos.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\RegistroDesechos\\RegistroDesechos.cshtml",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\RegistroDesechos\\RegistroDesechos.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\RegistroDesechos\\RegistroDesechos.cshtml",
+              "ViewState": "AQIAAM8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-16T04:23:47.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IUsuariosModel.cs",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Interfaces\\IUsuariosModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
+              "Title": "InsumosModel.cs",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\InsumosModel.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Models\\InsumosModel.cs",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\InsumosModel.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Models\\InsumosModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAiwF0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T15:21:55.554Z"
+              "WhenOpened": "2024-07-15T22:55:18.896Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuariosModel.cs",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Models\\UsuariosModel.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAUwCUAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T15:53:19.399Z",
+              "DocumentIndex": 0,
+              "Title": "ConsultaInsumos.cshtml",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Insumos\\ConsultaInsumos.cshtml",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Views\\Insumos\\ConsultaInsumos.cshtml",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Views\\Insumos\\ConsultaInsumos.cshtml",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Views\\Insumos\\ConsultaInsumos.cshtml",
+              "ViewState": "AQIAAKAAAAAAAAAAAAArwNAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-14T06:48:38.977Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InsumosController.cs",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\InsumosController.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\InsumosController.cs",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\InsumosController.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\InsumosController.cs",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAowJQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T22:50:31.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "consulta-insumos.js",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\js\\consulta-insumos.js",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\js\\consulta-insumos.js",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\js\\consulta-insumos.js",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\js\\consulta-insumos.js",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAuwMEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-16T02:53:02.613Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Program.cs",
-              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Program.cs",
-              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Program.cs",
-              "RelativeToolTip": "WEB_APP_Panaderia\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAARAAAA",
+              "Title": "consultas-registro-desechos.js",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\js\\consultas-registro-desechos.js",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\wwwroot\\js\\consultas-registro-desechos.js",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\wwwroot\\js\\consultas-registro-desechos.js",
+              "RelativeToolTip": "WEB_APP_Panaderia\\wwwroot\\js\\consultas-registro-desechos.js",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-16T19:42:59.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistroDesechosController.cs",
+              "DocumentMoniker": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\RegistroDesechosController.cs",
+              "RelativeDocumentMoniker": "WEB_APP_Panaderia\\Controllers\\RegistroDesechosController.cs",
+              "ToolTip": "C:\\Users\\j_gon\\OneDrive\\Documentos\\GitHub\\WEB_Panaderia_Tres_Rios\\WEB_APP_Panaderia\\WEB_APP_Panaderia\\Controllers\\RegistroDesechosController.cs",
+              "RelativeToolTip": "WEB_APP_Panaderia\\Controllers\\RegistroDesechosController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwFEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T16:57:34.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T04:52:14.614Z"
             }
           ]
         }

@@ -32,16 +32,93 @@
                 </li>
             </ul>
             <div class="page-btn">
-                <a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#add-units"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Insumo</a>
+				<a href="#" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#agregar-insumo"><i data-feather="plus-circle" class="me-2"></i>Agregar Nuevo Insumo</a>
 
             </div>
             <br />
 
         </div>
         <!-- /user list -->
-      
-              
-@if (ViewData["Message"] != null)
+
+		<div class="card table-list-card">
+			<div class="card-body">
+				<div class="table-top">
+					<div class="search-set">
+						<div class="search-input">
+							<a href="javascript:void(0);" class="btn btn-searchset"><i data-feather="search" class="feather-search"></i> </a>
+						</div>
+					</div>
+				</div>
+
+				<div class="table-responsive product-list">
+					@if (ViewData["Message"] != null)
+					{
+						<div>@ViewData["Message"]</div>
+					}
+					else
+					{
+						@if (Model.Insumos == null)
+						{
+							<div class="alert alert-warning" role="alert">
+								No hay registros de proveedores.
+							</div>
+						}
+						else
+						{
+							<table class="table">
+								<thead>
+
+									<tr>
+										<th class="no-sort">
+											<label class="checkboxs">
+												<input type="checkbox" id="select-all">
+												<span class="checkmarks"></span>
+											</label>
+										</th>
+
+										<th>Nombre</th>
+										<th>Tipo Insumo</th>
+										<th>Marca</th>
+										<th>Categoría</th>
+										<th>Presentación</th>
+										<th class="no-sort">Acción</th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var reporte in Model.Insumos)
+									{
+										<tr>
+											<td>@reporte.idInsumo</td>
+											<td>@reporte.nombre</td>
+											<td>@reporte.tipo</td>
+											<td>@reporte.marca</td>
+											<td>@reporte.categoria</td>
+											<td>@reporte.presentacion</td>
+											<td class="action-table-data">
+												<div class="edit-delete-action">
+													@* 		<a class="me-2 p-2 mb-0" href="javascript:void(0);">
+										<i data-feather="eye" class="action-eye"></i>
+										</a> *@
+													<a class="me-2 p-2 mb-0" onclick="cargarDatosReporte(@reporte.idInsumo)" data-bs-toggle="modal" data-bs-target="#editar-reporte">
+														<i data-feather="edit" class="feather-edit"></i>
+													</a>
+													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);" data-id="@reporte.idInsumo">
+														<i data-feather="trash-2" class="feather-trash-2"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+									}
+								</tbody>
+							</table>
+						}
+					}
+				</div>
+			</div>
+		</div>
+
+@* 
+		@if (ViewData["Message"] != null)
 {
     <div>@ViewData["Message"]</div>
 }
@@ -87,153 +164,202 @@ else
         }
         
     </tbody>
-</table>
+</table> *@
 }
 }
-                <!-- Modal para agregar proveedor -->
-                <div class="modal fade" id="add-units" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            @using (Html.BeginForm("RegistrarInsumos", "Home", FormMethod.Post, new { @class = "pt-3" }))
-                            {
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Agregar Insumo</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="nombre" class="form-label">Nombre</label>
-                                        @Html.TextBoxFor(m => m.Insumo.nombre, new { @class = "form-control", @required = "required" })
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="tipo" class="form-label">Tipo</label>
-                                        @Html.TextBoxFor(m => m.Insumo.tipo, new { @class = "form-control", @required = "required" })
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="marca" class="form-label">Marca</label>
-                                        @Html.TextBoxFor(m => m.Insumo.marca, new { @class = "form-control", @required = "required" })
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="categoria" class="form-label">Categoría</label>
-                                        @Html.TextBoxFor(m => m.Insumo.categoria, new { @class = "form-control", @required = "required" })
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
-                                </div>
-                            }
-                        </div>
-                    </div>
-                </div>
+		<!-- Agregar un insumo -->
+		<div class="modal fade" id="agregar-insumo">
+			<div class="modal-dialog modal-dialog-centered custom-modal-two">
+				<div class="modal-content">
+					<div class="page-wrapper-new p-0">
+						<div class="content">
+							<div class="modal-header border-0 custom-modal-header">
+								<div class="page-title">
+									<h4>Agregar Reporte de Desechos</h4>
+								</div>
 
-                <!-- Modal para editar proveedor -->
-                <div class="modal fade" id="edit-units" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            @using (Html.BeginForm("ActualizarProveedor", "Home", FormMethod.Post, new { @class = "pt-3", @id = "editProveedorForm" }))
-                            {
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Editar Proveedor</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <input type="hidden" id="idProveedor" name="idProveedor" />
-                                    <div class="mb-3">
-                                        <label for="editDescripcion" class="form-label">Descripción</label>
-                                        <input type="text" class="form-control" id="editDescripcion" name="descripcion" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="editTelefono" class="form-label">Teléfono</label>
-                                        <input type="text" class="form-control" id="editTelefono" name="telefono" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="editCorreo" class="form-label">Correo</label>
-                                        <input type="email" class="form-control" id="editCorreo" name="correo" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="editDireccion" class="form-label">Dirección</label>
-                                        <input type="text" class="form-control" id="editDireccion" name="direccion" required />
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
-                                </div>
-                            }
-                        </div>
-                    </div>
-                </div>
+								<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body custom-modal-body">
 
-<script>
-                    function cargarDatosInsumos(idProveedor) {
-                        $.ajax({
-                            url: '@Url.Action("ObtenerProveedor", "Home")',
-                            type: 'GET',
-                            data: { id: idProveedor },
-                            success: function (data) {
-                                $('#idProveedor').val(data.idProveedor);
-                                $('#editDescripcion').val(data.descripcion);
-                                $('#editTelefono').val(data.telefono);
-                                $('#editCorreo').val(data.correo);
-                                $('#editDireccion').val(data.direccion);
-                                $('#edit-units').modal('show'); // Esto abrirá el modal después de cargar los datos
-                            },
-                            error: function (error) {
-                                console.log('Error al cargar los datos del proveedor:', error);
-                            }
-                        });
-                    }
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="new-employee-field">
 
-    function eliminarProveedor(idProveedor) {
-        $.ajax({
-            url: '@Url.Action("EliminarProveedor", "Home")',
-            type: 'POST',
-            data: { idProveedor: idProveedor },
-            success: function (data) {
-                if (data.success) {
-                    location.reload();
-                } else {
-                    alert(data.message);
-                }
-            }
-        });
-    }
+											@* <span>Avatar</span>
+											<div class="profile-pic-upload mb-2">
+											<div class="profile-pic">
+											<span><i data-feather="plus-circle" class="plus-down-add"></i> Profile Photo</span>
+											</div>
+											<div class="input-blocks mb-0">
+											<div class="image-upload mb-0">
+											<input type="file">
+											<div class="image-uploads">
+											<h4>Change Image</h4>
+											</div>
+											</div>
+											</div>
+											</div> *@
+										</div>
+									</div>
+									@using (Html.BeginForm("AgregarInsumos", "Insumos", FormMethod.Post, new { @class = "pt-3" }))
+									{
+										//@Html.Hidden("idInsumo", idInsumo)
+										<div class="col-lg-6">
+											<div class="input-blocks">
+												<label>Nombre</label>
+												<div class="pass-group">
+													<input type="text" class="pass-input" name="idNombre" id="add-idNombre">
+												</div>
+											</div>
+										</div>
 
-    $(document).ready(function () {
-        $('#addProveedorForm').submit(function (e) {
-            e.preventDefault();
-            $.ajax({
-                url: '@Url.Action("RegistrarInsumos", "Home")',
-                type: 'POST',
-                data: $(this).serialize(),
-                success: function (data) {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert(data.message);
-                    }
-                }
-            });
-        });
+										<div class="col-lg-6">
+											<div class="input-blocks">
+												<label>Tipo Insumo</label>
+												<select class="select tipo-insumo" required name="idTipoInsumo" id="add-idTipoInsumo"></select>
+											</div>
+										</div>
 
-        $('#editProveedorForm').submit(function (e) {
-            e.preventDefault();
-            $.ajax({
-                url: '@Url.Action("ActualizarProveedor", "Home")',
-                type: 'POST',
-                data: $(this).serialize(),
-                success: function (data) {
-                    if (data.success) {
-                        location.reload();
-                    } else {
-                        alert(data.message);
-                    }
-                }
-            });
-        });
-    });
-</script>
+
+										<div class="col-lg-6">
+											<div class="input-blocks">
+												<label>Marca</label>
+												<select class="select marca" required name="idMarca" id="add-idMarca"></select>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="input-blocks">
+												<label>Categoria Insumo</label>
+												<select class="select categoria-insumo" required name="idCategoriaInsumo" id="add-idCategoriaInsumo"></select>
+											</div>
+										</div>
+
+										<div class="col-lg-6">
+											<div class="input-blocks">
+												<label>Presentación</label>
+												<select class="select presentacion" required name="idPresentacion" id="add-idPresentacion"></select>
+											</div>
+										</div>
+										@* 	<div class="col-lg-12">
+									<div class="mb-0 input-blocks">
+									<label class="form-label">Descriptions</label>
+									<textarea class="form-control mb-1">Type Message</textarea>
+									<p>Maximum 600 Characters</p>
+									</div>
+									</div>
+									</div> *@
+										<div class="modal-footer-btn">
+											<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
+											<button type="submit" class="btn btn-submit">Agregar</button>
+										</div>
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+		<!-- FIN Agregar un insumo -->
+
+	<!-- Editar Reporte de desechos -->
+	<div class="modal fade" id="editar-reporte">
+		<div class="modal-dialog modal-dialog-centered custom-modal-two">
+			<div class="modal-content">
+				<div class="page-wrapper-new p-0">
+					<div class="content">
+						<div class="modal-header border-0 custom-modal-header">
+							<div class="page-title">
+								<h4>Editar Insumo</h4>
+							</div>
+
+							<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body custom-modal-body">
+
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="new-employee-field">
+
+										@* <span>Avatar</span>
+										<div class="profile-pic-upload mb-2">
+										<div class="profile-pic">
+										<span><i data-feather="plus-circle" class="plus-down-add"></i> Profile Photo</span>
+										</div>
+										<div class="input-blocks mb-0">
+										<div class="image-upload mb-0">
+										<input type="file">
+										<div class="image-uploads">
+										<h4>Change Image</h4>
+										</div>
+										</div>
+										</div>
+										</div> *@
+									</div>
+								</div>
+								@using (Html.BeginForm("ActualizarInsumos", "Insumos", FormMethod.Post, new { @class = "pt-3" }))
+								{
+									@* @Html.Hidden("idUsuario", id_usuario) *@
+									@Html.Hidden("idInsumo", null, new { id = "idInsumoEditar" })
+
+									<div class="col-lg-6">
+										<div class="input-blocks">
+											<label>Nombre</label>
+											<div class="pass-group">
+												<input type="text" class="pass-input-editar"  name="idNombre" id="nombre">
+											</div>
+										</div>
+									</div>
+
+									<div class="col-lg-6">
+										<div class="input-blocks">
+											<label>Tipo Insumo</label>
+											<select class="select tipo-insumo" required name="idTipoInsumo" id="idTipoInsumo"></select>
+										</div>
+									</div>
+
+
+									<div class="col-lg-6">
+										<div class="input-blocks">
+											<label>Marca</label>
+											<select class="select marca" required name="idMarca" id="idMarca"></select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="input-blocks">
+											<label>Categoria Insumo</label>
+											<select class="select categoria-insumo" required name="idCategoriaInsumo" id="idCategoriaInsumo"></select>
+										</div>
+									</div>
+
+									<div class="col-lg-6">
+										<div class="input-blocks">
+											<label>Presentación</label>
+											<select class="select presentacion" required name="idPresentacion" id="idPresentacion"></select>
+										</div>
+									</div>
+
+									<div class="modal-footer-btn">
+										<button type="button" class="btn btn-cancel me-2" data-bs-dismiss="modal">Cancelar</button>
+										<button type="submit" class="btn btn-submit">Editar</button>
+									</div>
+								}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div> 
+	<!--  FIN Editar Reporte de desechos -->
 
 
 <!-- jQuery -->
