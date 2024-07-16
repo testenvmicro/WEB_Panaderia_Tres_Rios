@@ -15,6 +15,7 @@ builder.Services.AddScoped<IProductosModel, ProductosModel>();
 builder.Services.AddScoped<ISaboresPizzaModel, SaboresPizzaModel>();
 builder.Services.AddScoped<ILogsModel, LogsModel>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,6 +30,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",

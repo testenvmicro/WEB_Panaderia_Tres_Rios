@@ -19,7 +19,7 @@ namespace WEB_APP_Panaderia.Models
             _contextAccessor = contextAccessor;
         }
 
-		public List<UsuariosEntities> GetAllUsers() // Cambiar el tipo de retorno a List<UsuariosEntities>
+		public List<UsuariosEntities> GetAllUsers() 
 		{
 			using (var client = new HttpClient())
 			{
@@ -56,20 +56,34 @@ namespace WEB_APP_Panaderia.Models
         }
 
         public void ActualizarUsuario(UsuariosEntities entidad)
-		{
-			using (var client = new HttpClient())
-			{
-				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Usuarios/ActualizarUsuario";
+        {
+            using (var client = new HttpClient())
+            {
+                string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Usuarios/ActualizarUsuario";
 
-				JsonContent body = JsonContent.Create(entidad);
-				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
+                // Si la contraseña está vacía, no la incluyas en la actualización
+                if (string.IsNullOrEmpty(entidad.contrasenna))
+                {
+                    entidad.contrasenna = null;
+                }
+                if (string.IsNullOrEmpty(entidad.correo))
+                {
+                    entidad.correo = null;
+                }
 
-				if (!response.IsSuccessStatusCode)
-					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
-			}
-		}
+                var json = JsonConvert.SerializeObject(entidad);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-		public UsuariosEntities? ValidarCredenciales(UsuariosEntities entidad)
+                HttpResponseMessage response = client.PostAsync(urlApi, content).Result;
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception("Error al actualizar usuario: " + response.Content.ReadAsStringAsync().Result);
+                }
+            }
+        }
+
+        public UsuariosEntities? ValidarCredenciales(UsuariosEntities entidad)
 		{
 			using (var client = new HttpClient())
 			{
@@ -103,32 +117,23 @@ namespace WEB_APP_Panaderia.Models
 
         public int RegistrarUsuarios(UsuariosEntities entidad)
         {
+
             using (var client = new HttpClient())
             {
                 string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Usuarios/RegistrarUsuarios";
 
-                // Serializa manualmente el objeto para asegurarte de que todos los campos se incluyan
-                var json = JsonConvert.SerializeObject(entidad);
-                Console.WriteLine($"WEB: JSON enviado al API: {json}");
-
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
-                HttpResponseMessage response = client.PostAsync(urlApi, content).Result;
+                JsonContent body = JsonContent.Create(entidad);
+                HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
 
                 if (response.IsSuccessStatusCode)
-                {
-                    var resultString = response.Content.ReadAsStringAsync().Result;
-                    Console.WriteLine($"WEB: Respuesta del API: {resultString}");
-                    return JsonConvert.DeserializeObject<int>(resultString);
-                }
+                    return response.Content.ReadFromJsonAsync<int>().Result;
 
                 if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                {
-                    var errorMessage = response.Content.ReadAsStringAsync().Result;
-                    Console.WriteLine($"WEB: Error del API: {errorMessage}");
-                    throw new Exception("Excepción Web Api: " + errorMessage);
-                }
+                    throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
 
                 return 0;
+
+                
             }
         }
 
@@ -165,12 +170,13 @@ namespace WEB_APP_Panaderia.Models
         {
             using (var client = new HttpClient())
             {
-                string urlApi = _configuration.GetSection("Parametros:urlApi").Value + $"/Usuarios/GetUsuarioById?idUsuario={idUsuario}";
+                string urlApi = _configuration.GetSection("Parametros:urlApi").Value + $"/Usuarios/GetUsuarioById/{idUsuario}";
                 HttpResponseMessage response = client.GetAsync(urlApi).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
-                    return response.Content.ReadFromJsonAsync<UsuariosEntities>().Result;
+                    var jsonString = response.Content.ReadAsStringAsync().Result;
+                    return JsonConvert.DeserializeObject<UsuariosEntities>(jsonString);
                 }
 
                 if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)

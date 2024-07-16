@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<WEB_APP_Panaderia.Entities.CotizacionEntity>
+@{
 	ViewData["Title"] = "Inventario";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -12,16 +13,18 @@
 					<h6>Lista de Cotizaciones</h6>
 				</div>
 			</div>
-			<ul class="table-top-head">
-				<li>
-					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Excel">Importar Archivo de Cotizacion <img src="~/assets/img/icons/excel.svg" alt="img"></a>
-				</li>
-				<li>
-					<a data-bs-toggle="tooltip" data-bs-placement="top" title="Refresh"><i data-feather="rotate-ccw" class="feather-rotate-ccw"></i></a>
-			</ul>
-			<!--<div class="page-btn">
-				<a href="@Url.Action("NuevoCotizacion", "Cotizacion")" class="btn btn-added"><i data-feather="plus-circle" class="me-2"></i>Añadir un Producto</a>
-			</div>-->
+			<form asp-action="ImportarCotizacion" asp-controller="Cotizaciones" method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="nombreProveedor">Nombre del Proveedor:</label>
+					<input type="text" id="nombreProveedor" name="nombreProveedor" class="form-control" required />
+				</div>
+				<div class="form-group">
+					<label for="archivo">Seleccionar archivo (PDF o Excel):</label>
+					<input type="file" id="archivo" name="archivo" class="form-control-file" accept=".pdf,.xlsx" required />
+				</div>
+				<button type="submit" class="btn btn-primary">Importar</button>
+			</form>
+
 		</div>
 
 		<!-- /user list -->
@@ -125,93 +128,22 @@
 					<table class="table datanew">
 						<thead>
 							<tr>
-								<th class="no-sort">
-									<label class="checkboxs">
-										<input type="checkbox" id="select-all">
-										<span class="checkmarks"></span>
-									</label>
-								</th>
-								<th>Codigo Cotizacion</th>
 								<th>Proveedor</th>
-								<th>Nombre Producto</th>
-								<th>Peso Neto</th>
-								<th>Precio</th>
-								<th class="no-sort">Acción</th>
+								<th>Producto</th>
+								<th>Precio por Kg</th>
+								<th>Recomendación</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>001</td>
-
-								<td>Tratamiento1</td>
-								<td>Disposición1</td>
-								<td>Transporte1</td>
-								<td>Transporte1</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2" href="@Url.Action("EditarCotizacion","Cotizacion")">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>001</td>
-
-								<td>Tratamiento1</td>
-								<td>Disposición1</td>
-								<td>Transporte1</td>
-								<td>Transporte1</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2" href="@Url.Action("EditarCotizacion","Cotizacion")">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label class="checkboxs">
-										<input type="checkbox">
-										<span class="checkmarks"></span>
-									</label>
-								</td>
-								<td>001</td>
-
-								<td>Tratamiento1</td>
-								<td>Disposición1</td>
-								<td>Transporte1</td>
-								<td>Transporte1</td>
-								<td class="action-table-data">
-									<div class="edit-delete-action">
-										<a class="me-2 p-2" href="@Url.Action("EditarCotizacion","Cotizacion")">
-											<i data-feather="edit" class="feather-edit"></i>
-										</a>
-										<a class="confirm-text p-2" href="javascript:void(0);">
-											<i data-feather="trash-2" class="feather-trash-2"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
+							@foreach (var cotizacion in Model)
+							{
+								<tr>
+									<td>@cotizacion.NombreProveedor</td>
+									<td>@cotizacion.Producto</td>
+									<td>@cotizacion.PrecioPorKg.ToString("C")</td>
+									<td>@cotizacion.Recomendacion</td>
+								</tr>
+							}
 						</tbody>
 					</table>
 				</div>

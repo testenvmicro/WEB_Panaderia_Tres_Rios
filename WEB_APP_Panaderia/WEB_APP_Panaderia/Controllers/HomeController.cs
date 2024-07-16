@@ -17,11 +17,12 @@ namespace WEB_APP_Panaderia.Controllers
 	public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        private readonly IRegistroDesechosModel _registroDesechosModel;
 		private readonly IUsuariosModel _usuariosModel;
 		private readonly IProveedoresModel _proveedoresModel;
 
         private readonly IUsuariosRolesModel _usuariosRolesModel;
+
         private readonly IRegistroDesechosModel _reportesModel;
         public HomeController(ILogger<HomeController> logger, IUsuariosModel usuariosModel, IProveedoresModel proveedoresModel, IUsuariosRolesModel usuariosRolesModel, IRegistroDesechosModel bitacoraModel)
 
@@ -32,12 +33,11 @@ namespace WEB_APP_Panaderia.Controllers
 			_proveedoresModel = proveedoresModel;
 
             _usuariosRolesModel = usuariosRolesModel;
+			_registroDesechosModel = bitacoraModel;
 
-            _reportesModel = bitacoraModel;
+			_reportesModel = bitacoraModel;
 		}
 
-
-        
 		[AllowAnonymous]
 		public IActionResult Index()
         {
@@ -85,7 +85,7 @@ namespace WEB_APP_Panaderia.Controllers
 		[TypeFilter(typeof(JwtAuthorizationFilter))]
 		[HttpPost]
         public IActionResult RegistrarProveedores(ProveedoresEntities proveedor)
-        {//
+        {
             try
             {
                 _proveedoresModel.RegistrarProveedores(proveedor);
@@ -228,7 +228,7 @@ namespace WEB_APP_Panaderia.Controllers
             {
                 var viewModel = new RegistroDesechosViewModel
                 {
-                    Reportes = _reportesModel.ConsultarRegistroDesechos(),
+                    Reportes = _registroDesechosModel.ConsultarRegistroDesechos(),
                     Reporte = new RegistroDesechosEntities()
                 };
                 return View(viewModel);
@@ -242,28 +242,28 @@ namespace WEB_APP_Panaderia.Controllers
 		public IActionResult RegistroDeshechosPdf()
 		{
 
-			var resultado = _reportesModel.ConsultarRegistroDesechos();
+			var resultado = _registroDesechosModel.ConsultarRegistroDesechos();
 
 			if (resultado == null || resultado.Count == 0)
 			{
 				return NotFound("No se encontraron registros.");
 			}
 
-			var pdfBytes = _reportesModel.GenerarPdfRegistroDesechos(resultado); 
+			var pdfBytes = _registroDesechosModel.GenerarPdfRegistroDesechos(resultado); 
 
 			return File(pdfBytes, "application/pdf", "ReporteDesechos.pdf");
 		}
 
 		public IActionResult RegistroDeshechosExcel()
 		{
-			var resultado = _reportesModel.ConsultarRegistroDesechos();
+			var resultado = _registroDesechosModel.ConsultarRegistroDesechos();
 
 			if (resultado == null || resultado.Count == 0)
 			{
 				return NotFound("No se encontraron registros.");
 			}
 
-			var excelBytes = _reportesModel.GenerarExcelRegistroDesechos(resultado);
+			var excelBytes = _registroDesechosModel.GenerarExcelRegistroDesechos(resultado);
 
 			return File(excelBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "RegistroDesechos.xlsx");
 		}
@@ -274,7 +274,13 @@ namespace WEB_APP_Panaderia.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public IActionResult ListaNotificaciones()
+
+		public IActionResult ErrorUsuario()
+		{
+            return View();
+		}
+
+		public IActionResult ListaNotificaciones()
         {
             return View();
         }
@@ -298,6 +304,7 @@ namespace WEB_APP_Panaderia.Controllers
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult GetUsuarioById(int idUsuario)
         {
@@ -312,5 +319,8 @@ namespace WEB_APP_Panaderia.Controllers
             }
         }
     }
+
+
 }
+
 
