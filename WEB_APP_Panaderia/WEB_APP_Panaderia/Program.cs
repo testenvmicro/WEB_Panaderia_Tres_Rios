@@ -14,7 +14,7 @@ builder.Services.AddScoped<IRegistroDesechosModel, RegistroDesechosModel>();
 builder.Services.AddScoped<IProductosModel, ProductosModel>();
 builder.Services.AddScoped<ISaboresPizzaModel, SaboresPizzaModel>();
 builder.Services.AddScoped<ILogsModel, LogsModel>();
-
+//
 
 var app = builder.Build();
 
