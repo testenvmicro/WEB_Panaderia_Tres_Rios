@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\consultas-registro-desechos.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\consultas-registro-desechos.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\consultas-registro-desechos.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.2.0" />
     <PackageReference Include="itext" Version="8.0.4" />
     <PackageReference Include="itext.bouncy-castle-adapter" Version="8.0.4" />

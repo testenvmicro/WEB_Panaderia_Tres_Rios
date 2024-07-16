@@ -1,4 +1,7 @@
-﻿using WEB_APP_Panaderia.Entities;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using WEB_APP_Panaderia.Entities;
+using WEB_APP_Panaderia.Models;
 
 namespace WEB_APP_Panaderia.Interfaces
 {
@@ -16,5 +19,6 @@ namespace WEB_APP_Panaderia.Interfaces
 		public List<CategoriaDesechoTratamientoEntities> ConsultarCategoriaDesechoTratamiento();
 		public List<DesechoDisposicionFinalEntities> ConsultarDesechoDisposicionFinal();
 		public List<DesechoTransporteEntities> ConsultarDesechoTransporte();
+
 	}
 }
