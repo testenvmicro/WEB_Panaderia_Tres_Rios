@@ -262,7 +262,8 @@
                             </div>
                             `;
             $("#product-list").append(productHTML);
-            feather.replace(); // Actualiza los iconos de Feather
+        feather.replace(); // Actualiza los iconos de Feather
+
 
         // Añadir manejadores de eventos para los botones de incremento y decremento
         $(".inc").off('click').on('click', function () {
@@ -320,6 +321,10 @@
     });
 
     $(document).ready(function () {
+
+        // Variables globales para almacenar los datos de la orden
+        var globalOrderData = {};
+        var globalProducts = [];
         $('#payButton').click(function () {
             // Obtener la información de los productos
             var products = [];
@@ -350,6 +355,10 @@
                 });
             });
 
+            // Guardar los productos y el total globalmente
+            globalProducts = products;
+            globalOrderData.totalAmount = totalAmount;
+
             // Obtener el total
             var total = $('.order-total .text-end').text();
 
@@ -360,10 +369,15 @@
             var isExpress = $('#express-order-checkbox').is(':checked');
 
             // Obtener la información del cliente
-            var customerNombre = $('#customerNombreHidden').text() || 'N/A';
+            var customerNombre = $('#customerNombreHidden').text() || $('#customerNameInput input[name="nombre"]').val() || 'N/A';
             var customerCorreo = $('#customerCorreoHidden').text() || 'N/A';
             var customerTelefono = $('#customerTelefonoHidden').text() || 'N/A';
             var customerDireccion = $('#customerDireccionHidden').text() || 'N/A';
+
+            // Guardar los datos del cliente globalmente
+            globalOrderData.customerNombre = customerNombre;
+            globalOrderData.customerTelefono = customerTelefono;
+            globalOrderData.customerDireccion = customerDireccion;
 
             // Llenar los datos del cliente en el modal
             $('#ordenCustomerNombre').text(customerNombre);
@@ -398,6 +412,35 @@
 
             // Mostrar el modal
             $('#detalle-orden').modal('show');
+        });
+
+        $('#printReceiptButton').click(function () {
+            // Llenar los datos del cliente en el modal de factura
+            $('#receiptCustomerNombre').text(globalOrderData.customerNombre);
+            $('#receiptCustomerTelefono').text(globalOrderData.customerTelefono);
+            $('#receiptCustomerDireccion').text(globalOrderData.customerDireccion);
+
+            // Llenar la tabla de productos en el modal de factura
+            var receiptProductRows = '';
+            globalProducts.forEach(function (product, index) {
+                var descripcion = (product.descripcion && product.descripcion.trim()) ? product.descripcion : 'N/A';
+                var tipo = (product.tipo && product.tipo.trim()) ? product.tipo : 'N/A';
+                receiptProductRows += `
+           <tr>
+              <td>${index + 1}. ${product.nombre}</td>
+              <td>₡${product.precio.toFixed(2)}</td>
+              <td>${product.cantidad}</td>
+              <td class="text-end">₡${product.total.toFixed(2)}</td>
+          </tr>
+      `;
+            });
+            $('#receiptProductList').html(receiptProductRows);
+
+            // Llenar el total en el modal de factura
+            $('#receiptTotalAmount').text(`₡${globalOrderData.totalAmount.toFixed(2)}`);
+
+            // Mostrar el modal de factura
+            $('#print-receipt').modal('show');
         });
 
         $('#confirmOrderButton').click(function () {
@@ -437,7 +480,7 @@
             var isExpress = $('#express-order-checkbox').is(':checked');
 
             // Obtener la información del cliente
-            var customerNombre = $('#customerNombreHidden').text() || 'N/A';
+            var customerNombre = $('#customerNombreHidden').text() || $('#customerNameInput input[name="nombre"]').val() || 'N/A';
             var customerCorreo = $('#customerCorreoHidden').text() || 'N/A';
             var customerTelefono = $('#customerTelefonoHidden').text() || 'N/A';
             var customerDireccion = $('#customerDireccionHidden').text() || 'N/A';
@@ -474,8 +517,7 @@
                         }).then(() => {
                             // Cerrar el modal
                             $('#detalle-orden').modal('hide');
-                            // Redirigir o realizar otra acción después de cerrar el SweetAlert
-                           /* window.location.href = "/TuRutaDeRedireccion"; // Cambia esta ruta a la que necesites*/
+                            $('#payment-completed').modal('show');
                         });
                     } else {
                         // Mostrar mensaje de error con SweetAlert
@@ -502,14 +544,17 @@
 
   });
 
-});
+
 
 $(document).ready(function () {
     // Manejar el checkbox de pedido express
+
     $('#express-order-checkbox').change(function () {
         if ($(this).is(':checked')) {
             $('.customer-info.block-section').removeClass('hidden');
+            $('#customerNameInput').closest('.input-blocks').addClass('hidden'); // Ocultar input
         } else {
+            $('#customerNameInput').closest('.input-blocks').removeClass('hidden'); // Mostrar input
             $('.customer-info.block-section').addClass('hidden');
         }
     });
@@ -611,4 +656,38 @@ $(document).ready(function () {
 
 });
 
+});
 
+$(document).ready(function () {
+    $('#downloadReceiptButton').click(function () {
+        // Seleccionar el contenido del modal de factura
+        var element = document.getElementById('receipt-content');
+        var downloadButton = document.getElementById('downloadReceiptButton');
+        var closeButton = element.querySelector('.close');
+
+        // Ocultar el botón de descarga y el ícono de cierre
+        downloadButton.style.display = 'none';
+        if (closeButton) {
+            closeButton.style.display = 'none';
+        }
+
+        // Opciones para la generación del PDF
+        var opt = {
+            margin: 1,
+            filename: 'factura.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        // Generar y descargar el PDF
+        // Generar y descargar el PDF
+        html2pdf().from(element).set(opt).save().then(function () {
+            // Mostrar el botón de descarga y el ícono de cierre nuevamente
+            downloadButton.style.display = 'block';
+            if (closeButton) {
+                closeButton.style.display = 'block';
+            }
+        });
+    });
+});
