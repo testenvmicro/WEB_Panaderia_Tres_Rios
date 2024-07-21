@@ -234,25 +234,23 @@
 
     // Función para agregar productos al carrito
     function addProductToCart(producto_id, nombre, tipo, precio, descripcion, sabores) {
-        let descripcionHTML = descripcion ? `<p>Sabores: ${descripcion}</p>` : '';
+        let descripcionHTML = descripcion ? `<p>Descripcion: ${descripcion}</p>` : '';
         let saboresHTML = sabores ? `<p>Sabores: ${sabores}</p>` : '';
        
             let productHTML = `
                             <div class="product-list d-flex align-items-center justify-content-between" data-productoid="${producto_id}" data-nombre="${nombre}" data-tipo="${tipo}" data-sabores="${sabores}" data-precio="${precio}" data-descripcion="${descripcion}">
                                 <div class="d-flex align-items-center product-info">
                                     <div class="info">
-                                        <h6 class="product-name"><a>${nombre}</a></h6>
-                                        <p class="product-type">${tipo}</p>
+                                        <h6 class="product-name"><a>${nombre} - ${tipo} </a></h6>
+                                        <p hidden class="product-type">${tipo}</p>
                                          ${descripcionHTML}
                                          ${saboresHTML}
-                                        <p class="subtotal">Subtotal: ₡<span class="subtotal-amount">${precio}</span></p>
+                                        <p class="subtotal">₡<span class="subtotal-amount">${precio}</span></p>
                                          <input type="text" class="form-control product-note" placeholder="Nota">
                                     </div>
                                 </div>
                                 <div class="qty-item text-center">
-                                    <a href="javascript:void(0);" class="dec d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="minus"><i data-feather="minus-circle" class="feather-14"></i></a>
-                                    <input type="text" class="form-control text-center qty-input" name="qty" value="1" readonly>
-                                    <a href="javascript:void(0);" class="inc d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="plus"><i data-feather="plus-circle" class="feather-14"></i></a>
+                                    <input hidden type="text" class="form-control text-center qty-input" name="qty" value="1" readonly>
                                 </div>
                                 <div class="d-flex align-items-center action">
                                     <a class="btn-icon delete-icon confirm-text" href="javascript:void(0);">
@@ -673,21 +671,23 @@ $(document).ready(function () {
 
         // Opciones para la generación del PDF
         var opt = {
-            margin: 1,
+            margin: [0.5, 0.5, 0.5, 0.5], // Márgenes en pulgadas
             filename: 'factura.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            jsPDF: { unit: 'in', format: [5.5, 8.5], orientation: 'portrait' } // Formato personalizado
         };
 
         // Generar y descargar el PDF
-        // Generar y descargar el PDF
+
         html2pdf().from(element).set(opt).save().then(function () {
             // Mostrar el botón de descarga y el ícono de cierre nuevamente
             downloadButton.style.display = 'block';
             if (closeButton) {
                 closeButton.style.display = 'block';
             }
+            // Refrescar la página
+            location.reload();
         });
     });
 });
