@@ -40,7 +40,7 @@ namespace WEB_APP_Panaderia.Models
 		{
 			using (var client = new HttpClient())
 			{
-				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + $"/RegistroDesechos/ConsultarUnRegistroDesecho/{idInsumo}";
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + $"/Insumos/ConsultaUnRegistroInsumo/{idInsumo}";
 				HttpResponseMessage response = client.GetAsync(urlApi).Result;
 
 				if (response.IsSuccessStatusCode)
@@ -145,7 +145,8 @@ namespace WEB_APP_Panaderia.Models
 
 				JsonContent body = JsonContent.Create(reporte);
 				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
-
+				if (!response.IsSuccessStatusCode)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
 			}
 		}
 

@@ -1,14 +1,14 @@
 ﻿$(document).ready(function () {
     $.ajax({
-        url: '/Insumos/ConsultaTipoInsumo',
+        url: '@Url.Action("ConsultaTipoInsumo", "Insumos")',
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-
-            $('.tipo-insumo').append('<option value="">Seleccione Tipo de Insumo</option>');
+       
+            $('.tipo-insumo').append('<option value="">Tipo de Insumo</option>');
             $.each(res, function (key, value) {
-
-                $('.tipo-insumo').append('<option value="' + value.idTipoInsumo + '">' + value.descripcion + '</option>');
+    
+                $('.tipo-insumo').append('<option value="' + value.IdTipoInsumo + '">' + value.descripcion + '</option>');
             });
         }
     });
@@ -20,10 +20,10 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-
-            $('.marca').append('<option value="">Seleccione Marca</option>');
+         
+            $('.marca').append('<option value="">Marca</option>');
             $.each(res, function (key, value) {
-
+        
                 $('.marca').append('<option value="' + value.idMarca + '">' + value.descripcion + '</option>');
             });
         }
@@ -32,15 +32,15 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $.ajax({
-        url: '/Insumos/ConsultaPresentacion',
+        url: '/RegistroDesechos/ConsultarDesechoDisposicionFinal',
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-
-            $('.presentacion').append('<option value="">Seleccione Presentación</option>');
+          
+            $('.disposicion-final').append('<option value="">Disposicion Final</option>');
             $.each(res, function (key, value) {
-
-                $('.presentacion').append('<option value="' + value.idPresentacion + '">' + value.descripcion + '</option>');
+             
+                $('.disposicion-final').append('<option value="' + value.idDisposicionFinal + '">' + value.descripcion + '</option>');
             });
         }
     });
@@ -48,39 +48,38 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $.ajax({
-        url: '/Insumos/ConsultaCategoriaInsumo',
+        url: '/RegistroDesechos/ConsultarDesechoTransporte',
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-
-            $('.categoria-insumo').append('<option value="">Seleccione Categoría</option>');
+           
+            $('.transporte').append('<option value="">Transporte</option>');
             $.each(res, function (key, value) {
-
-                $('.categoria-insumo').append('<option value="' + value.idCategoriaInsumos + '">' + value.descripcion + '</option>');
+      
+                $('.transporte').append('<option value="' + value.idDesechoTransporte + '">' + value.descripcion + '</option>');
             });
         }
     });
 });
 
-function cargarDatosReporte(idInsumo) {
+function cargarDatosReporte(id) {
 
     // Limpiamos las opciones actuales
-    $('.tipo-insumo-editar').empty();
-    $('.marca-editar').empty();
-    $('.presentacion-editar').empty();
-    $('.categoria-insumo-editar').empty();
-    
+    $('.tratamiento-residuo-editar').empty();
+    $('.disposicion-final-editar').empty();
+    $('.transporte-editar').empty();
+    $('.categoria-desecho-editar').empty();
 
     $(document).ready(function () {
         $.ajax({
-            url: '/Insumos/ConsultaTipoInsumo',
+            url: '/RegistroDesechos/ConsultarCategoriaDesecho',
             type: 'GET',
             dataType: 'json',
             success: function (res) {
 
                 $.each(res, function (key, value) {
 
-                    $('.tipo-insumo-editar').append('<option value="' + value.idTipoInsumo + '">' + value.descripcion + '</option>');
+                    $('.categoria-desecho-editar').append('<option value="' + value.idCategoria + '">' + value.descripcion + '</option>');
                 });
             }
         });
@@ -88,13 +87,13 @@ function cargarDatosReporte(idInsumo) {
 
     $(document).ready(function () {
         $.ajax({
-            url: '/Insumos/ConsultaMarca',
+            url: '/RegistroDesechos/ConsultarCategoriaDesechoTratamiento',
             type: 'GET',
             dataType: 'json',
             success: function (res) {
                 $.each(res, function (key, value) {
 
-                    $('.marca-editar').append('<option value="' + value.idMarca + '">' + value.descripcion + '</option>');
+                    $('.tratamiento-residuo-editar').append('<option value="' + value.idCategoriaTratamientoResiduo + '">' + value.descripcion + '</option>');
                 });
             }
         });
@@ -102,13 +101,13 @@ function cargarDatosReporte(idInsumo) {
 
     $(document).ready(function () {
         $.ajax({
-            url: '/Insumos/ConsultaCategoriaInsumo',
+            url: '/RegistroDesechos/ConsultarDesechoDisposicionFinal',
             type: 'GET',
             dataType: 'json',
             success: function (res) {
                 $.each(res, function (key, value) {
 
-                    $('.categoria-insumo-editar').append('<option value="' + value.idCategoriaInsumos + '">' + value.descripcion + '</option>');
+                    $('.disposicion-final-editar').append('<option value="' + value.idDisposicionFinal + '">' + value.descripcion + '</option>');
                 });
             }
         });
@@ -116,14 +115,14 @@ function cargarDatosReporte(idInsumo) {
 
     $(document).ready(function () {
         $.ajax({
-            url: '/Insumos/ConsultaPresentacion',
+            url: '/RegistroDesechos/ConsultarDesechoTransporte',
             type: 'GET',
             dataType: 'json',
             success: function (res) {
 
                 $.each(res, function (key, value) {
 
-                    $('.presentacion-editar').append('<option value="' + value.idPresentacion + '">' + value.descripcion + '</option>');
+                    $('.transporte-editar').append('<option value="' + value.idDesechoTransporte + '">' + value.descripcion + '</option>');
                 });
             }
         });
@@ -131,37 +130,33 @@ function cargarDatosReporte(idInsumo) {
 
 
     $.ajax({
-        url: '/Insumos/ConsultaUnRegistroInsumo/',
+        url: '/RegistroDesechos/ConsultarUnRegistroDesecho/',
         type: 'GET',
-        data: { idInsumo: idInsumo },
+        data: { id: id },
         success: function (res) {
-        console.log(res)
-            // Añadimos la opción correspondiente al tratamiento residuo y lo seleccionamos
-            //$('.tipo-insumo-editar').append(res.nombre);
-            $('.nombre-insumo-editar').val(res.nombre);
 
             // Añadimos la opción correspondiente al tratamiento residuo y lo seleccionamos
-            $('.tipo-insumo-editar').append('<option value="' + res.idTipoInsumo + '">' + res.tipo+ '</option>');
-            $('.tipo-insumo-editar').val(res.idTipoInsumo);
+            $('.tratamiento-residuo-editar').append('<option value="' + res.idCategoriaTratamientoResiduo + '">' + res.tratamientoResiduo + '</option>');
+            $('.tratamiento-residuo-editar').val(res.idCategoriaTratamientoResiduo);
 
             // Añadimos la opción correspondiente a la disposición final y lo seleccionamos
-            $('.marca-editar').append('<option value="' + res.idMarca + '">' + res.marca + '</option>');
-            $('.marca-editar').val(res.idMarca);
+            $('.disposicion-final-editar').append('<option value="' + res.idDisposicionFinal + '">' + res.disposicionFinal + '</option>');
+            $('.disposicion-final-editar').val(res.idDisposicionFinal);
 
             // Añadimos la opción correspondiente al transporte y lo seleccionamos
-            $('.categoria-insumo-editar').append('<option value="' + res.idCategoriaInsumos + '">' + res.categoria + '</option>');
-            $('.categoria-insumo-editar').val(res.idCategoriaInsumos);
+            $('.transporte-editar').append('<option value="' + res.idDesechoTransporte + '">' + res.transporte + '</option>');
+            $('.transporte-editar').val(res.idDesechoTransporte);
 
             // Añadimos la opción correspondiente a la categoría desecho y lo seleccionamos
-            $('.presentacion-editar').append('<option value="' + res.idPresentacion + '">' + res.presentacion + '</option>');
-            $('.presentacion-editar').val(res.idPresentacion);
+            $('.categoria-desecho-editar').append('<option value="' + res.idCategoria + '">' + res.categoria + '</option>');
+            $('.categoria-desecho-editar').val(res.idCategoria);
 
             // Establecemos el valor del input oculto para el idEvento
-            $('.idInsumoEditar').val(res.idInsumo);
+            $('#idEventoEditar').val(res.idEvento);
 
             // Establecemos el valor de la fecha en el input datetimepicker
             // Establece la fecha correctamente
-            //$('#fechaRevisionEditar').val(res.fechaRevision.split('T')[0]);
+            $('#fechaRevisionEditar').val(res.fechaRevision.split('T')[0]);
 
             $('#editar-reporte').modal('show'); // Esto abrirá el modal después de cargar los datos
         },
@@ -178,8 +173,7 @@ function formatoFecha() {
 
 $(document).ready(function () {
     $(".confirm-text").on("click", function () {
-        var idInsumo
-            = $(this).data('idInsumo'); // Asumiendo que el id se almacena en un atributo data del elemento <a>
+        var id = $(this).data('id'); // Asumiendo que el id se almacena en un atributo data del elemento <a>
 
         Swal.fire({
             title: "\u00BFEst\u00E1 seguro de eliminar el registro?",
@@ -196,17 +190,17 @@ $(document).ready(function () {
         }).then(function (result) {
             if (result.isConfirmed) {
                 // Llamar a la función eliminarReporte si se confirma
-                eliminarReporte(idInsumo);
+                eliminarReporte(id);
             }
         });
     });
 });
 
-function eliminarReporte(idInsumo) {
+function eliminarReporte(id) {
     $.ajax({
-        url: '/Insumos/BorrarInsumo',
+        url: '/RegistroDesechos/EliminarRegistroDesecho',
         type: 'POST',
-        data: { idInsumo: idInsumo },
+        data: { id: id },
         success: function (data) {
             if (data.success) {
                 Swal.fire({

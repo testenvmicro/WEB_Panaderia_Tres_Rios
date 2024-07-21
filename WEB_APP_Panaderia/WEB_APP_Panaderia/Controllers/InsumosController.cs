@@ -79,7 +79,7 @@ namespace WEB_APP_Panaderia.Controllers
 			try
 			{
 				_InsumosModel.AgregarInsumos(reporte);
-				return RedirectToAction("Insumos");
+				return RedirectToAction("ConsultaInsumos");
 			}
 			catch (Exception ex)
 			{
@@ -147,7 +147,7 @@ namespace WEB_APP_Panaderia.Controllers
 			try
 			{
 				_InsumosModel.ActualizarInsumos(reporte);
-				return RedirectToAction("Insumos");
+				return RedirectToAction("ConsultaInsumos");
 			}
 			catch (Exception ex)
 			{

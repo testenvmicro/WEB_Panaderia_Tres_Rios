@@ -206,12 +206,14 @@ else
 									</div>
 									@using (Html.BeginForm("AgregarInsumos", "Insumos", FormMethod.Post, new { @class = "pt-3" }))
 									{
-										//@Html.Hidden("idInsumo", idInsumo)
+
+										//@Html.Hidden("idInsumo", IdInsumo)
+										//@Html.Hidden("idInsumo", null, new { id = "idInsumoEditar" })
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Nombre</label>
 												<div class="pass-group">
-													<input type="text" class="pass-input" name="idNombre" id="add-idNombre">
+													<input type="text" class="pass-input" name="nombre" id="add-idNombre">
 												</div>
 											</div>
 										</div>
@@ -233,7 +235,7 @@ else
 										<div class="col-lg-6">
 											<div class="input-blocks">
 												<label>Categoria Insumo</label>
-												<select class="select categoria-insumo" required name="idCategoriaInsumo" id="add-idCategoriaInsumo"></select>
+												<select class="select categoria-insumo" required name="idCategoriaInsumos" id="add-idCategoriaInsumo"></select>
 											</div>
 										</div>
 
@@ -243,6 +245,8 @@ else
 												<select class="select presentacion" required name="idPresentacion" id="add-idPresentacion"></select>
 											</div>
 										</div>
+
+
 										@* 	<div class="col-lg-12">
 									<div class="mb-0 input-blocks">
 									<label class="form-label">Descriptions</label>
@@ -304,16 +308,16 @@ else
 										</div> *@
 									</div>
 								</div>
-								@using (Html.BeginForm("ActualizarInsumos", "Insumos", FormMethod.Post, new { @class = "pt-3" }))
+								@using (Html.BeginForm("ActualizarInsumos", "Insumos", FormMethod.Post, new { @class = "pt-3"}))
 								{
 									@* @Html.Hidden("idUsuario", id_usuario) *@
-									@Html.Hidden("idInsumo", null, new { id = "idInsumoEditar" })
-
+									@* @Html.Hidden("idInsumo", null, new { id = "idInsumoEditar" }) *@
+									<input type="hidden" id="idInsumoEditar" name="idInsumo" class="idInsumoEditar" />
 									<div class="col-lg-6">
 										<div class="input-blocks">
 											<label>Nombre</label>
 											<div class="pass-group">
-												<input type="text" class="pass-input-editar"  name="idNombre" id="nombre">
+												<input type="text" class="nombre-insumo-editar" name="nombre" id="nombreEditar" required>
 											</div>
 										</div>
 									</div>
@@ -321,7 +325,7 @@ else
 									<div class="col-lg-6">
 										<div class="input-blocks">
 											<label>Tipo Insumo</label>
-											<select class="select tipo-insumo" required name="idTipoInsumo" id="idTipoInsumo"></select>
+											<select class="select tipo-insumo-editar" required name="idTipoInsumo" id="idTipoInsumoEditar"></select>
 										</div>
 									</div>
 
@@ -329,20 +333,20 @@ else
 									<div class="col-lg-6">
 										<div class="input-blocks">
 											<label>Marca</label>
-											<select class="select marca" required name="idMarca" id="idMarca"></select>
+											<select class="select marca-editar" required name="idMarca" id="idMarcaEditar"></select>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="input-blocks">
 											<label>Categoria Insumo</label>
-											<select class="select categoria-insumo" required name="idCategoriaInsumo" id="idCategoriaInsumo"></select>
+											<select class="select categoria-insumo-editar" required name="idCategoriaInsumos" id="idCategoriaInsumosEditar"></select>
 										</div>
 									</div>
 
 									<div class="col-lg-6">
 										<div class="input-blocks">
 											<label>Presentación</label>
-											<select class="select presentacion" required name="idPresentacion" id="idPresentacion"></select>
+											<select class="select presentacion-editar" required name="idPresentacion" id="idPresentacionEditar"></select>
 										</div>
 									</div>
 
@@ -359,8 +363,9 @@ else
 		</div>
 
 	</div> 
-	<!--  FIN Editar Reporte de desechos -->
 
+
+	<!--  FIN Editar Reporte de desechos -->
 
 <!-- jQuery -->
 <script src="assets/js/jquery-3.7.1.min.js"></script>
