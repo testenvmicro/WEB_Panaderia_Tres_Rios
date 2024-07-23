@@ -1,10 +1,9 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <!-- /Sidebar -->
 
@@ -50,63 +49,27 @@
 									</div>
 								</div>
 								<div class="search-path">
-									<div class="d-flex align-items-center">
-										@*<a class="btn btn-filter" id="filter_search">
-											<i data-feather="filter" class="filter-icon"></i>
-											<span><img src="~/assets/img/icons/closes.svg" alt="img"></span>
-							</a>*@
-										
-									</div>
-									
-								</div>
-								<div class="form-sort">
-									<i data-feather="sliders" class="info-img"></i>
-									<select class="select">
-										<option>Ordenar por Fecha</option>
-										<option>25 9 23</option>
-										<option>12 9 23</option>
-									</select>
 								</div>
 							</div>
 				<!-- /product list -->
 							<div class="table-responsive">
-								<table class="table  datanew">
+								<table class="table">
 									<thead>
 										<tr>
-											<th class="no-sort">
-												<label class="checkboxs">
-													<input type="checkbox" id="select-all">
-													<span class="checkmarks"></span>
-												</label>
-											</th>
-											<th>Nombre Producto</th>
-											<th>Referencia</th>
-											<th>Nombre Cliente</th>
-											<th>Estado</th>
-								            <th>Total (₡)</th>
+											
+											<th>Núm de Orden</th>
+											<th>Express</th>
+											<th>Nombre</th>
+											<th>Estado de la Orden</th>
 											<th class="no-sort">Acción</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/stock-img-01.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Baguette</a>
-											</td>
 											<td>PT001</td>
 											<td>Cliente-de-paso</td>
-											<td><span class="badges status-badge">Enviado</span></td>
-											<td>₡550</td>
+											<td>David Gonzalez</td>
+											<td><span class="badges status-badge">Pendiente</span></td>
 											<td class="action-table-data">
 												<div class="edit-delete-action data-row">
 													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
@@ -115,375 +78,10 @@
 													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
 														<i data-feather="edit" class="feather-edit"></i>
 													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
 												</div>
 											</td>
 										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/stock-img-06.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Arreglado</a>
-											</td>
-											<td>PT002</td>
-											<td>Cliente-de-paso</td>
-											<td><span class="badges status-badge">Enviado</span></td>
-											<td>₡430</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/stock-img-02.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Café Negro</a>
-											</td>
-											<td>PT003</td>
-											<td>Cliente-de-paso</td>
-											<td><span class="badges order-badge">Ordenado</span></td>
-											<td>₡260</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/stock-img-03.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Costilla Dulce</a>
-											</td>
-											<td>PT004</td>
-											<td>Juan Pérez</td>
-											<td><span class="badges unstatus-badge">Pendiente</span></td>
-											<td>₡470</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/stock-img-04.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Prusiano</a>
-											</td>
-											<td>PT005</td>
-											<td>Luisa Olsen</td>
-											<td><span class="badges unstatus-badge">Pendiente</span></td>
-											<td>₡380</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/stock-img-05.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Galletas Saladas</a>
-											</td>
-											<td>PT006</td>
-											<td>Alberto Díaz</td>
-											<td><span class="badges status-badge">Enviado</span></td>
-											<td>₡190</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/expire-product-01.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Prusiano</a>
-											</td>
-											<td>PT007</td>
-											<td>Cliente-de-paso</td>
-											<td><span class="badges unstatus-badge">Pendiente</span></td>
-											<td>₡540</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/expire-product-02.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Baguette Queso</a>
-											</td>
-											<td>PT008</td>
-											<td>Benjamin Torres</td>
-											<td><span class="badges order-badge">Ordenado</span></td>
-											<td>₡610</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/expire-product-03.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Pizza Pepperoni Grande</a>
-											</td>
-											<td>PT009</td>
-											<td>Cliente-de-paso</td>
-											<td><span class="badges unstatus-badge">Pendiente</span></td>
-											<td>₡220</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me- p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/expire-product-04.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Calzone</a>
-											</td>
-											<td>PT010</td>
-											<td>Lidia Quirós</td>
-											<td><span class="badges status-badge">Enviado</span></td>
-											<td>₡460</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/expire-product-01.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Spaguetti Supremo</a>
-											</td>
-											<td>PT011</td>
-											<td>Antony López</td>
-											<td><span class="badges unstatus-badge">Pendiente</span></td>
-											<td>₡250</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<label class="checkboxs">
-													<input type="checkbox">
-													<span class="checkmarks"></span>
-												</label>
-											</td>
-											<td class="productimgname">
-												<div class="view-product me-2">
-													<a href="javascript:void(0);">
-														<img src="~/assets/img/products/expire-product-02.png" alt="product">
-													</a>
-												</div>
-												<a href="javascript:void(0);">Pizza Personal</a>
-											</td>
-											<td>PT012</td>
-											<td>Benjamin Torres</td>
-											<td><span class="badges status-badge">Enviado</span></td>
-											<td>₡550</td>
-											<td class="action-table-data">
-												<div class="edit-delete-action data-row">
-													<a class="me-2 p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="eye" class="action-eye"></i>
-													</a>
-													<a class="me-2 p-2 mb-0" data-bs-toggle="modal" data-bs-target="#edit-units">
-														<i data-feather="edit" class="feather-edit"></i>
-													</a>
-													<a class="me-2 confirm-text p-2 mb-0" href="javascript:void(0);">
-														<i data-feather="trash-2" class="feather-trash-2"></i>
-													</a>
-												</div>
-											</td>
-										</tr>
+										
 									</tbody>
 								</table>
 							</div>
@@ -735,3 +333,5 @@
 				</li>
 			</ul>
 		</div>
+
+
