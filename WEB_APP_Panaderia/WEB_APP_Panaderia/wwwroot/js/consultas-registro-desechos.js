@@ -62,7 +62,7 @@ $(document).ready(function () {
     });
 });
 
-function cargarDatosReporte(id) {
+function cargarDatosReporteDesecho(id) {
 
     // Limpiamos las opciones actuales
     $('.tratamiento-residuo-editar').empty();
@@ -190,13 +190,13 @@ $(document).ready(function () {
         }).then(function (result) {
             if (result.isConfirmed) {
                 // Llamar a la función eliminarReporte si se confirma
-                eliminarReporte(id);
+                eliminarReporteDesecho(id);
             }
         });
     });
 });
 
-function eliminarReporte(id) {
+function eliminarReporteDesecho(id) {
     $.ajax({
         url: '/RegistroDesechos/EliminarRegistroDesecho',
         type: 'POST',
