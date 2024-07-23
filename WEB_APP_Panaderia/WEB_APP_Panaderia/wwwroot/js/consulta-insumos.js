@@ -157,7 +157,7 @@ function cargarDatosReporte(idInsumo) {
             $('.presentacion-editar').val(res.idPresentacion);
 
             // Establecemos el valor del input oculto para el idEvento
-            $('.idInsumoEditar').val(res.idInsumo);
+            $('#idInsumoEditar').val(res.idInsumo);
 
             // Establecemos el valor de la fecha en el input datetimepicker
             // Establece la fecha correctamente
@@ -178,8 +178,7 @@ function formatoFecha() {
 
 $(document).ready(function () {
     $(".confirm-text").on("click", function () {
-        var idInsumo
-            = $(this).data('idInsumo'); // Asumiendo que el id se almacena en un atributo data del elemento <a>
+        var idInsumo = $(res.idInsumo); // Asumiendo que el id se almacena en un atributo data del elemento <a>
 
         Swal.fire({
             title: "\u00BFEst\u00E1 seguro de eliminar el registro?",
@@ -204,7 +203,7 @@ $(document).ready(function () {
 
 function eliminarReporte(idInsumo) {
     $.ajax({
-        url: '/Insumos/BorrarInsumo',
+        url: '/Insumos/BorrarInsumos',
         type: 'POST',
         data: { idInsumo: idInsumo },
         success: function (data) {
