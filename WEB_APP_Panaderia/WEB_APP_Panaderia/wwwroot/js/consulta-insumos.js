@@ -69,7 +69,7 @@ function cargarDatosReporte(idInsumo) {
     $('.marca-editar').empty();
     $('.presentacion-editar').empty();
     $('.categoria-insumo-editar').empty();
-    
+
 
     $(document).ready(function () {
         $.ajax({
@@ -135,13 +135,13 @@ function cargarDatosReporte(idInsumo) {
         type: 'GET',
         data: { idInsumo: idInsumo },
         success: function (res) {
-        console.log(res)
+            console.log(res)
             // Añadimos la opción correspondiente al tratamiento residuo y lo seleccionamos
             //$('.tipo-insumo-editar').append(res.nombre);
             $('.nombre-insumo-editar').val(res.nombre);
 
             // Añadimos la opción correspondiente al tratamiento residuo y lo seleccionamos
-            $('.tipo-insumo-editar').append('<option value="' + res.idTipoInsumo + '">' + res.tipo+ '</option>');
+            $('.tipo-insumo-editar').append('<option value="' + res.idTipoInsumo + '">' + res.tipo + '</option>');
             $('.tipo-insumo-editar').val(res.idTipoInsumo);
 
             // Añadimos la opción correspondiente a la disposición final y lo seleccionamos
@@ -178,7 +178,7 @@ function formatoFecha() {
 
 $(document).ready(function () {
     $(".confirm-text").on("click", function () {
-        var idInsumo = $(res.idInsumo); // Asumiendo que el id se almacena en un atributo data del elemento <a>
+        var idInsumo = $(this).data('id'); // Asumiendo que el id se almacena en un atributo data del elemento <a>
 
         Swal.fire({
             title: "\u00BFEst\u00E1 seguro de eliminar el registro?",
