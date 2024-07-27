@@ -3,6 +3,7 @@
 	public class OrdenProductoEntities
 	{
 		public long idProducto { get; set; }
+		public long idCategoria { get; set; }
 		public string nombre { get; set; } = string.Empty;
 		public int cantidad { get; set; }
 		public float precioUnitario { get; set; }
