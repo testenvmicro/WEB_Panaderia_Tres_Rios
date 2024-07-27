@@ -58,7 +58,14 @@
         productos.forEach(function (producto) {
             content += `
                 <div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-                    <div class="product-info default-cover card" data-producto-id="${producto.idProducto}" data-producto-nombre="${producto.nombre}" data-producto-precio="${producto.precioUnitario}" data-producto-tipo="${producto.tipo}">
+                    <div class="product-info default-cover card"
+             
+                    data-producto-id="${producto.idProducto}" 
+                    data-producto-nombre="${producto.nombre}" 
+                    data-producto-precio="${producto.precioUnitario}" 
+                    data-producto-tipo="${producto.tipo}" 
+                    data-producto-descripcion="${producto.descripcion}"
+                    data-producto-idcategoria="${producto.idCategoria}">
                         <h6 class="cat-name"><a>${producto.tipo}</a></h6>
                         <h6 class="product-name"><a>${producto.nombre}</a></h6>
                         <div class="d-flex align-items-center justify-content-between price">
@@ -72,12 +79,18 @@
 
         // Añadir el evento de clic para los productos
         $(".product-info").click(function () {
+            const categoriaId = $(this).data('producto-idcategoria');
             const productoId = $(this).data('producto-id');
+            const productoNombre = $(this).data('producto-nombre');
+            const productoPrecio = $(this).data('producto-precio');
             const productoTipo = $(this).data('producto-tipo');
+            const productoDescripcion = $(this).data('producto-descripcion');
+            const sabores = '';
             if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
-                openModal(productoId, $(this).data('producto-nombre'), $(this).data('producto-precio'));
+                openModal(productoId, productoNombre, productoPrecio, productoDescripcion, categoriaId);
             } else {
-                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
+                addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion,sabores,categoriaId);
+
             }
         });
     }
@@ -87,7 +100,12 @@
         productos.forEach(function (producto) {
             content += `
                 <div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-                    <div class="product-info default-cover card" data-producto-id="${producto.idProducto}" data-producto-nombre="${producto.nombre}" data-producto-precio="${producto.precioUnitario}" data-producto-tipo="${producto.tipo}">
+                    <div class="product-info default-cover card"
+                    data-producto-id="${producto.idProducto}"
+                    data-producto-nombre="${producto.nombre}" 
+                    data-producto-precio="${producto.precioUnitario}" 
+                    data-producto-tipo="${producto.tipo}" 
+                    data-producto-idcategoria="${producto.idCategoria}">
                         <h6 class="cat-name"><a>${producto.tipo}</a></h6>
                         <h6 class="product-name"><a>${producto.nombre}</a></h6>
                         <div class="d-flex align-items-center justify-content-between price">
@@ -102,12 +120,18 @@
 
         // Añadir el evento de clic para los productos
         $(".product-info").click(function () {
+            const categoriaId = $(this).data('producto-idcategoria');
             const productoId = $(this).data('producto-id');
+            const productoNombre = $(this).data('producto-nombre');
+            const productoPrecio = $(this).data('producto-precio');
             const productoTipo = $(this).data('producto-tipo');
+            const productoDescripcion = $(this).data('producto-descripcion');
+            const sabores = '';
             if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
-                openModal(productoId, $(this).data('producto-nombre'), productoTipo, $(this).data('producto-precio'));
+                openModal(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion, categoriaId);
+                      
             } else {
-                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
+                addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion, sabores, categoriaId);
             }
         });
     }
@@ -117,7 +141,12 @@
         productos.forEach(function (producto) {
             content += `
                 <div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-                    <div class="product-info default-cover card" data-producto-id="${producto.idProducto}" data-producto-nombre="${producto.nombre}" data-producto-precio="${producto.precioUnitario}" data-producto-tipo="${producto.tipo}">
+                    <div class="product-info default-cover card"
+                    data-producto-id="${producto.idProducto}"
+                    data-producto-nombre="${producto.nombre}"
+                    data-producto-precio="${producto.precioUnitario}" 
+                    data-producto-tipo="${producto.tipo}"
+                    data-producto-idcategoria="${producto.idCategoria}">
                         <h6 class="cat-name"><a>${producto.tipo}</a></h6>
                         <h6 class="product-name"><a>${producto.nombre}</a></h6>
                         <div class="d-flex align-items-center justify-content-between price">
@@ -131,13 +160,15 @@
         $(`.tab_content[data-tab='pastas'] .row`).html(content);
 
         $(".product-info").click(function () {
+            const categoriaId = $(this).data('producto-idcategoria');
             const productoId = $(this).data('producto-id');
+            const productoNombre = $(this).data('producto-nombre');
+            const productoPrecio = $(this).data('producto-precio');
             const productoTipo = $(this).data('producto-tipo');
-            if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
-                openModal(productoId, $(this).data('producto-nombre'), $(this).data('producto-precio'));
-            } else {
-                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'));
-            }
+            const productoDescripcion = $(this).data('producto-descripcion');
+            const sabores = '';
+            addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion, sabores, categoriaId);
+                          
         });
     }
 
@@ -146,7 +177,13 @@
         productos.forEach(function (producto) {
             content += `
                 <div class="col-sm-2 col-md-6 col-lg-3 col-xl-3 pe-2">
-                    <div class="product-info default-cover card" data-producto-id="${producto.idProducto}" data-producto-nombre="${producto.nombre}" data-producto-precio="${producto.precioUnitario}" data-producto-tipo="${producto.tipo}" data-producto-descripcion="${producto.descripcion}">
+                    <div class="product-info default-cover card"
+                    data-producto-id="${producto.idProducto}" 
+                    data-producto-nombre="${producto.nombre}" 
+                    data-producto-precio="${producto.precioUnitario}" 
+                    data-producto-tipo="${producto.tipo}" 
+                    data-producto-descripcion="${producto.descripcion}" 
+                    data-producto-idCategoria="${producto.idCategoria}">
                         <h6 class="cat-name"><a>${producto.tipo}</a></h6>
                         <h6 class="product-name"><a>${producto.nombre}</a></h6>
                         <div class="d-flex align-items-center justify-content-between price">
@@ -160,18 +197,19 @@
         $(`.tab_content[data-tab='bebidas'] .row`).html(content);
 
         $(".product-info").click(function () {
+            const categoriaId = $(this).data('producto-idcategoria');
             const productoId = $(this).data('producto-id');
+            const productoNombre = $(this).data('producto-nombre');
+            const productoPrecio = $(this).data('producto-precio');
             const productoTipo = $(this).data('producto-tipo');
             const productoDescripcion = $(this).data('producto-descripcion');
-            if (productoTipo.includes("Un tipo") || productoTipo.includes("Uno / dos tipos")) {
-                openModal(productoId, $(this).data('producto-nombre'), $(this).data('producto-precio'));
-            } else {
-                addProductToCart(productoId, $(this).data('producto-nombre'), $(this).data('producto-tipo'), $(this).data('producto-precio'), productoDescripcion); 
-            }
+            const sabores = '';
+            addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion, sabores, categoriaId);                    
+            
         });
     }
     // Función para abrir el modal y cargar el contenido dinámico
-    function openModal(productoId, productoNombre, productoTipo, productoPrecio) {
+    function openModal(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion, categoriaId) {
         $.ajax({
             url: '/SaboresPizza/ConsultarSaboresPizza', 
             method: 'GET',
@@ -184,7 +222,7 @@
                     let selectedSabores = $(".sabor-check:checked").map(function () {
                         return $(this).closest('.row').find('h6').text();
                     }).get();
-                    addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, selectedSabores.join(', '));
+                    addProductToCart(productoId, productoNombre, productoTipo, productoPrecio, productoDescripcion, selectedSabores.join(', '), categoriaId);
                 });
 
             },
@@ -233,12 +271,19 @@
     }
 
     // Función para agregar productos al carrito
-    function addProductToCart(producto_id, nombre, tipo, precio, descripcion, sabores) {
+    function addProductToCart(producto_id, nombre, tipo, precio, descripcion, sabores, categoriaId) {
         let descripcionHTML = descripcion ? `<p>Descripcion: ${descripcion}</p>` : '';
         let saboresHTML = sabores ? `<p>Sabores: ${sabores}</p>` : '';
        
             let productHTML = `
-                            <div class="product-list d-flex align-items-center justify-content-between" data-productoid="${producto_id}" data-nombre="${nombre}" data-tipo="${tipo}" data-sabores="${sabores}" data-precio="${precio}" data-descripcion="${descripcion}">
+                            <div class="product-list d-flex align-items-center justify-content-between"
+                            data-productoid="${producto_id}" 
+                            data-nombre="${nombre}" 
+                            data-tipo="${tipo}"
+                            data-sabores="${sabores}"
+                            data-precio="${precio}" 
+                            data-descripcion="${descripcion}" 
+                            data-categoriaid="${categoriaId}">
                                 <div class="d-flex align-items-center product-info">
                                     <div class="info">
                                         <h6 class="product-name"><a>${nombre} - ${tipo} </a></h6>
@@ -328,6 +373,7 @@
             var products = [];
             var totalAmount = 0;
             $('.product-list').each(function () {
+                var categoriaId = $(this).data('categoriaid');
                 var productoId = $(this).data('productoid');
                 var productoNombre = $(this).data('nombre');
                 var productoPrecio = parseFloat($(this).data('precio'));
@@ -446,6 +492,7 @@
             var ordenProductos = [];
             var totalAmount = 0;
             $('.product-list').each(function () {
+                var categoriaId = $(this).data('categoriaid');
                 var productoId = $(this).data('productoid');
                 var productoNombre = $(this).data('nombre');
                 var productoPrecio = parseFloat($(this).data('precio'));
@@ -461,6 +508,7 @@
 
                 ordenProductos.push({
                     idProducto: productoId,
+                    idCategoria: categoriaId,
                     nombre: productoNombre,
                     precioUnitario: productoPrecio,
                     tipo: productoTipo,
