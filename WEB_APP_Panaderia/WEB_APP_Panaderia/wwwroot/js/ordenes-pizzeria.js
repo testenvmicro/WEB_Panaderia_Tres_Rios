@@ -111,6 +111,10 @@ $('#actualizar-orden-btn').on('click', function () {
                     icon: 'success',
                     title: '¡Éxito!',
                     text: 'El estado de la orden se ha actualizado correctamente.',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
                 });
                 // Cerrar el modal o realizar otras acciones necesarias
                 $('#detalle-orden').modal('hide');
@@ -119,6 +123,10 @@ $('#actualizar-orden-btn').on('click', function () {
                     icon: 'error',
                     title: 'Error',
                     text: 'Hubo un problema al actualizar el estado de la orden.',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
                 });
             }
         },
@@ -128,6 +136,10 @@ $('#actualizar-orden-btn').on('click', function () {
                 icon: 'error',
                 title: 'Error',
                 text: 'Hubo un problema al actualizar el estado de la orden: ' + xhr.responseText,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
             });
         }
     });

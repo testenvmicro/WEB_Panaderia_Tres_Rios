@@ -10,8 +10,7 @@ namespace WEB_APP_Panaderia.Interfaces
 		public List<RegistroDesechosEntities> ConsultarRegistroDesechos();
 		public int AgregarRegistroDesecho(RegistroDesechosEntities reporte);
 		public void ActualizarRegistroDesecho(RegistroDesechosEntities reporte);
-
-		public void EliminarRegistroDesecho(int idProveedor);
+		public void EliminarRegistroDesechos(int id);
 		public RegistroDesechosEntities? ConsultarUnRegistroDesecho(int id);
 		public byte[] GenerarPdfRegistroDesechos(List<RegistroDesechosEntities> registros);
 		public byte[] GenerarExcelRegistroDesechos(List<RegistroDesechosEntities> registros);

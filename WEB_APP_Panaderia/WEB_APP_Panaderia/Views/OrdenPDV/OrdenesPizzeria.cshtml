@@ -13,7 +13,10 @@
 						<div class="add-item d-flex">
 							<div class="page-title">
 								<h4>Lista de Ordenes</h4>
-								<h6>Gestión de Ordenes</h6>
+								<h6>Aquí se pueden ver todas las ordenes pendientes y en progreso que entran desde el punto de venta. Haz click en "Ver" para los detalles de la orden.</h6>
+								<br />
+								<h6 style="font-weight: bold;">Asegúrate de cambiar el estado de una orden, cuándo estés listo/a para tomarla.</h6>
+
 							</div>
 						</div>
 						<ul class="table-top-head">
@@ -73,7 +76,7 @@
 
 									<tr>
 										<th>Núm de Orden</th>
-										<th>Express/Cliente-Salón</th>
+										<th>Servicio</th>
 										<th>Cliente</th>
 										<th>Estado de la Orden</th>
 										<th class="no-sort">Ver</th>
@@ -83,9 +86,18 @@
 									@foreach (var orden in Model.Ordenes)
 									{
 										<tr>
-											<td>@orden.idOrden</td>
-											<td>@(orden.express ? "Express" : "Cliente-Salón")</td>
-											<td>@orden.nombreCliente</td>
+											<td><span class="badge text-bg-info"><h4>@orden.idOrden</h4></span></td>
+											<td>
+												@if (orden.metodoPago == "Uber Eats")
+												{
+													<span class="badge text-bg-light"><h4>Uber Eats</h4></span>
+												}
+												else
+												{
+													<span class="badge text-bg-light"><h4>@(orden.express ? "Express" : "Cliente-Salón")</h4></span>
+												}
+											</td>
+											<td><span class="badge text-bg-light"><h4>@orden.nombreCliente</h4></span></td>
 											<td>
 												@if (orden.estado == "Pendiente")
 												{

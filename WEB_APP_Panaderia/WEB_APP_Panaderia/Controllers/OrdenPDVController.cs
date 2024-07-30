@@ -48,7 +48,7 @@ namespace WEB_APP_Panaderia.Controllers
 				};
 				if (viewModel.Ordenes == null || viewModel.Ordenes.Count() == 0)
 				{
-					ViewData["Message"] = "No hay registros de desechos.";
+					ViewData["Message"] = "No hay ordenes pendientes, ¡Buen trabajo!.";
 				}
 
 				return View(viewModel);
