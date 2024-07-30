@@ -66,11 +66,11 @@ namespace WEB_APP_Panaderia.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult EliminarRegistroDesechos(int idReporte)
+		public IActionResult EliminarRegistroDesechos(int idEvento)
 		{
 			try
 			{
-				_registroDesechosModel.EliminarRegistroDesechos(idReporte);
+				_registroDesechosModel.EliminarRegistroDesechos(idEvento);
 				return Json(new { success = true });
 			}
 			catch (Exception ex)
@@ -78,6 +78,8 @@ namespace WEB_APP_Panaderia.Controllers
 				return Json(new { success = false, message = ex.Message });
 			}
 		}
+
+
 
 		[HttpGet]
 		public IActionResult ConsultarUnRegistroDesecho(int id)

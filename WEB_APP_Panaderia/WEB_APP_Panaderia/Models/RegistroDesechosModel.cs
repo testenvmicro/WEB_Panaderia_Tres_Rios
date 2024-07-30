@@ -178,13 +178,13 @@ namespace WEB_APP_Panaderia.Models
 			}
 		}
 
-		public void EliminarRegistroDesechos(int id)
+		public void EliminarRegistroDesechos(int idEvento)
 		{
 			using (var client = new HttpClient())
 			{
 				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/RegistroDesechos/EliminarRegistroDesechos";
 
-				JsonContent body = JsonContent.Create(id);
+				JsonContent body = JsonContent.Create(idEvento);
 				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
 
 				if (!response.IsSuccessStatusCode)
