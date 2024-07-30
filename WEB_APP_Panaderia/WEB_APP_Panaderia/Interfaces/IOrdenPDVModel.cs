@@ -11,5 +11,7 @@ namespace WEB_APP_Panaderia.Interfaces
 		public List<DetalleOrdenEntities>? ConsultarDetalleOrden(int id);
 
 		public List<EstadoOrdenesEntities> ConsultarEstadosOrden();
+
+		public DetalleOrdenEntities? ActualizarEstadoOrden(DetalleOrdenEntities orden);
 	}
 }

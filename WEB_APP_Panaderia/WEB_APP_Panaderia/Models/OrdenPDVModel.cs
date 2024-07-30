@@ -95,6 +95,22 @@ namespace WEB_APP_Panaderia.Models
 
 		}
 
+		public DetalleOrdenEntities? ActualizarEstadoOrden(DetalleOrdenEntities orden)
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/OrdenPDV/ActualizarEstadoOrden";
+
+				JsonContent body = JsonContent.Create(orden);
+				HttpResponseMessage response = client.PostAsync(urlApi, body).Result;
+
+				if (!response.IsSuccessStatusCode)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+
+				return null;
+			}
+		}
+
 
 	}
 }

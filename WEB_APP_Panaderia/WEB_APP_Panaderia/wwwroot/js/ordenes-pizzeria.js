@@ -92,3 +92,44 @@ function actualizarModal(data) {
     }
 }
 
+// Manejar el clic en el botón de Actualizar Orden
+$('#actualizar-orden-btn').on('click', function () {
+    var idOrden = $('#detalle-orden .badge.bg-info').text().replace('#', '').trim();
+    var idEstadoOrden = $('.estado-orden').val();
+
+    $.ajax({
+        url: '/OrdenPDV/ActualizarEstadoOrden',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            idOrden: idOrden,
+            idEstadoOrden: idEstadoOrden
+        }),
+        success: function (response) {
+            if (response.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Éxito!',
+                    text: 'El estado de la orden se ha actualizado correctamente.',
+                });
+                // Cerrar el modal o realizar otras acciones necesarias
+                $('#detalle-orden').modal('hide');
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Hubo un problema al actualizar el estado de la orden.',
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error('Error al actualizar el estado de la orden:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Hubo un problema al actualizar el estado de la orden: ' + xhr.responseText,
+            });
+        }
+    });
+});
+

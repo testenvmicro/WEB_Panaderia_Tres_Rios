@@ -76,5 +76,19 @@ namespace WEB_APP_Panaderia.Controllers
 			return Json(_ordenModel.ConsultarEstadosOrden());
 		}
 
+		[HttpPost]
+		public IActionResult ActualizarEstadoOrden([FromBody] DetalleOrdenEntities orden)
+		{
+			try
+			{
+				_ordenModel.ActualizarEstadoOrden(orden);
+				return Json(new { success = true });
+			}
+			catch (Exception ex)
+			{
+				return Json(new { success = false, message = ex.Message });
+			}
+		}
+
 	}
 }

@@ -17,6 +17,7 @@
 		public float montoTotal { get; set; }
 		public string metodoPago { get; set; } = string.Empty;
 		public bool express { get; set; }
+		public long idEstadoOrden { get; set; }
 		public string estado { get; set; } = string.Empty;
 		public long idCliente { get; set; }
 		public string nombreCliente { get; set; } = string.Empty;
