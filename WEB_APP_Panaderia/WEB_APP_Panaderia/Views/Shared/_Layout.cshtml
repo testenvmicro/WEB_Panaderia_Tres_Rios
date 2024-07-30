@@ -63,6 +63,7 @@
 
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="~/assets/css/style.css">
+	<link rel="stylesheet" href="~/css/ordenes-pizzeria.css">
 
 </head>
 <body>
@@ -271,11 +272,11 @@
 						<li class="submenu-open">
 							<ul>
 							<h6 class="submenu-hdr">Ordenes</h6>
-								@* 								<li><a href="sales-list.html"><i data-feather="shopping-cart"></i><span>Sales</span></a></li>
+								@*<li><a href="sales-list.html"><i data-feather="shopping-cart"></i><span>Sales</span></a></li>
 								<li><a href="invoice-report.html"><i data-feather="file-text"></i><span>Invoices</span></a></li>
 								<li><a href="sales-returns.html"><i data-feather="copy"></i><span>Sales Return</span></a></li>
 								<li><a href="quotation-list.html"><i data-feather="save"></i><span>Quotation</span></a></li> *@
-								<li><a href="@Url.Action("Ordenes_Pizzeria","Home")"><i data-feather="hard-drive"></i><span>Ordenes Pizzería</span></a></li>
+								<li><a href="@Url.Action("OrdenesPizzeria","OrdenPDV")"><i data-feather="hard-drive"></i><span>Ordenes Pizzería</span></a></li>
 							</ul>
 						</li>
 						@* <li class="submenu-open">
@@ -1627,7 +1628,7 @@
 	<script src="~/js/buscar-correo-ru.js"></script>
 	<script src="~/js/validacion-campo-registrar-usuario.js"></script>
 	<script src="~/js/consultas-registro-desechos.js"></script>
-
+	<script src="~/js/ordenes-pizzeria.js"></script>
 	<script src="~/js/consulta-insumos.js"></script>
 
 	@await RenderSectionAsync("Scripts", required: false)

@@ -217,11 +217,6 @@ namespace WEB_APP_Panaderia.Controllers
             return Json(proveedor);
         }
 
-        public IActionResult Ordenes_Pizzeria()
-		{
-			return View();
-		}
-
 		public IActionResult Privacy()
         {
             return View();

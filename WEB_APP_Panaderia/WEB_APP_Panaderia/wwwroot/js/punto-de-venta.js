@@ -378,9 +378,13 @@
                 var productoNombre = $(this).data('nombre');
                 var productoPrecio = parseFloat($(this).data('precio'));
                 var productoTipo = $(this).data('tipo') || 'N/A';
+                var productoSabores = $(this).data('sabores');
+                if (productoSabores === 'undefined') {
+                    var productoSabores = 'N/A';
+                }
                 var productoDescripcion = $(this).data('descripcion');
                 if (productoDescripcion === 'undefined') {
-                    var productoDescripcion = '';
+                    var productoDescripcion = 'N/A';
                 }
                 var productoCantidad = parseInt($(this).find('.qty-input').val());
                 var productoTotal = productoPrecio * productoCantidad;
@@ -393,6 +397,7 @@
                     precio: productoPrecio,
                     tipo: productoTipo,
                     descripcion: productoDescripcion,
+                    sabores: productoSabores,
                     cantidad: productoCantidad,
                     total: productoTotal,
                     nota: productoNota
@@ -437,12 +442,14 @@
             products.forEach(function (product, index) {
                 var descripcion = (product.descripcion && product.descripcion.trim()) ? product.descripcion : 'N/A';
                 var tipo = (product.tipo && product.tipo.trim()) ? product.tipo : 'N/A';
+                var sabores = (product.sabores && product.sabores.trim()) ? product.sabores : 'N/A';
                 productRows += `
                  <tr>
                     <td>${index + 1}. ${product.nombre}</td>
                     <td>₡${product.precio.toFixed(2)}</td>
                     <td>${product.cantidad}</td>
                     <td>${tipo}</td>
+                    <td>${sabores}</td>
                     <td>${descripcion}</td>
                     <td>${product.nota}</td>
                     <td class="text-end">₡${product.total.toFixed(2)}</td>
@@ -497,6 +504,10 @@
                 var productoNombre = $(this).data('nombre');
                 var productoPrecio = parseFloat($(this).data('precio'));
                 var productoTipo = $(this).data('tipo') || 'N/A';
+                var productoSabores = $(this).data('sabores');
+                if (productoSabores === 'undefined') {
+                    var productoSabores = 'N/A';
+                }
                 var productoDescripcion = $(this).data('descripcion');
                 if (productoDescripcion === 'undefined') {
                     productoDescripcion = 'N/A';
@@ -513,6 +524,7 @@
                     precioUnitario: productoPrecio,
                     tipo: productoTipo,
                     descripcion: productoDescripcion,
+                    sabores: productoSabores,
                     cantidad: productoCantidad,
                     total: productoTotal,
                     nota: productoNota
