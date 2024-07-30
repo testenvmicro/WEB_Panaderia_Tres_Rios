@@ -202,8 +202,7 @@ function eliminarRepDesecho(id) {
     $.ajax({
         url: '/RegistroDesechos/EliminarRegistroDesechos',
         type: 'POST',
-        data: { idReporte: id },
-        contentType: 'application/json; charset=utf-8',
+        data: { idEvento: id },
         success: function (data) {
             console.log("Respuesta recibida:", data);
             if (data.success) {
@@ -212,7 +211,9 @@ function eliminarRepDesecho(id) {
                     title: "¡Eliminado!",
                     text: "Tu archivo ha sido eliminado.",
                     confirmButtonClass: "btn btn-success",
-                });
+                }).then(function () {
+                    location.reload();
+                });;
             } else {
                 Swal.fire({
                     icon: "error",
