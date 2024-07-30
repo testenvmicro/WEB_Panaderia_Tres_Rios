@@ -34,8 +34,66 @@ namespace WEB_APP_Panaderia.Models
 			}
 		}
 
+		public List<DetalleOrdenEntities>? OrdenesPizzeria()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/OrdenPDV/ConsultarOrdenesPDV";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
 
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<DetalleOrdenEntities>>().Result;
+					return result;
+				}
+				
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+					return new List<DetalleOrdenEntities>();
 
+			}
+		}
+
+		public List<DetalleOrdenEntities>? ConsultarDetalleOrden(int id)
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/OrdenPDV/ConsultarDetalleOrdenPDV?idOrden=" + id;
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<DetalleOrdenEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+				return new List<DetalleOrdenEntities>();
+
+			}
+		}
+
+		public List<EstadoOrdenesEntities> ConsultarEstadosOrden()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/OrdenPDV/ConsultarEstadosOrden";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<EstadoOrdenesEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+				return new List<EstadoOrdenesEntities>();
+			}
+
+		}
 
 
 	}

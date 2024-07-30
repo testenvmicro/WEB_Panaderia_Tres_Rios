@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml.Export.HtmlExport.StyleCollectors.StyleContracts;
 using WEB_APP_Panaderia.Entities;
 using WEB_APP_Panaderia.Interfaces;
 using WEB_APP_Panaderia.Models;
@@ -35,5 +36,45 @@ namespace WEB_APP_Panaderia.Controllers
 			}
 
 		}
+
+		public IActionResult OrdenesPizzeria()
+		{
+			try
+			{
+				var viewModel = new OrdenesPizzeriaViewModel
+				{
+					Ordenes = _ordenModel.OrdenesPizzeria(),
+					Orden = new DetalleOrdenEntities()
+				};
+				if (viewModel.Ordenes == null || viewModel.Ordenes.Count() == 0)
+				{
+					ViewData["Message"] = "No hay registros de desechos.";
+				}
+
+				return View(viewModel);
+			}
+			catch (Exception ex)
+			{
+				return View("Error");
+			}
+		}
+
+		[HttpGet]
+		public IActionResult ConsultarDetalleOrdenPDV(int id)
+		{
+			var detalleOrden = _ordenModel.ConsultarDetalleOrden(id);
+			if (detalleOrden == null)
+			{
+				return NotFound(new { message = "No se encontraron detalles para la orden." });
+			}
+			return Json(detalleOrden);
+		}
+
+		[HttpGet]
+		public IActionResult ConsultarEstadosOrden()
+		{
+			return Json(_ordenModel.ConsultarEstadosOrden());
+		}
+
 	}
 }
