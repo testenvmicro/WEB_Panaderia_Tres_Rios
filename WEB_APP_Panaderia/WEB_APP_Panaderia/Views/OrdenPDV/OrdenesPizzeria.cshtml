@@ -105,9 +105,9 @@
 													<a class="me-2 p-2 mb-0" onclick="consultarDetallesOrden(@orden.idOrden)">
 														<i data-feather="eye" class="action-eye"></i>
 													</a>
-													<a class="me-2 p-2 mb-0" onclick="AceptarOrden(@orden.idOrden)" data-bs-toggle="modal" data-bs-target="#detalle-orden">
+@* 													<a class="me-2 p-2 mb-0" onclick="AceptarOrden(@orden.idOrden)" data-bs-toggle="modal" data-bs-target="#detalle-orden">
 														<i data-feather="edit" class="feather-edit"></i>
-													</a>
+													</a> *@
 
 												</div>
 											</td>
@@ -126,7 +126,6 @@
         </div>
 		<!-- /Main Wrapper -->
 
-		<!-- Detalle Orden -->
 <!-- Detalle Orden -->
 <div class="modal fade" id="detalle-orden">
 	<div class="modal-dialog edit-sales-modal">
@@ -206,7 +205,7 @@
 							</div>
 							<div class="col-lg-12 text-end">
 								<button type="button" class="btn btn-cancel add-cancel me-3" data-bs-dismiss="modal">Cancelar</button>
-								<button type="submit" class="btn btn-submit add-sale">Actualizar Orden</button>
+								<button type="submit" class="btn btn-submit add-sale" id="actualizar-orden-btn">Actualizar Orden</button>
 							</div>
 						</div>
 					</div>
