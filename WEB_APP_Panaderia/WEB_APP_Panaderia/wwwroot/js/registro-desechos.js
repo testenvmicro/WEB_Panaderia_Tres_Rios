@@ -1,13 +1,13 @@
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $.ajax({
         url: '/RegistroDesechos/ConsultarCategoriaDesecho',
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-       
+
             $('.categoria-desecho').append('<option value="">Categoria Desecho</option>');
             $.each(res, function (key, value) {
-    
+
                 $('.categoria-desecho').append('<option value="' + value.idCategoria + '">' + value.descripcion + '</option>');
             });
         }
@@ -20,10 +20,10 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-         
+
             $('.tratamiento-residuo').append('<option value="">Cat. Desecho Tratamiento</option>');
             $.each(res, function (key, value) {
-        
+
                 $('.tratamiento-residuo').append('<option value="' + value.idCategoriaTratamientoResiduo + '">' + value.descripcion + '</option>');
             });
         }
@@ -36,10 +36,10 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-          
+
             $('.disposicion-final').append('<option value="">Disposicion Final</option>');
             $.each(res, function (key, value) {
-             
+
                 $('.disposicion-final').append('<option value="' + value.idDisposicionFinal + '">' + value.descripcion + '</option>');
             });
         }
@@ -52,10 +52,10 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (res) {
-           
+
             $('.transporte').append('<option value="">Transporte</option>');
             $.each(res, function (key, value) {
-      
+
                 $('.transporte').append('<option value="' + value.idDesechoTransporte + '">' + value.descripcion + '</option>');
             });
         }
@@ -172,44 +172,46 @@ function formatoFecha() {
 }
 
 $(document).ready(function () {
-    $(".confirm-text").on("click", function () {
-        var id = $(this).data('id'); // Asumiendo que el id se almacena en un atributo data del elemento <a>
+    $(".confirm-text-reporte").on("click", function () {
+        var id = $(this).data('id-reporte');
+        console.log("ID a eliminar:", id);
 
         Swal.fire({
-            title: "\u00BFEst\u00E1 seguro de eliminar el registro?",
-            text: "\u00A1No podr\u00E1s revertir el cambio!",
+            title: "¿Está seguro de eliminar el registro?",
+            text: "¡No podrás revertir el cambio!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "\u00A1S\u00ED, eliminar!",
+            confirmButtonText: "¡Sí, eliminar!",
             cancelButtonText: "Cancelar",
             confirmButtonClass: "btn btn-primary",
             cancelButtonClass: "btn btn-danger ml-1",
             buttonsStyling: false,
         }).then(function (result) {
             if (result.isConfirmed) {
-                // Llamar a la función eliminarReporte si se confirma
-                eliminarReporteDesecho(id);
+                console.log("Confirmación recibida para eliminar el ID:", id);
+                eliminarRepDesecho(id);
             }
         });
     });
 });
 
-function eliminarReporteDesecho(id) {
+function eliminarRepDesecho(id) {
+    console.log("Eliminando reporte con ID:", id);
     $.ajax({
-        url: '/RegistroDesechos/EliminarRegistroDesecho',
+        url: '/RegistroDesechos/EliminarRegistroDesechos',
         type: 'POST',
-        data: { id: id },
+        data: { idReporte: id },
+        contentType: 'application/json; charset=utf-8',
         success: function (data) {
+            console.log("Respuesta recibida:", data);
             if (data.success) {
                 Swal.fire({
                     icon: "success",
-                    title: "\u00A1Eliminado!",
+                    title: "¡Eliminado!",
                     text: "Tu archivo ha sido eliminado.",
                     confirmButtonClass: "btn btn-success",
-                }).then(function () {
-                    location.reload();
                 });
             } else {
                 Swal.fire({
@@ -221,6 +223,7 @@ function eliminarReporteDesecho(id) {
             }
         },
         error: function (error) {
+            console.log("Error en la llamada AJAX:", error);
             Swal.fire({
                 icon: "error",
                 title: "Error",
