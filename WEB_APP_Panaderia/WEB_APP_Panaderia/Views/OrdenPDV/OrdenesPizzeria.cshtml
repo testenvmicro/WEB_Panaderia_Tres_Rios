@@ -70,7 +70,7 @@
 								<tbody>
 									@foreach (var orden in Model.Ordenes)
 									{
-										<tr>
+										<tr id="orden-@orden.idOrden">
 											<td><span class="badge text-bg-info"><h4>@orden.idOrden</h4></span></td>
 											<td>
 												@if (orden.metodoPago == "Uber Eats")
@@ -83,7 +83,7 @@
 												}
 											</td>
 											<td><span class="badge text-bg-light"><h4>@orden.nombreCliente</h4></span></td>
-											<td>
+											<td class="estado-orden-cell">
 												@if (orden.estado == "Pendiente")
 												{
 													<span class="badges text-bg-secondary">@orden.estado</span>
@@ -107,6 +107,8 @@
 										</tr>
 									}
 								</tbody>
+
+
 							</table>
 						}
 					}
@@ -207,3 +209,13 @@
 		</div>
 	</div>
 </div>
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			if (!$('body').hasClass('mini-sidebar')) {
+				$('body').addClass('mini-sidebar');
+			}
+		});
+	</script>
+}
+
