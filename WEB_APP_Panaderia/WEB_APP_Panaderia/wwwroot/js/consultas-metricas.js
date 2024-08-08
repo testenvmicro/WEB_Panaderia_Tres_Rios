@@ -158,3 +158,43 @@ function renderTable(data) {
 function formatCurrency(value) {
     return parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
+
+$.ajax({
+    url: '/Metricas/ConsultarGanancias', // URL del controlador
+    type: 'GET',
+    dataType: 'json',
+    success: function (response) {
+        if (response && response.porcentajeCambio !== undefined) {
+            var porcentajeCambio = response.porcentajeCambio;
+
+            // Formatear el porcentaje a un formato con 0 decimales y agregar el símbolo de porcentaje
+            var formattedPorcentaje = porcentajeCambio.toFixed(0) + '%';
+
+            // Modificar el contenido del <p> para incluir el porcentaje dinámicamente
+            $('.sales-range').html(`
+                <span class="text-success">
+                    <i data-feather="chevron-up" class="feather-16"></i>${formattedPorcentaje}&nbsp;
+                </span>Aumento en comparación con la semana pasada
+            `);
+        } else {
+            // Mostrar 0% y un mensaje indicando que no hay registros disponibles
+            $('.sales-range').html(`
+                <span class="text-danger">
+                    <i data-feather="chevron-down" class="feather-16"></i>0%&nbsp;
+                </span>No hay registros disponibles
+            `);
+        }
+
+        // Actualizar los íconos de feather (si es necesario)
+        feather.replace();
+    },
+    error: function (xhr, status, error) {
+        console.error("Error en la llamada AJAX:", error);
+        $('.sales-range').html(`
+            <span class="text-danger">
+                <i data-feather="chevron-down" class="feather-16"></i>0%&nbsp;
+            </span>Error al cargar
+        `);
+    }
+});
+

@@ -94,5 +94,25 @@ namespace WEB_APP_Panaderia.Models
 			}
 		}
 
+		public GananciasEntities? ConsultarGanancias()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Metricas/ConsultarGanancias";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<GananciasEntities>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+
+				return null;
+			}
+		}
+
 	}
 }
