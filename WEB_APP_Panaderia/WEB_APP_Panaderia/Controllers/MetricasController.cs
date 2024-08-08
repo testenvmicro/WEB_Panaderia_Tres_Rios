@@ -36,5 +36,11 @@ namespace WEB_APP_Panaderia.Controllers
 			return Json(_metricasModel.ConsultarTransaccionesRecientes());
 		}
 
+		[HttpGet]
+		public IActionResult ConsultarGanancias()
+		{
+			return Json(_metricasModel.ConsultarGanancias());
+		}
+
 	}
 }
