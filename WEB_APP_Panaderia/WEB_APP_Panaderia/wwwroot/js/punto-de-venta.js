@@ -404,6 +404,17 @@
                 });
             });
 
+            // Verificar si hay productos
+            if (products.length === 0) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'No hay productos',
+                    text: 'No hay productos por pagar. Por favor, agregue productos al carrito antes de proceder con el pago.',
+                    confirmButtonText: 'Aceptar'
+                });
+                return;
+            }
+
             // Guardar los productos y el total globalmente
             globalProducts = products;
             globalOrderData.totalAmount = totalAmount;
@@ -413,6 +424,17 @@
 
             // Obtener el método de pago seleccionado
             var selectedMethod = $('.payment-method .selected-method span').text();
+
+            // Verificar si hay un método de pago seleccionado
+            if (!selectedMethod) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Método de pago no seleccionado',
+                    text: 'Por favor, seleccione un método de pago antes de proceder con el pago.',
+                    confirmButtonText: 'Aceptar'
+                });
+                return;
+            }
 
             // Verificar si el pedido es express
             var isExpress = $('#express-order-checkbox').is(':checked');
