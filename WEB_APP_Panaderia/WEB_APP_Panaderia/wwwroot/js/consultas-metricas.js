@@ -1,0 +1,160 @@
+﻿$(document).ready(function () {
+    $.ajax({
+        url: '/Metricas/ConsultarConteoVentasPorSemana',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response) {
+                var numeroVentas = response.numeroVentas;
+                var countersElement = $('.total-sales');
+                countersElement.attr('data-count', numeroVentas);
+                animateCounter(countersElement, numeroVentas);
+            } else {
+                $('.total-sales').text('No hay datos disponibles');
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error en la llamada AJAX:", error);
+            $('.total-sales').text('Error al cargar');
+        }
+    });
+
+    // Obtener y actualizar ventas por día
+    $.ajax({
+        url: '/Metricas/ConsultarConteoVentasPorDia', 
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response) {
+                var numeroVentas = response.numeroVentas;
+                var countersElement = $('.daily-sales');
+                countersElement.attr('data-count', numeroVentas);
+                animateCounter(countersElement, numeroVentas);
+            } else {
+                $('.daily-sales').text('No hay datos disponibles');
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error en la llamada AJAX:", error);
+            $('.daily-sales').text('Error al cargar');
+        }
+    });
+
+    // Obtener y actualizar ganancia semanal
+    $.ajax({
+        url: '/Metricas/ConsultarConteoVentasPorSemana', 
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            if (response) {
+                var montoTotalVentas = response.montoTotalVentas;
+                var countersElement = $('.weekly-earnings');
+                countersElement.attr('data-count', formatCurrency(montoTotalVentas))
+                animateCounter(countersElement, montoTotalVentas, true);
+            } else {
+                $('.weekly-earnings').text('No hay datos disponibles');
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error en la llamada AJAX:", error);
+            $('.weekly-earnings').text('Error al cargar');
+        }
+    });
+
+    $(document).ready(function () {
+        $.ajax({
+            url: '/Metricas/ConsultarTransaccionesRecientes', // Cambia a la URL de tu controlador
+            type: 'GET',
+            success: function (data) {
+                var tbody = $('.recent-transactions tbody');
+                tbody.empty(); // Limpiar la tabla antes de añadir nuevos datos
+
+                data.forEach(function (orden, index) {
+                    var row = `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>
+                                <div class="product-info">
+                                    <a href="#" class="product-img"></a>
+                                    <div class="info">
+                                        <a href="#">Orden #${orden.idOrden}</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="d-block head-text">${orden.metodoPago}</span>
+                                <span class="text-blue">#${orden.idOrden}</span>
+                            </td>
+                            <td><span class="badge background-less border-success">${orden.estado}</span></td>
+                            <td>${orden.total.toLocaleString('es-CR', { style: 'currency', currency: 'CRC' })}</td>
+                        </tr>
+                    `;
+                    tbody.append(row);
+                });
+            },
+            error: function (error) {
+                console.error('Error al obtener los datos:', error);
+            }
+        });
+    });
+
+    function animateCounter($element, countTo) {
+        $element.each(function () {
+            var $this = $(this);
+            $({ countNum: $this.text() }).animate({
+                countNum: countTo
+            }, {
+                duration: 2000,
+                easing: 'linear',
+                step: function () {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                    $this.text(this.countNum.toLocaleString()); 
+                }
+            });
+        });
+    }
+});
+
+$(document).ready(function () {
+    $.ajax({
+        url: '/Metricas/ConsultarTotalVentasProductoPorDia',  
+        method: 'GET',
+        success: function (data) {
+            renderTable(data);
+        },
+        error: function (error) {
+            console.error('Error fetching data:', error);
+        }
+    });
+});
+
+function renderTable(data) {
+    // Selecciona el cuerpo de la tabla
+    var tableBody = $('.best-seller tbody');
+    tableBody.empty(); // Limpia cualquier contenido existente
+
+    // Itera sobre la respuesta y construye las filas de la tabla
+    data.forEach(function (item) {
+        var row = `<tr>
+                        <td>
+                            <div class="product-info">
+                                <div class="info">
+                                    <a href="">${item.nombreProducto}</a>
+                                    <p class="dull-text">₡${formatCurrency(item.precio)}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <p class="head-text">Ventas</p>
+                            ${item.cantidadTotal}
+                        </td>
+                    </tr>`;
+        tableBody.append(row);
+    });
+}
+
+function formatCurrency(value) {
+    return parseFloat(value).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}

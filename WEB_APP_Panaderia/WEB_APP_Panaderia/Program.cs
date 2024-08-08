@@ -16,6 +16,7 @@ builder.Services.AddScoped<ISaboresPizzaModel, SaboresPizzaModel>();
 builder.Services.AddScoped<IOrdenPDVModel, OrdenPDVModel>();
 builder.Services.AddScoped<ILogsModel, LogsModel>();
 builder.Services.AddScoped<IInsumosModel, InsumosModel>();
+builder.Services.AddScoped<IMetricasModel, MetricasModel>();
 
 
 var app = builder.Build();
