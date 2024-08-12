@@ -42,5 +42,11 @@ namespace WEB_APP_Panaderia.Controllers
 			return Json(_metricasModel.ConsultarGanancias());
 		}
 
+		[HttpGet]
+		public IActionResult ConsultarRestanteLotes()
+		{
+			return Json(_metricasModel.ConsultarRestanteLotes());
+		}
+
 	}
 }

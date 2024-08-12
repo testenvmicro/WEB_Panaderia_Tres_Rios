@@ -202,67 +202,67 @@ var chart = new ApexCharts(
 chart.render();
 }
 
-// Simple Column
-if($('#s-col').length > 0 ){
-var sCol = {
-    chart: {
-        height: 350,
-        type: 'bar',
-        toolbar: {
-          show: false,
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'  
-        },
-    },
-    // colors: ['#888ea8', '#4361ee'],
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-    },
-    series: [{
-        name: 'Net Profit',
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-    }, {
-        name: 'Revenue',
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-    }],
-    xaxis: {
-        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-    },
-    yaxis: {
-        title: {
-            text: '$ (thousands)'
-        }
-    },
-    fill: {
-        opacity: 1
+//// Simple Column
+//if($('#s-col').length > 0 ){
+//var sCol = {
+//    chart: {
+//        height: 350,
+//        type: 'bar',
+//        toolbar: {
+//          show: false,
+//        }
+//    },
+//    plotOptions: {
+//        bar: {
+//            horizontal: false,
+//            columnWidth: '55%',
+//            endingShape: 'rounded'  
+//        },
+//    },
+//    // colors: ['#888ea8', '#4361ee'],
+//    dataLabels: {
+//        enabled: false
+//    },
+//    stroke: {
+//        show: true,
+//        width: 2,
+//        colors: ['transparent']
+//    },
+//    series: [{
+//        name: 'Net Profit',
+//        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+//    }, {
+//        name: 'Revenue',
+//        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+//    }],
+//    xaxis: {
+//        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+//    },
+//    yaxis: {
+//        title: {
+//            text: '$ (thousands)'
+//        }
+//    },
+//    fill: {
+//        opacity: 1
 
-    },
-    tooltip: {
-        y: {
-            formatter: function (val) {
-                return "$ " + val + " thousands"
-            }
-        }
-    }
-}
+//    },
+//    tooltip: {
+//        y: {
+//            formatter: function (val) {
+//                return "$ " + val + " thousands"
+//            }
+//        }
+//    }
+//}
 
-var chart = new ApexCharts(
-    document.querySelector("#s-col"),
-    sCol
-);
+//var chart = new ApexCharts(
+//    document.querySelector("#s-col"),
+//    sCol
+//);
 
-chart.render();
-}
+//chart.render();
+//}
 
 
 // Simple Column Stacked
@@ -346,10 +346,14 @@ var sBar = {
         enabled: false
     },
     series: [{
-        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        data: [10, 75, 134, 98]
     }],
     xaxis: {
-        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
+        categories: ['Lote 1', 'Lote 2', 'Lote 3', 'Lote 4'],
+    },
+
+    yaxis: {
+        categories: [100],
     }
 }
 
@@ -425,7 +429,7 @@ var donutChart = {
         }
     },
     // colors: ['#4361ee', '#888ea8', '#e3e4eb', '#d3d3d3'],
-    series: [44, 55, 41, 17],
+    series: [10, 75, 134, 98],
     responsive: [{
         breakpoint: 480,
         options: {
