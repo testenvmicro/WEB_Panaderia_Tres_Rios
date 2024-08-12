@@ -114,5 +114,25 @@ namespace WEB_APP_Panaderia.Models
 			}
 		}
 
+		public List<RestanteLotesEntities>? ConsultarRestanteLotes()
+		{
+			using (var client = new HttpClient())
+			{
+				string urlApi = _configuration.GetSection("Parametros:urlApi").Value + "/Metricas/ConsultarRestanteLotes";
+				HttpResponseMessage response = client.GetAsync(urlApi).Result;
+
+				if (response.IsSuccessStatusCode)
+				{
+					var result = response.Content.ReadFromJsonAsync<List<RestanteLotesEntities>>().Result;
+					return result;
+				}
+
+				if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+					throw new Exception("Excepción Web Api: " + response.Content.ReadAsStringAsync().Result);
+
+				return null;
+			}
+		}
+
 	}
 }

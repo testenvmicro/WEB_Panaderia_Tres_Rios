@@ -9,5 +9,6 @@ namespace WEB_APP_Panaderia.Interfaces
 		public List<TotalVentasProductoEntities>? ConsultarTotalVentasProductoPorDia();
 		public List<TransaccionesRecientesEntities>? ConsultarTransaccionesRecientes();
 		public GananciasEntities? ConsultarGanancias();
+		public List<RestanteLotesEntities>? ConsultarRestanteLotes();
 	}
 }

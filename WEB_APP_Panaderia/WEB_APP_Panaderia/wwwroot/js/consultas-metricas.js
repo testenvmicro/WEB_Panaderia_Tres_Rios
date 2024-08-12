@@ -198,3 +198,83 @@ $.ajax({
     }
 });
 
+$(document).ready(function () {
+    // Realizar la llamada AJAX para obtener los datos
+    $.ajax({
+        url: '/Metricas/ConsultarRestanteLotes', // Cambia esto por la URL de tu API
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+            // Procesar los datos recibidos
+            var ids = [];
+            var valoresTotales = [];
+            var valoresRestantes = [];
+
+            response.forEach(function (item) {
+                ids.push('Lote ' + item.idLote);
+                valoresTotales.push(item.valorTotal);
+                valoresRestantes.push(item.valorRestante);
+            });
+
+            // Configurar el gráfico de ApexCharts
+            var sCol = {
+                chart: {
+                    height: 350,
+                    type: 'bar',
+                    toolbar: {
+                        show: false,
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                series: [{
+                    name: 'Valor Total',
+                    data: valoresTotales
+                }, {
+                    name: 'Valor Restante',
+                    data: valoresRestantes
+                }],
+                xaxis: {
+                    categories: ids,
+                },
+                yaxis: {
+                    title: {
+                        text: 'Insumos'
+                    }
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return "Insumos " + val; 
+                        }
+                    }
+                }
+            };
+
+            // Renderizar el gráfico
+            var chart = new ApexCharts(document.querySelector("#s-col"), sCol);
+            chart.render();
+        },
+        error: function (xhr, status, error) {
+            console.error("Error al obtener los datos:", error);
+        }
+    });
+});
+
+
